@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                         <state key="normal" title="One"/>
                                         <connections>
-                                            <action selector="oneClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAV-ed-Fwd"/>
+                                            <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ut-VJ-8bv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-Jb-zxO" userLabel="2">
@@ -32,7 +32,7 @@
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Two"/>
                                         <connections>
-                                            <action selector="twoClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sq-hW-Epf"/>
+                                            <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2y-o8-bAS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3J-Fp-leJ" userLabel="3">
@@ -40,7 +40,7 @@
                                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Three"/>
                                         <connections>
-                                            <action selector="threeClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rN-KK-E4W"/>
+                                            <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6E-DX-AiV"/>
                                         </connections>
                                     </button>
                                 </subviews>

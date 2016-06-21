@@ -12,70 +12,84 @@
 #import "YHPTwoViewController.h"
 #import "YHPThreeViewController.h"
 
-@interface ViewController ()
+#define CONTROLLER_VIEW_WIDTH(vc) (vc.view.frame.size.width)
+#define CONTROLLER_VIEW_HEIGHT(vc) (vc.view.frame.size.height)
 
-/** 控制器 */
-@property(nonatomic,strong)YHPOneViewController* one;
-@property(nonatomic,strong)YHPTwoViewController* two;
-@property(nonatomic,strong)YHPThreeViewController* three;
+
+@interface ViewController ()
+// 正在显示的控制器
+@property(nonatomic,weak)UIViewController* showingVc;
+/** 存放控制器的数组 */
+@property(nonatomic,strong)NSArray* allVces;
 
 @end
 
 @implementation ViewController
 
-/**
- *  显示OneViewController
- */
-- (IBAction)oneClick {
-    if (self.one == nil) {
-        self.one = [[YHPOneViewController alloc]init];
-        self.one.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64);
-    }
-    
-    [self.two.view removeFromSuperview];
-    [self.three.view removeFromSuperview];
-    
-    [self.view addSubview: self.one.view];
-    
-}
-
-/**
- *  显示TwoViewController
- */
-- (IBAction)twoClick {
-    
-    if (self.two == nil) {
-        self.two = [[YHPTwoViewController alloc]init];
-        self.two.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64);
-    }
-    
-    [self.one.view removeFromSuperview];
-    [self.three.view removeFromSuperview];
-    [self.view addSubview: self.two.view];// 加了100次，其实也就加了1次
-}
-
-/**
- *  显示ThreeViewController
- */
-- (IBAction)threeClick {
-    
-    if (self.three == nil) {
-        self.three = [[YHPThreeViewController alloc]init];
-        self.three.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64);
-    }
-    
-    [self.one.view removeFromSuperview];
-    [self.two.view removeFromSuperview];
-    [self.view addSubview:self.three.view];
-}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.allVces = @[
+                     [[YHPOneViewController alloc]init],
+                     [[YHPTwoViewController alloc]init],
+                     [[YHPThreeViewController alloc]init]
+                     ];
 }
+
+
 /**
- *  1,上面点按创建控制器的代码有问题
+ *  优化版本
+ *  @param sender 核心代码
  */
+- (IBAction)buttonClick:(UIButton *)sender {
+    
+    [self.showingVc.view removeFromSuperview];
+    
+    //  获取控制器的索引
+    NSUInteger index = [sender.superview.subviews indexOfObject:sender];
+    self.showingVc = self.allVces[index];
+    self.showingVc.view.frame = CGRectMake(0, 64,CONTROLLER_VIEW_WIDTH(self) , CONTROLLER_VIEW_HEIGHT(self));
+    [self.view addSubview: self.showingVc.view];
+    
+}
+
+
+
+///**
+// *  显示OneViewController
+// */
+//- (IBAction)oneClick {
+//    
+//    [self.showingVc.view removeFromSuperview];
+//    /**
+//     *  注意点，数组中 [self.allVces[0].view 该语法
+//     */
+//    self.showingVc = self.allVces[0];
+//    self.showingVc.view.frame = CGRectMake(0, 64,CONTROLLER_VIEW_WIDTH(self) , CONTROLLER_VIEW_HEIGHT(self));
+//    [self.view addSubview: self.showingVc.view];
+//    
+//}
+//
+///**
+// *  显示TwoViewController
+// */
+//- (IBAction)twoClick {
+//     [self.showingVc.view removeFromSuperview];
+//    self.showingVc = self.allVces[1];
+//    self.showingVc.view.frame = CGRectMake(0, 64,CONTROLLER_VIEW_WIDTH(self) , CONTROLLER_VIEW_HEIGHT(self));
+//    [self.view addSubview: self.showingVc.view];
+//}
+//
+///**
+// *  显示ThreeViewController
+// */
+//- (IBAction)threeClick {
+//    [self.showingVc.view removeFromSuperview];
+//    self.showingVc = self.allVces[2];
+//    self.showingVc.view.frame = CGRectMake(0, 64,CONTROLLER_VIEW_WIDTH(self) , CONTROLLER_VIEW_HEIGHT(self));
+//    [self.view addSubview: self.showingVc.view];
+//}
+
 
 @end
