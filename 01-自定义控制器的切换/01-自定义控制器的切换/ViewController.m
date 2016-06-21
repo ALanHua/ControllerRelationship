@@ -32,15 +32,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /**
-     addChildViewController 会将控制器存放在self.childViewControllers
-     */
     [self addChildViewController:[[YHPOneViewController alloc]init]];
     [self addChildViewController:[[YHPTwoViewController alloc]init]];
     [self addChildViewController:[[YHPThreeViewController alloc]init]];
     
-    //  将控制器从父控制器中移除
-//    [self.childViewControllers[0] removeFromParentViewController];
 }
 
 
@@ -49,15 +44,22 @@
  *  @param sender 核心代码
  */
 - (IBAction)buttonClick:(UIButton *)sender {
-    
-    [self.showingVc.view removeFromSuperview];
-    
+
+    [self.showingVc removeFromParentViewController];
     //  获取控制器的索引
     NSUInteger index = [sender.superview.subviews indexOfObject:sender];
+    //  当前的索引
+    NSUInteger oldIndex = [self.childViewControllers indexOfObject:self.showingVc];
     self.showingVc = self.childViewControllers[index];
     self.showingVc.view.frame = CGRectMake(0, 64,CONTROLLER_VIEW_WIDTH(self) , CONTROLLER_VIEW_HEIGHT(self));
     [self.view addSubview: self.showingVc.view];
     
+    // 添加转场动画
+    CATransition* animation = [CATransition animation];
+    animation.type = @"cube";
+    animation.subtype = index > oldIndex ? kCATransitionFromRight :kCATransitionFromLeft;
+    animation.duration = 1;
+    [self.view.layer addAnimation:animation forKey:nil];
 }
 /**
  *  屏幕即将某个方向时调用
