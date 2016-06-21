@@ -28,8 +28,15 @@ NSString* ID = @"one";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+/**
+ *  屏幕即将某个方向时调用
+ */
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    NSLog(@"%@,rotate",self.class);
+}
 
+#pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return 50;
