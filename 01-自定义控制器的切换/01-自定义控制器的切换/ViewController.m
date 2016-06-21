@@ -24,14 +24,23 @@
 
 @implementation ViewController
 
+/**
+ *  [a.view addSubView b.view]
+ *  [a addChildViewController:b]
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    /**
+     addChildViewController 会将控制器存放在self.childViewControllers
+     */
     [self addChildViewController:[[YHPOneViewController alloc]init]];
     [self addChildViewController:[[YHPTwoViewController alloc]init]];
     [self addChildViewController:[[YHPThreeViewController alloc]init]];
-
-    NSLog(@"%@",self.childViewControllers);
+    
+    //  将控制器从父控制器中移除
+//    [self.childViewControllers[0] removeFromParentViewController];
 }
 
 

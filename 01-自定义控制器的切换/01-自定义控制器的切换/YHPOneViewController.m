@@ -21,6 +21,7 @@ NSString* ID = @"one";
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+
 }
 
 - (void)didReceiveMemoryWarning {
