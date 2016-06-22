@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-235" y="149"/>
         </scene>
-        <!--View Controller-->
+        <!--首页控制器-->
         <scene sceneID="ztp-Go-hSa">
             <objects>
-                <viewController id="yR8-mS-ynZ" sceneMemberID="viewController">
+                <viewController id="yR8-mS-ynZ" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IJT-kT-xu4"/>
                         <viewControllerLayoutGuide type="bottom" id="sLn-zc-Dxi"/>
@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lBi-e3-aa0"/>
+                    <navigationItem key="navigationItem" title="首页控制器" id="lBi-e3-aa0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSP-e2-ZFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

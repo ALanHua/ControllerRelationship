@@ -39,8 +39,17 @@
     self.contentView = cotentView;
     
     [self addChildViewController:[[YHPOneViewController alloc]init]];
+    /**
+     *  将听 didMoveToParentViewController方法
+     */
+//    [self.childViewControllers[0] didMoveToParentViewController:self];
     [self addChildViewController:[[YHPTwoViewController alloc]init]];
     [self addChildViewController:[[YHPThreeViewController alloc]init]];
+    
+    /**
+     *  这个歌方法会主动调用 didMoveToParentViewController，并告诉你你将被移动到一个空的父控制器
+     */
+//    [self.childViewControllers[0] removeFromParentViewController];
     
 }
 

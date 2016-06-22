@@ -24,9 +24,12 @@ NSString* ID = @"one";
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)didMoveToParentViewController:(UIViewController *)parent
+{
+    [super didMoveToParentViewController:parent];
+    NSLog(@"YHPOneViewController add to-- %@",parent);
+    
 }
 
 /**

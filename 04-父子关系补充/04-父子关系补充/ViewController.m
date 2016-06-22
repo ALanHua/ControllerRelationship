@@ -16,12 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ * 当前控制器已经被添加到某个父控制器器上时会调用这个方法
+ */
+- (void)didMoveToParentViewController:(UIViewController *)parent
+{
+    [super didMoveToParentViewController:parent];
+    
+    if ([parent isKindOfClass:[UINavigationController class]]) {
+        
+    }
+    
+    NSLog(@"didMoveToParentViewController--%@",parent);
+    
 }
+
 
 @end
