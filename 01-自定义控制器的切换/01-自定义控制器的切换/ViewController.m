@@ -19,6 +19,7 @@
 @interface ViewController ()
 // 正在显示的控制器
 @property(nonatomic,weak)UIViewController* showingVc;
+@property(nonatomic,weak)UIView* contentView;
 
 @end
 
@@ -31,6 +32,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIView* cotentView = [[UIView alloc]init];
+    cotentView.frame = CGRectMake(0, 64,CONTROLLER_VIEW_WIDTH(self) , CONTROLLER_VIEW_HEIGHT(self));
+    [self.view addSubview:cotentView];
+    self.contentView = cotentView;
     
     [self addChildViewController:[[YHPOneViewController alloc]init]];
     [self addChildViewController:[[YHPTwoViewController alloc]init]];
@@ -45,21 +51,21 @@
  */
 - (IBAction)buttonClick:(UIButton *)sender {
 
-    [self.showingVc removeFromParentViewController];
+    [self.showingVc.view removeFromSuperview];
     //  获取控制器的索引
     NSUInteger index = [sender.superview.subviews indexOfObject:sender];
     //  当前的索引
     NSUInteger oldIndex = [self.childViewControllers indexOfObject:self.showingVc];
     self.showingVc = self.childViewControllers[index];
-    self.showingVc.view.frame = CGRectMake(0, 64,CONTROLLER_VIEW_WIDTH(self) , CONTROLLER_VIEW_HEIGHT(self));
-    [self.view addSubview: self.showingVc.view];
+    self.showingVc.view.frame = self.contentView.bounds;
+    [self.contentView addSubview: self.showingVc.view];
     
     // 添加转场动画
     CATransition* animation = [CATransition animation];
     animation.type = @"cube";
     animation.subtype = index > oldIndex ? kCATransitionFromRight :kCATransitionFromLeft;
     animation.duration = 1;
-    [self.view.layer addAnimation:animation forKey:nil];
+    [self.contentView.layer addAnimation:animation forKey:nil];
 }
 /**
  *  屏幕即将某个方向时调用
