@@ -67,6 +67,7 @@
     animation.duration = 1;
     [self.contentView.layer addAnimation:animation forKey:nil];
 }
+
 /**
  *  屏幕即将某个方向时调用
  */
