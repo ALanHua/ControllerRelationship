@@ -39,11 +39,16 @@
     [super viewDidLoad];
     
     [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+    
+    self.subCategoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%@",NSStringFromUIEdgeInsets(self.categoryTableView.contentInset));
+    NSLog(@"%@",NSStringFromUIEdgeInsets(self.subCategoryTableView.contentInset));
 }
 
 #pragma mark - Table view data source
