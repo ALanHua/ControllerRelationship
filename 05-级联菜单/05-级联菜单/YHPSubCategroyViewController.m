@@ -45,6 +45,8 @@ NSString* ID2 = @"subCategory";
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:ID2];
     cell.textLabel.text = self.subcategories[indexPath.row];
+    cell.textLabel.highlightedTextColor = [UIColor redColor];
+    
     return cell;
 }
 @end

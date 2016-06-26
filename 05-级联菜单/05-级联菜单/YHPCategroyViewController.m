@@ -10,11 +10,14 @@
 #import "YHPCategory.h"
 
 @interface YHPCategroyViewController ()
-
 /** 所有类别数据 */
 @property(nonatomic,strong)NSArray* categories;
-
 @end
+
+/**
+ *  知识点：
+ 当一个cell呗选中的时候，cell内部的子控件都会到达high_lighted
+ */
 
 @implementation YHPCategroyViewController
 
@@ -55,7 +58,9 @@ NSString* ID = @"category";
     
     YHPCategory* c = self.categories[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:c.icon];
+    cell.imageView.highlightedImage = [UIImage imageNamed:c.highlighted_icon];
     cell.textLabel.text = c.name;
+    cell.textLabel.highlightedTextColor = [UIColor blueColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
