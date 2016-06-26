@@ -17,6 +17,8 @@
 		B8459FAF1D1DA32C0098C8E7 /* _5_____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8459FAE1D1DA32C0098C8E7 /* _5_____UITests.m */; };
 		B8459FBE1D1DA3BF0098C8E7 /* YHPCategroyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8459FBD1D1DA3BF0098C8E7 /* YHPCategroyViewController.m */; };
 		B8459FC11D1DA3DB0098C8E7 /* YHPSubCategroyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8459FC01D1DA3DB0098C8E7 /* YHPSubCategroyViewController.m */; };
+		B8459FC31D1FBABB0098C8E7 /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8459FC21D1FBABB0098C8E7 /* categories.plist */; };
+		B8459FC61D1FBE4E0098C8E7 /* YHPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B8459FC51D1FBE4E0098C8E7 /* YHPCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		B8459FBD1D1DA3BF0098C8E7 /* YHPCategroyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPCategroyViewController.m; sourceTree = "<group>"; };
 		B8459FBF1D1DA3DB0098C8E7 /* YHPSubCategroyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPSubCategroyViewController.h; sourceTree = "<group>"; };
 		B8459FC01D1DA3DB0098C8E7 /* YHPSubCategroyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPSubCategroyViewController.m; sourceTree = "<group>"; };
+		B8459FC21D1FBABB0098C8E7 /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		B8459FC41D1FBE4E0098C8E7 /* YHPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPCategory.h; sourceTree = "<group>"; };
+		B8459FC51D1FBE4E0098C8E7 /* YHPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +120,14 @@
 				B8459F951D1DA32C0098C8E7 /* Assets.xcassets */,
 				B8459F971D1DA32C0098C8E7 /* LaunchScreen.storyboard */,
 				B8459F9A1D1DA32C0098C8E7 /* Info.plist */,
+				B8459FC21D1FBABB0098C8E7 /* categories.plist */,
 				B8459F891D1DA32C0098C8E7 /* Supporting Files */,
 				B8459FBC1D1DA3BF0098C8E7 /* YHPCategroyViewController.h */,
 				B8459FBD1D1DA3BF0098C8E7 /* YHPCategroyViewController.m */,
 				B8459FBF1D1DA3DB0098C8E7 /* YHPSubCategroyViewController.h */,
 				B8459FC01D1DA3DB0098C8E7 /* YHPSubCategroyViewController.m */,
+				B8459FC41D1FBE4E0098C8E7 /* YHPCategory.h */,
+				B8459FC51D1FBE4E0098C8E7 /* YHPCategory.m */,
 			);
 			path = "05-级联菜单";
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8459FC31D1FBABB0098C8E7 /* categories.plist in Resources */,
 				B8459F991D1DA32C0098C8E7 /* LaunchScreen.storyboard in Resources */,
 				B8459F961D1DA32C0098C8E7 /* Assets.xcassets in Resources */,
 				B8459F941D1DA32C0098C8E7 /* Main.storyboard in Resources */,
@@ -287,6 +296,7 @@
 				B8459FC11D1DA3DB0098C8E7 /* YHPSubCategroyViewController.m in Sources */,
 				B8459FBE1D1DA3BF0098C8E7 /* YHPCategroyViewController.m in Sources */,
 				B8459F911D1DA32C0098C8E7 /* ViewController.m in Sources */,
+				B8459FC61D1FBE4E0098C8E7 /* YHPCategory.m in Sources */,
 				B8459F8E1D1DA32C0098C8E7 /* AppDelegate.m in Sources */,
 				B8459F8B1D1DA32C0098C8E7 /* main.m in Sources */,
 			);

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YHPCategroyViewController : UITableViewController
+@class YHPCategroyViewController;
+// 代理协议
+@protocol YHPCategoryViewControllerDelegate <NSObject>
+@optional
+-(void)categoryViewController:(YHPCategroyViewController*)categoryViewController didSelectSubCategories:(NSArray*)subCategories;
+@end
 
+@interface YHPCategroyViewController : UITableViewController
+@property(nonatomic,weak)id <YHPCategoryViewControllerDelegate>delegate;
 @end

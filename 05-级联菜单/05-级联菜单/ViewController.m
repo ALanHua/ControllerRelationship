@@ -18,12 +18,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CGFloat width   = self.view.frame.size.width * 0.5;
+    CGFloat height = self.view.frame.size.height;
+    
+    YHPSubCategroyViewController* subCategroyVc = [[YHPSubCategroyViewController alloc]init];
+    subCategroyVc.view.frame = CGRectMake(width, 0, width, height);
+    [self addChildViewController:subCategroyVc];
+    [self.view addSubview:subCategroyVc.view];
+    
+    YHPCategroyViewController* categroyVc = [[YHPCategroyViewController alloc]init];
+    categroyVc.view.frame = CGRectMake(0, 0, width, height);
+    categroyVc.delegate = subCategroyVc;
+    [self addChildViewController:categroyVc];
+    [self.view addSubview:categroyVc.view];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

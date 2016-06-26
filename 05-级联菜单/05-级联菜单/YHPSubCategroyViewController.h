@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YHPCategroyViewController.h"
 
-@interface YHPSubCategroyViewController : UITableViewController
+@interface YHPSubCategroyViewController : UITableViewController<YHPCategoryViewControllerDelegate>
 
 @end
