@@ -9,6 +9,8 @@
 #import "YHPHomeViewController.h"
 
 @interface YHPHomeViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 @end
 
@@ -16,22 +18,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // 先添加标题
+    [self setUpTittle];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  添加标题
+ */
+ -(void)setUpTittle
+{
+    CGFloat labelW = 100;
+    CGFloat labelH = self.titleScrollView.frame.size.height;
+    CGFloat labelY = 0;
+    //  添加label
+    for (int i = 0; i < 7; i++) {
+        UILabel* label = [[UILabel alloc]init];
+        label.text = [NSString stringWithFormat:@"%d",i + 1];
+        CGFloat labelX = i * labelW ;
+        label.frame = CGRectMake(labelX, labelY, labelW, labelH);
+        label.textAlignment = NSTextAlignmentCenter;
+        label.backgroundColor = [self randomColor];
+        [label addGestureRecognizer: [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelClick:)]];
+        label.userInteractionEnabled = YES;
+        [self.titleScrollView addSubview:label];
+    }
+    //   设置contentSize
+    self.titleScrollView.contentSize = CGSizeMake(7 * labelW, 0);
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ *  监听titleScrollView顶部label点击
+ *  @param tap 点击手势
+ */
+-(void)labelClick:(UITapGestureRecognizer*)tap
+{
+//    NSLog(@"%@",tap.view);
 }
-*/
 
+/**
+ *  产生随机颜色
+ *  @return UIColor
+ */
+-(UIColor*)randomColor
+{
+    CGFloat r = arc4random_uniform(255) / 255.0;
+    CGFloat g = arc4random_uniform(255) / 255.0;
+    CGFloat b = arc4random_uniform(255) / 255.0;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1.0];
+}
 @end
