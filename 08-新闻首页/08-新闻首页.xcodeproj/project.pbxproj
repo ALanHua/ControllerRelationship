@@ -15,6 +15,7 @@
 		B87D10481D22BEE9003E8AA0 /* _8_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B87D10471D22BEE9003E8AA0 /* _8_____Tests.m */; };
 		B87D10531D22BEE9003E8AA0 /* _8_____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B87D10521D22BEE9003E8AA0 /* _8_____UITests.m */; };
 		B87D10621D22BF63003E8AA0 /* YHPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87D10611D22BF63003E8AA0 /* YHPHomeViewController.m */; };
+		B87D10651D241DA6003E8AA0 /* YHPSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87D10641D241DA6003E8AA0 /* YHPSocialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B87D10541D22BEE9003E8AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B87D10601D22BF63003E8AA0 /* YHPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHPHomeViewController.h; path = ../YHPHomeViewController.h; sourceTree = "<group>"; };
 		B87D10611D22BF63003E8AA0 /* YHPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHPHomeViewController.m; path = ../YHPHomeViewController.m; sourceTree = "<group>"; };
+		B87D10631D241DA6003E8AA0 /* YHPSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPSocialViewController.h; sourceTree = "<group>"; };
+		B87D10641D241DA6003E8AA0 /* YHPSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPSocialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				B87D10601D22BF63003E8AA0 /* YHPHomeViewController.h */,
 				B87D10611D22BF63003E8AA0 /* YHPHomeViewController.m */,
+				B87D10631D241DA6003E8AA0 /* YHPSocialViewController.h */,
+				B87D10641D241DA6003E8AA0 /* YHPSocialViewController.m */,
 				B87D10361D22BEE9003E8AA0 /* Main.storyboard */,
 				B87D10391D22BEE9003E8AA0 /* Assets.xcassets */,
 				B87D102D1D22BEE9003E8AA0 /* Supporting Files */,
@@ -277,6 +282,7 @@
 				B87D10321D22BEE9003E8AA0 /* AppDelegate.m in Sources */,
 				B87D10621D22BF63003E8AA0 /* YHPHomeViewController.m in Sources */,
 				B87D102F1D22BEE9003E8AA0 /* main.m in Sources */,
+				B87D10651D241DA6003E8AA0 /* YHPSocialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
