@@ -19,7 +19,7 @@ static NSString* ID = @"social";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@--viewDidload",self.title);
+//    NSLog(@"%@--viewDidload",self.title);
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
 }

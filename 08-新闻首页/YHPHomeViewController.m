@@ -77,7 +77,7 @@
         CGFloat labelX = i * labelW ;
         label.frame = CGRectMake(labelX, labelY, labelW, labelH);
         label.textAlignment = NSTextAlignmentCenter;
-        label.backgroundColor = [self randomColor];
+        label.backgroundColor = [UIColor lightGrayColor];
         [label addGestureRecognizer: [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelClick:)]];
         label.userInteractionEnabled = YES;
         label.tag = i;
@@ -161,5 +161,32 @@
     [self scrollViewDidEndScrollingAnimation:scrollView];
 }
 
+/**
+ *  实时监听 scrollView拖拽
+ *  @param scrollView
+ */
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//          R   G   B
+//    黑色   0   0   0
+//    红色   1   0   0
+//    蓝色   0   0   1
+//    黄色   1   1   0
+    CGFloat sclae = scrollView.contentOffset.x / scrollView.frame.size.width;
+    //    left
+    NSInteger leftIndex = sclae;
+    UILabel*  leftLabel = self.titleScrollView.subviews[leftIndex];
+    CGFloat   rightScale = sclae - leftIndex;
+    CGFloat   leftScale  = 1 - rightScale;
+    leftLabel.textColor = [UIColor colorWithRed:leftScale green:0 blue:0 alpha:1.0];
+    if (leftIndex == self.titleScrollView.subviews.count - 1) {
+        return;//数组越界返回
+    }
+    //    right
+    NSInteger rightIndex = leftIndex + 1;
+    UILabel*  rightLabel = self.titleScrollView.subviews[rightIndex];
+    rightLabel.textColor = [UIColor colorWithRed:rightScale green:0 blue:0 alpha:1.0];
+//    NSLog(@"%f %f",leftScale,rightScale);
+}
 
 @end
