@@ -23,6 +23,8 @@
     [self setUpChildVc];
     // 先添加标题
     [self setUpTittle];
+    // 默认选择第一个
+    [self scrollViewDidEndScrollingAnimation:self.contentScrollView];
 }
 
 /**
@@ -83,7 +85,7 @@
     }
     //   设置contentSize 
     self.titleScrollView.contentSize = CGSizeMake(7 * labelW, 0);
-    self.contentScrollView.contentSize = CGSizeMake(7 * self.contentScrollView.frame.size.width,0);
+    self.contentScrollView.contentSize = CGSizeMake(7 * [UIScreen mainScreen].bounds.size.width,0);
 //    self.contentScrollView.autoresizingMask = NO;
 }
 /**
@@ -118,14 +120,36 @@
  */
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
+    
     //  新控制器的索引
-    NSInteger index =  scrollView.contentOffset.x / scrollView.frame.size.width;
+    CGFloat width = scrollView.frame.size.width;// 600 ,约束后375
+    CGFloat height = scrollView.frame.size.height;
+    CGFloat offset = scrollView.contentOffset.x;
+    NSInteger index = offset / width;
+    
+    //  让对应的顶部的标题居中显示
+    UILabel* label = self.titleScrollView.subviews[index];
+    CGPoint titleOffset = self.titleScrollView.contentOffset;
+    titleOffset.x = label.center.x - width * 0.5;
+    CGFloat maxTitleOffsetX = self.titleScrollView.contentSize.width - width;
+    if (titleOffset.x < 0) {
+        titleOffset.x = 0;
+    }else if(titleOffset.x > maxTitleOffsetX){
+        titleOffset.x = maxTitleOffsetX;
+    }
+    [self.titleScrollView setContentOffset:titleOffset animated:YES];
+    
     // 取出需要显示的控制器
     UIViewController* willShowVc = self.childViewControllers[index];
+    //    如果现实过了就直接返回
+    if (willShowVc.view.superview) {
+        return;
+    }
     // 添加控制器的View到contentScrollView中
-    willShowVc.view.frame = CGRectMake(scrollView.contentOffset.x, -64, scrollView.frame.size.width, scrollView.frame.size.height);
+//    willShowVc.view.autoresizingMask = UIViewAutoresizingNone;
+    willShowVc.view.frame = CGRectMake(offset, -64, width, height);
+    [scrollView addSubview:willShowVc.view];
     
-    [self.contentScrollView addSubview:willShowVc.view];
 }
 
 /**
@@ -133,7 +157,8 @@
  */
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSLog(@"scrollViewDidEndDecelerating");
+//    NSLog(@"scrollViewDidEndDecelerating");
+    [self scrollViewDidEndScrollingAnimation:scrollView];
 }
 
 
