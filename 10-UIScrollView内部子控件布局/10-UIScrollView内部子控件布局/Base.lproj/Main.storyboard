@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="控制器View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYb-C5-itD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLX-UN-Q1U" userLabel="绿色">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="44a-iK-FqC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yLX-UN-Q1U" secondAttribute="trailing" constant="100" id="7ri-zt-daw"/>
+                                    <constraint firstItem="yLX-UN-Q1U" firstAttribute="top" secondItem="XYb-C5-itD" secondAttribute="top" id="hwB-xF-835"/>
+                                    <constraint firstItem="yLX-UN-Q1U" firstAttribute="leading" secondItem="XYb-C5-itD" secondAttribute="leading" id="qto-87-Fy6"/>
+                                    <constraint firstAttribute="bottom" secondItem="yLX-UN-Q1U" secondAttribute="bottom" id="tGC-An-kMK"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XYb-C5-itD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BEh-du-S1p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XYb-C5-itD" secondAttribute="bottom" id="OQm-l6-nEV"/>
+                            <constraint firstItem="XYb-C5-itD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VLb-95-Siv"/>
+                            <constraint firstItem="yLX-UN-Q1U" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Zse-0m-iaf"/>
+                            <constraint firstAttribute="trailing" secondItem="XYb-C5-itD" secondAttribute="trailing" id="k8W-L2-kBm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="XYb-C5-itD" id="DQB-w5-23G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
