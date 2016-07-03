@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B867C2A81D2936C200278746 /* YHPHomeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B867C2A71D2936C200278746 /* YHPHomeLabel.m */; };
 		B87D102F1D22BEE9003E8AA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B87D102E1D22BEE9003E8AA0 /* main.m */; };
 		B87D10321D22BEE9003E8AA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B87D10311D22BEE9003E8AA0 /* AppDelegate.m */; };
 		B87D10381D22BEE9003E8AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87D10361D22BEE9003E8AA0 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B867C2A61D2936C200278746 /* YHPHomeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPHomeLabel.h; sourceTree = "<group>"; };
+		B867C2A71D2936C200278746 /* YHPHomeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPHomeLabel.m; sourceTree = "<group>"; };
 		B87D102A1D22BEE9003E8AA0 /* 08-新闻首页.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "08-新闻首页.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87D102E1D22BEE9003E8AA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B87D10301D22BEE9003E8AA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				B87D10601D22BF63003E8AA0 /* YHPHomeViewController.h */,
+				B867C2A61D2936C200278746 /* YHPHomeLabel.h */,
+				B867C2A71D2936C200278746 /* YHPHomeLabel.m */,
 				B87D10611D22BF63003E8AA0 /* YHPHomeViewController.m */,
 				B87D10631D241DA6003E8AA0 /* YHPSocialViewController.h */,
 				B87D10641D241DA6003E8AA0 /* YHPSocialViewController.m */,
@@ -282,6 +287,7 @@
 				B87D10321D22BEE9003E8AA0 /* AppDelegate.m in Sources */,
 				B87D10621D22BF63003E8AA0 /* YHPHomeViewController.m in Sources */,
 				B87D102F1D22BEE9003E8AA0 /* main.m in Sources */,
+				B867C2A81D2936C200278746 /* YHPHomeLabel.m in Sources */,
 				B87D10651D241DA6003E8AA0 /* YHPSocialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +514,7 @@
 				B87D10591D22BEE9003E8AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B87D105A1D22BEE9003E8AA0 /* Build configuration list for PBXNativeTarget "08-新闻首页Tests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +523,7 @@
 				B87D105C1D22BEE9003E8AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B87D105D1D22BEE9003E8AA0 /* Build configuration list for PBXNativeTarget "08-新闻首页UITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +532,7 @@
 				B87D105F1D22BEE9003E8AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

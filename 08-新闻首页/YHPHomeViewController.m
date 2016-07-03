@@ -8,6 +8,7 @@
 
 #import "YHPHomeViewController.h"
 #import "YHPSocialViewController.h"
+#import "YHPHomeLabel.h"
 
 @interface YHPHomeViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
@@ -72,16 +73,16 @@
     CGFloat labelY = 0;
     //  添加label
     for (NSInteger i = 0; i < 7; i++) {
-        UILabel* label = [[UILabel alloc]init];
+        YHPHomeLabel* label = [[YHPHomeLabel alloc]init];
         label.text = self.childViewControllers[i].title;
         CGFloat labelX = i * labelW ;
         label.frame = CGRectMake(labelX, labelY, labelW, labelH);
-        label.textAlignment = NSTextAlignmentCenter;
-        label.backgroundColor = [UIColor lightGrayColor];
         [label addGestureRecognizer: [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelClick:)]];
-        label.userInteractionEnabled = YES;
         label.tag = i;
         [self.titleScrollView addSubview:label];
+        if (i == 0) {
+            label.scale = 1.0;
+        }
     }
     //   设置contentSize 
     self.titleScrollView.contentSize = CGSizeMake(7 * labelW, 0);
@@ -128,7 +129,7 @@
     NSInteger index = offset / width;
     
     //  让对应的顶部的标题居中显示
-    UILabel* label = self.titleScrollView.subviews[index];
+    YHPHomeLabel* label = self.titleScrollView.subviews[index];
     CGPoint titleOffset = self.titleScrollView.contentOffset;
     titleOffset.x = label.center.x - width * 0.5;
     CGFloat maxTitleOffsetX = self.titleScrollView.contentSize.width - width;
@@ -167,26 +168,18 @@
  */
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-//          R   G   B
-//    黑色   0   0   0
-//    红色   1   0   0
-//    蓝色   0   0   1
-//    黄色   1   1   0
-    CGFloat sclae = scrollView.contentOffset.x / scrollView.frame.size.width;
+    CGFloat scale = scrollView.contentOffset.x / scrollView.frame.size.width;
     //    left
-    NSInteger leftIndex = sclae;
-    UILabel*  leftLabel = self.titleScrollView.subviews[leftIndex];
-    CGFloat   rightScale = sclae - leftIndex;
-    CGFloat   leftScale  = 1 - rightScale;
-    leftLabel.textColor = [UIColor colorWithRed:leftScale green:0 blue:0 alpha:1.0];
-    if (leftIndex == self.titleScrollView.subviews.count - 1) {
-        return;//数组越界返回
-    }
-    //    right
+    NSInteger leftIndex = scale;
+    YHPHomeLabel* leftLabel = self.titleScrollView.subviews[leftIndex];
     NSInteger rightIndex = leftIndex + 1;
-    UILabel*  rightLabel = self.titleScrollView.subviews[rightIndex];
-    rightLabel.textColor = [UIColor colorWithRed:rightScale green:0 blue:0 alpha:1.0];
-//    NSLog(@"%f %f",leftScale,rightScale);
+    YHPHomeLabel* rightLabel = (rightIndex > self.titleScrollView.subviews.count - 1) ?nil : self.titleScrollView.subviews[rightIndex];
+    //左右比例
+    CGFloat  rightScale = scale - leftIndex;
+    CGFloat  leftScale  = 1 - rightScale;
+    //  设置比例
+    leftLabel.scale = leftScale;
+    rightLabel.scale = rightScale;
 }
 
 @end
