@@ -12,5 +12,5 @@
 @interface YHPPerson : NSObject
 /** 名字 */
 @property(nonatomic,strong)NSString* name;
-YHPSingletonH
+YHPSingletonH(Person)
 @end

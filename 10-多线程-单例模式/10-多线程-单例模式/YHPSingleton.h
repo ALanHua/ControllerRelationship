@@ -3,9 +3,9 @@
 //  Created by yhp on 16/7/22.
 //  Copyright © 2016年 YouHuaPei. All rights reserved.
 // .h文件
-#define YHPSingletonH + (instancetype)shareInstance;
+#define YHPSingletonH(name) + (instancetype)share##name;
 // .m文件
-#define YHPSingletonM \
+#define YHPSingletonM(name) \
 static id _instance;\
 \
 +(instancetype)allocWithZone:(struct _NSZone *)zone\
@@ -17,7 +17,7 @@ static id _instance;\
     return _instance;\
 }\
 \
-+(instancetype)shareInstance\
++(instancetype)share##name\
 {\
     static dispatch_once_t onceToken;\
     dispatch_once(&onceToken, ^{\

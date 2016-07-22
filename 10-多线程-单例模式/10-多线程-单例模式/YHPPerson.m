@@ -13,5 +13,5 @@
 @end
 
 @implementation YHPPerson
-YHPSingletonM
+YHPSingletonM(Person)
 @end
