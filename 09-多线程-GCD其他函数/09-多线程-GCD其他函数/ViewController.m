@@ -10,7 +10,10 @@
 #import "YHPPerson.h"
 
 @interface ViewController ()
-
+/** 图片 */
+@property(nonatomic,strong)UIImage* image1;
+@property(nonatomic,strong)UIImage* image2;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation ViewController
@@ -26,6 +29,55 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    
+}
+
+
+-(void)group
+{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    //  1，下载图片1
+    dispatch_group_async(group, queue, ^{
+        NSURL* url = [NSURL URLWithString:@"http://imgstore.cdn.sogou.com/app/a/100540002/714860.jpg"];
+        // 加载图片
+        NSData* data = [NSData dataWithContentsOfURL:url];
+        // 生成图片
+        self.image1 = [UIImage imageWithData:data];
+    });
+    //  2，下载图片2
+    dispatch_group_async(group, queue, ^{
+        NSURL* url = [NSURL URLWithString:@"http://img.pconline.com.cn/images/photoblog/9/9/8/1/9981681/200910/11/1255259355826.jpg"];
+        // 加载图片
+        NSData* data = [NSData dataWithContentsOfURL:url];
+        // 生成图片
+        self.image2 = [UIImage imageWithData:data];
+        
+    });
+    //  3，将图片1和图片2进行合成
+    dispatch_group_notify(group, queue, ^{
+        //  开启图形上下文
+        UIGraphicsBeginImageContext(CGSizeMake(100, 100));
+        //  绘制图片
+        [self.image1 drawInRect:CGRectMake(0, 0, 50, 100)];
+        [self.image2 drawInRect:CGRectMake(50, 0, 50, 100)];
+        //  取得上下文图片
+        UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+        //  结束上下文
+        UIGraphicsEndImageContext();
+        //  回到主线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //  4，将新图片显示出来
+            self.imageView.image = image;
+        });
+    });
+}
+
+/**
+ *  快熟迭代
+ */
+-(void)apply
+{
     NSString* from = @"/Users/smartwater/Downloads/11";
     NSString* to = @"/Users/smartwater/Downloads/22";
     NSFileManager* mgr = [NSFileManager defaultManager];
@@ -40,8 +92,6 @@
         NSLog(@"---%@",subPath);
     });
 
-
-    
 }
 
 -(void)moveFile
