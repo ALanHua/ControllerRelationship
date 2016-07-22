@@ -16,6 +16,7 @@
 		B83D4B4F1D425B4000B34516 /* _0_________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D4B4E1D425B4000B34516 /* _0_________Tests.m */; };
 		B83D4B5A1D425B4000B34516 /* _0_________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D4B591D425B4000B34516 /* _0_________UITests.m */; };
 		B83D4B691D425C0900B34516 /* YHPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D4B681D425C0900B34516 /* YHPPerson.m */; };
+		B83D4B721D426F0D00B34516 /* YHPCar.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D4B711D426F0D00B34516 /* YHPCar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		B83D4B671D425C0900B34516 /* YHPPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPPerson.h; sourceTree = "<group>"; };
 		B83D4B681D425C0900B34516 /* YHPPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPPerson.m; sourceTree = "<group>"; };
 		B83D4B6D1D4262BA00B34516 /* YHPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPSingleton.h; sourceTree = "<group>"; };
+		B83D4B701D426F0D00B34516 /* YHPCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPCar.h; sourceTree = "<group>"; };
+		B83D4B711D426F0D00B34516 /* YHPCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPCar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				B83D4B381D425B4000B34516 /* AppDelegate.m */,
 				B83D4B3A1D425B4000B34516 /* ViewController.h */,
 				B83D4B3B1D425B4000B34516 /* ViewController.m */,
+				B83D4B701D426F0D00B34516 /* YHPCar.h */,
+				B83D4B711D426F0D00B34516 /* YHPCar.m */,
 				B83D4B3D1D425B4000B34516 /* Main.storyboard */,
 				B83D4B401D425B4000B34516 /* Assets.xcassets */,
 				B83D4B421D425B4000B34516 /* LaunchScreen.storyboard */,
@@ -281,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83D4B721D426F0D00B34516 /* YHPCar.m in Sources */,
 				B83D4B3C1D425B4000B34516 /* ViewController.m in Sources */,
 				B83D4B391D425B4000B34516 /* AppDelegate.m in Sources */,
 				B83D4B691D425C0900B34516 /* YHPPerson.m in Sources */,
