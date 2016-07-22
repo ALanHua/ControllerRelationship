@@ -8,36 +8,10 @@
 
 #import "YHPPerson.h"
 
-@interface YHPPerson () <NSCopying>
+@interface YHPPerson ()
 
 @end
 
 @implementation YHPPerson
-
-static YHPPerson* _person;
-
-+(instancetype)allocWithZone:(struct _NSZone *)zone
-{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _person = [super allocWithZone:zone];
-    });
-    return _person;
-}
-/**
- *  单例
- */
-+(instancetype)sharePerson
-{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _person = [[self alloc]init];
-    });
-    return _person;
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    return _person;
-}
+YHPSingletonM
 @end

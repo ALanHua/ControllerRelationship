@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YHPSingleton.h"
 
 @interface YHPPerson : NSObject
 /** 名字 */
 @property(nonatomic,strong)NSString* name;
-
-+(instancetype)sharePerson;
+YHPSingletonH
 @end

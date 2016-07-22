@@ -54,6 +54,7 @@
 		B83D4B5B1D425B4000B34516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83D4B671D425C0900B34516 /* YHPPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPPerson.h; sourceTree = "<group>"; };
 		B83D4B681D425C0900B34516 /* YHPPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPPerson.m; sourceTree = "<group>"; };
+		B83D4B6D1D4262BA00B34516 /* YHPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPSingleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +116,7 @@
 				B83D4B341D425B4000B34516 /* Supporting Files */,
 				B83D4B671D425C0900B34516 /* YHPPerson.h */,
 				B83D4B681D425C0900B34516 /* YHPPerson.m */,
+				B83D4B6D1D4262BA00B34516 /* YHPSingleton.h */,
 			);
 			path = "10-多线程-单例模式";
 			sourceTree = "<group>";

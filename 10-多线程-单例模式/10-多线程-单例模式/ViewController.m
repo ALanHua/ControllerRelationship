@@ -25,7 +25,7 @@
     YHPPerson* p4 = [[YHPPerson alloc]init];
     NSLog(@"%p,%p,%p,%p",p1,p2,p3,p4);
     NSLog(@"%@,%@,%@,%@",p1.name,p2.name,p3.name,p4.name);
-    NSLog(@"%@,%@",[YHPPerson sharePerson],[YHPPerson sharePerson]);
+    NSLog(@"%@,%@",[YHPPerson shareInstance],[YHPPerson shareInstance]);
     
 }
 
