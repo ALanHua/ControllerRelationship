@@ -11,16 +11,64 @@
 
 @interface ViewController ()
 
+/** 队列 */
+@property(nonatomic,strong)NSOperationQueue* queue;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //  创建队列
+    NSOperationQueue* queue = [[NSOperationQueue alloc]init];
+    
+    //  设置最大并发操作数
+    queue.maxConcurrentOperationCount = 1;// 串行队列
+    
+//    [queue addOperationWithBlock:^{
+////        NSLog(@"download1---%@",[NSThread currentThread]);
+////        [NSThread sleepForTimeInterval:1];
+//        for (NSInteger i = 0; i < 5000; i++) {
+//             NSLog(@"download1---%@",[NSThread currentThread]);
+//        }
+//    }];
+//    [queue addOperationWithBlock:^{
+////        NSLog(@"download2---%@",[NSThread currentThread]);
+////        [NSThread sleepForTimeInterval:1];
+//        for (NSInteger i = 0; i < 5000; i++) {
+//            NSLog(@"download1---%@",[NSThread currentThread]);
+//        }
+//    }];
+//    [queue addOperationWithBlock:^{
+////        NSLog(@"download3---%@",[NSThread currentThread]);
+////        [NSThread sleepForTimeInterval:1];
+//        for (NSInteger i = 0; i < 1000; i++) {
+//            NSLog(@"download2---%@",[NSThread currentThread]);
+//        }
+//    }];
+//    [queue addOperationWithBlock:^{
+////        NSLog(@"download4---%@",[NSThread currentThread]);
+////        [NSThread sleepForTimeInterval:1];
+//        for (NSInteger i = 0; i < 1000; i++) {
+//            NSLog(@"download3---%@",[NSThread currentThread]);
+//        }
+//    }];
+    [queue addOperation:[[YHPNSOperation alloc]init]];
+
+    self.queue = queue;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+//    if (self.queue.isSuspended) {
+//        self.queue.suspended = NO;// 恢复队列
+//    }else{
+//        self.queue.suspended = YES;// 挂起队列
+//    }
+    [self.queue cancelAllOperations];
+}
+
+-(void)operationQueue3
 {
     //  创建队列
     NSOperationQueue* queue = [[NSOperationQueue alloc]init];
@@ -29,20 +77,20 @@
     queue.maxConcurrentOperationCount = 1;// 串行队列
     
     [queue addOperationWithBlock:^{
-         NSLog(@"download1---%@",[NSThread currentThread]);
+        NSLog(@"download1---%@",[NSThread currentThread]);
         [NSThread sleepForTimeInterval:0.01];
     }];
     [queue addOperationWithBlock:^{
         NSLog(@"download2---%@",[NSThread currentThread]);
-       [NSThread sleepForTimeInterval:0.01];
+        [NSThread sleepForTimeInterval:0.01];
     }];
     [queue addOperationWithBlock:^{
         NSLog(@"download3---%@",[NSThread currentThread]);
-       [NSThread sleepForTimeInterval:0.01];
+        [NSThread sleepForTimeInterval:0.01];
     }];
     [queue addOperationWithBlock:^{
         NSLog(@"download4---%@",[NSThread currentThread]);
-       [NSThread sleepForTimeInterval:0.01];
+        [NSThread sleepForTimeInterval:0.01];
     }];
 }
 

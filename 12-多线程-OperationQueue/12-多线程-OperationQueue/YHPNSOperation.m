@@ -15,6 +15,22 @@
  */
 -(void)main
 {
-    NSLog(@"YHPNSOperation----%@",[NSThread currentThread]);
+//    NSLog(@"YHPNSOperation----%@",[NSThread currentThread]);
+    for (NSInteger i = 0; i < 1000; i++) {
+        NSLog(@"YHPNSOperation--1-%@",[NSThread currentThread]);
+    }
+    if (self.isCancelled) {
+        return;
+    }// 苹果官方建议，自定义queue
+    
+    for (NSInteger i = 0; i < 1000; i++) {
+        NSLog(@"YHPNSOperation--2-%@",[NSThread currentThread]);
+    }
+    if (self.isCancelled) {
+        return;
+    }// 苹果官方建议,自定义queue
+    for (NSInteger i = 0; i < 1000; i++) {
+        NSLog(@"YHPNSOperation--3-%@",[NSThread currentThread]);
+    }
 }
 @end
