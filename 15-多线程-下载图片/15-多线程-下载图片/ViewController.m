@@ -142,6 +142,8 @@
                             // 存到字典中去
                             self.images[app.icon] = image;
                             [data writeToFile:file atomically:YES];
+                            // 移除操作
+                            [self.operations removeObjectForKey:app.icon];
                         }];
                     }
                 }];
