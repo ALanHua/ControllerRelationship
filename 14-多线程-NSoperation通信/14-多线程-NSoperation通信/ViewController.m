@@ -72,6 +72,11 @@
     [queue addOperation:combine];
 }
 
+
+-(void)test2
+{
+    
+}
 /**
  *  线程间通信
  */
