@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "YHPApp.h"
-#import "UIButton+WebCache.h"
+#import "UIImageView+WebCache.h"
+#import "SDWebImageManager.h"
 
 @interface ViewController ()
 
@@ -76,7 +77,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //  下载图片
+    [[SDWebImageManager sharedManager] downloadImageWithURL:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        
+    }];
 }
 
 #pragma mark - 数据源方法
@@ -92,8 +99,16 @@
     YHPApp* app = self.apps[indexPath.row];
     cell.textLabel.text = app.name;
     cell.detailTextLabel.text = app.download;
-
-
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:app.icon] placeholderImage:[UIImage imageNamed:@"qq"]];
+//
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:app.icon] placeholderImage:[UIImage imageNamed:@"qq"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        //expectedSize 期望大小
+        //receivedSize 已经接收大小
+        NSLog(@"%f",1.0 * receivedSize / expectedSize);
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        NSLog(@"图片下载完毕");
+    }];
+    //   SDwebImage的图片缓存周期是多久：默认1周
     
     return cell;
 }
