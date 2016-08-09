@@ -1,0 +1,5 @@
+platform  :ios,'9.3'
+use_frameworks!
+target '17-测试Pods' do
+pod 'SDWebImage'
+end
