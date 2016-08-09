@@ -78,6 +78,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    self.images = nil;
+    self.operations = nil;
+    [self.queue cancelAllOperations];
+}
+
 #pragma mark - 数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
