@@ -14,12 +14,36 @@
 
 @implementation ViewController
 
+
+- (IBAction)btnClick:(UIButton *)sender {
+    NSLog(@"---btnclik");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self timer];
+    [self obverser];
 
 }
+
+-(void)obverser
+{
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        NSLog(@"监听---%ld",activity);
+    });
+    //  添加观察者，监听RunLoop的状态
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    
+    // 释放
+    CFRelease(observer);
+
+}
+
+/**
+ *  core Foundation 
+ 1,凡是带有 Create Copy Retain 等函数都需要释放CFRelease(对象)
+ */
 
 -(void)timer2
 {
