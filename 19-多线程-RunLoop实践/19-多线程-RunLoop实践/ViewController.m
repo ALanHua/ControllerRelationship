@@ -26,25 +26,36 @@
 
 -(void)run
 {
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop]run];
+    /**
+     *  内存池会在进入秀面前清掉
+     */
+    @autoreleasepool {
+        [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop]run];
+    }
+
 }
 
 -(void)run3
 {
-   NSTimer* timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop]run];
+    @autoreleasepool {
+        NSTimer* timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSDefaultRunLoopMode];
+        [[NSRunLoop currentRunLoop]run];
+    }
     
 }
 
 -(void)run2
 {
+    @autoreleasepool {
+        // port 就相当于source
+        [[NSRunLoop currentRunLoop]addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+        [[NSRunLoop currentRunLoop]run];
+        NSLog(@"----end-----");
+    }
     NSLog(@"----run-----");
-    // port 就相当于source
-    [[NSRunLoop currentRunLoop]addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop]run];
-    NSLog(@"----end-----");
+
 //    [[NSRunLoop currentRunLoop]runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
 //    [[NSRunLoop currentRunLoop]runUntilDate:[NSDate distantFuture]];
 }
