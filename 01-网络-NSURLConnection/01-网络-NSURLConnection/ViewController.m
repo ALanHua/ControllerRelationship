@@ -42,10 +42,13 @@
         NSLog(@"%@",str);
         [[NSOperationQueue mainQueue]addOperationWithBlock:^{
 //            [SVProgressHUD dismiss]; 可以不写
+            NSInteger loc = [str rangeOfString:@"\":\""].location + 3;
+            NSUInteger len = [str rangeOfString:@"\"}"].location - loc;
+            NSString* msg = [str substringWithRange:NSMakeRange(loc, len)];
             if ([str containsString:@"Success"]) {
-                [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                [SVProgressHUD showSuccessWithStatus:msg];
             }else{
-                [SVProgressHUD showErrorWithStatus:@"登录失败"];
+                [SVProgressHUD showErrorWithStatus:msg];
             }
   
         }];
