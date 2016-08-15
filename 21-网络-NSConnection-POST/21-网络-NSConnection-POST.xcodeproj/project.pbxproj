@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8E1949D1D620FFF00E08C84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1949C1D620FFF00E08C84 /* main.m */; };
+		B8E194A01D620FFF00E08C84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1949F1D620FFF00E08C84 /* AppDelegate.m */; };
+		B8E194A31D620FFF00E08C84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E194A21D620FFF00E08C84 /* ViewController.m */; };
+		B8E194A61D620FFF00E08C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E194A41D620FFF00E08C84 /* Main.storyboard */; };
+		B8E194A81D620FFF00E08C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E194A71D620FFF00E08C84 /* Assets.xcassets */; };
+		B8E194AB1D620FFF00E08C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E194A91D620FFF00E08C84 /* LaunchScreen.storyboard */; };
+		B8E194B61D620FFF00E08C84 /* _1____NSConnection_POSTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E194B51D620FFF00E08C84 /* _1____NSConnection_POSTTests.m */; };
+		B8E194C11D620FFF00E08C84 /* _1____NSConnection_POSTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E194C01D620FFF00E08C84 /* _1____NSConnection_POSTUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8E194B21D620FFF00E08C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8E194901D620FFF00E08C84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8E194971D620FFF00E08C84;
+			remoteInfo = "21-网络-NSConnection-POST";
+		};
+		B8E194BD1D620FFF00E08C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8E194901D620FFF00E08C84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8E194971D620FFF00E08C84;
+			remoteInfo = "21-网络-NSConnection-POST";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B8E194981D620FFF00E08C84 /* 21-网络-NSConnection-POST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "21-网络-NSConnection-POST.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E1949C1D620FFF00E08C84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8E1949E1D620FFF00E08C84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B8E1949F1D620FFF00E08C84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B8E194A11D620FFF00E08C84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B8E194A21D620FFF00E08C84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B8E194A51D620FFF00E08C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8E194A71D620FFF00E08C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8E194AA1D620FFF00E08C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8E194AC1D620FFF00E08C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E194B11D620FFF00E08C84 /* 21-网络-NSConnection-POSTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "21-网络-NSConnection-POSTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E194B51D620FFF00E08C84 /* _1____NSConnection_POSTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1____NSConnection_POSTTests.m"; sourceTree = "<group>"; };
+		B8E194B71D620FFF00E08C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E194BC1D620FFF00E08C84 /* 21-网络-NSConnection-POSTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "21-网络-NSConnection-POSTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E194C01D620FFF00E08C84 /* _1____NSConnection_POSTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1____NSConnection_POSTUITests.m"; sourceTree = "<group>"; };
+		B8E194C21D620FFF00E08C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8E194951D620FFF00E08C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E194AE1D620FFF00E08C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E194B91D620FFF00E08C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B8E1948F1D620FFF00E08C84 = {
+			isa = PBXGroup;
+			children = (
+				B8E1949A1D620FFF00E08C84 /* 21-网络-NSConnection-POST */,
+				B8E194B41D620FFF00E08C84 /* 21-网络-NSConnection-POSTTests */,
+				B8E194BF1D620FFF00E08C84 /* 21-网络-NSConnection-POSTUITests */,
+				B8E194991D620FFF00E08C84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8E194991D620FFF00E08C84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8E194981D620FFF00E08C84 /* 21-网络-NSConnection-POST.app */,
+				B8E194B11D620FFF00E08C84 /* 21-网络-NSConnection-POSTTests.xctest */,
+				B8E194BC1D620FFF00E08C84 /* 21-网络-NSConnection-POSTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8E1949A1D620FFF00E08C84 /* 21-网络-NSConnection-POST */ = {
+			isa = PBXGroup;
+			children = (
+				B8E1949E1D620FFF00E08C84 /* AppDelegate.h */,
+				B8E1949F1D620FFF00E08C84 /* AppDelegate.m */,
+				B8E194A11D620FFF00E08C84 /* ViewController.h */,
+				B8E194A21D620FFF00E08C84 /* ViewController.m */,
+				B8E194A41D620FFF00E08C84 /* Main.storyboard */,
+				B8E194A71D620FFF00E08C84 /* Assets.xcassets */,
+				B8E194A91D620FFF00E08C84 /* LaunchScreen.storyboard */,
+				B8E194AC1D620FFF00E08C84 /* Info.plist */,
+				B8E1949B1D620FFF00E08C84 /* Supporting Files */,
+			);
+			path = "21-网络-NSConnection-POST";
+			sourceTree = "<group>";
+		};
+		B8E1949B1D620FFF00E08C84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8E1949C1D620FFF00E08C84 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8E194B41D620FFF00E08C84 /* 21-网络-NSConnection-POSTTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8E194B51D620FFF00E08C84 /* _1____NSConnection_POSTTests.m */,
+				B8E194B71D620FFF00E08C84 /* Info.plist */,
+			);
+			path = "21-网络-NSConnection-POSTTests";
+			sourceTree = "<group>";
+		};
+		B8E194BF1D620FFF00E08C84 /* 21-网络-NSConnection-POSTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B8E194C01D620FFF00E08C84 /* _1____NSConnection_POSTUITests.m */,
+				B8E194C21D620FFF00E08C84 /* Info.plist */,
+			);
+			path = "21-网络-NSConnection-POSTUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8E194971D620FFF00E08C84 /* 21-网络-NSConnection-POST */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E194C51D620FFF00E08C84 /* Build configuration list for PBXNativeTarget "21-网络-NSConnection-POST" */;
+			buildPhases = (
+				B8E194941D620FFF00E08C84 /* Sources */,
+				B8E194951D620FFF00E08C84 /* Frameworks */,
+				B8E194961D620FFF00E08C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "21-网络-NSConnection-POST";
+			productName = "21-网络-NSConnection-POST";
+			productReference = B8E194981D620FFF00E08C84 /* 21-网络-NSConnection-POST.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8E194B01D620FFF00E08C84 /* 21-网络-NSConnection-POSTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E194C81D620FFF00E08C84 /* Build configuration list for PBXNativeTarget "21-网络-NSConnection-POSTTests" */;
+			buildPhases = (
+				B8E194AD1D620FFF00E08C84 /* Sources */,
+				B8E194AE1D620FFF00E08C84 /* Frameworks */,
+				B8E194AF1D620FFF00E08C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8E194B31D620FFF00E08C84 /* PBXTargetDependency */,
+			);
+			name = "21-网络-NSConnection-POSTTests";
+			productName = "21-网络-NSConnection-POSTTests";
+			productReference = B8E194B11D620FFF00E08C84 /* 21-网络-NSConnection-POSTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8E194BB1D620FFF00E08C84 /* 21-网络-NSConnection-POSTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E194CB1D620FFF00E08C84 /* Build configuration list for PBXNativeTarget "21-网络-NSConnection-POSTUITests" */;
+			buildPhases = (
+				B8E194B81D620FFF00E08C84 /* Sources */,
+				B8E194B91D620FFF00E08C84 /* Frameworks */,
+				B8E194BA1D620FFF00E08C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8E194BE1D620FFF00E08C84 /* PBXTargetDependency */,
+			);
+			name = "21-网络-NSConnection-POSTUITests";
+			productName = "21-网络-NSConnection-POSTUITests";
+			productReference = B8E194BC1D620FFF00E08C84 /* 21-网络-NSConnection-POSTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8E194901D620FFF00E08C84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YHP;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = YouHuaPei;
+				TargetAttributes = {
+					B8E194971D620FFF00E08C84 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U9A585N65C;
+					};
+					B8E194B01D620FFF00E08C84 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U9A585N65C;
+						TestTargetID = B8E194971D620FFF00E08C84;
+					};
+					B8E194BB1D620FFF00E08C84 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U9A585N65C;
+						TestTargetID = B8E194971D620FFF00E08C84;
+					};
+				};
+			};
+			buildConfigurationList = B8E194931D620FFF00E08C84 /* Build configuration list for PBXProject "21-网络-NSConnection-POST" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8E1948F1D620FFF00E08C84;
+			productRefGroup = B8E194991D620FFF00E08C84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8E194971D620FFF00E08C84 /* 21-网络-NSConnection-POST */,
+				B8E194B01D620FFF00E08C84 /* 21-网络-NSConnection-POSTTests */,
+				B8E194BB1D620FFF00E08C84 /* 21-网络-NSConnection-POSTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8E194961D620FFF00E08C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E194AB1D620FFF00E08C84 /* LaunchScreen.storyboard in Resources */,
+				B8E194A81D620FFF00E08C84 /* Assets.xcassets in Resources */,
+				B8E194A61D620FFF00E08C84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E194AF1D620FFF00E08C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E194BA1D620FFF00E08C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8E194941D620FFF00E08C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E194A31D620FFF00E08C84 /* ViewController.m in Sources */,
+				B8E194A01D620FFF00E08C84 /* AppDelegate.m in Sources */,
+				B8E1949D1D620FFF00E08C84 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E194AD1D620FFF00E08C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E194B61D620FFF00E08C84 /* _1____NSConnection_POSTTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E194B81D620FFF00E08C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E194C11D620FFF00E08C84 /* _1____NSConnection_POSTUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8E194B31D620FFF00E08C84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8E194971D620FFF00E08C84 /* 21-网络-NSConnection-POST */;
+			targetProxy = B8E194B21D620FFF00E08C84 /* PBXContainerItemProxy */;
+		};
+		B8E194BE1D620FFF00E08C84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8E194971D620FFF00E08C84 /* 21-网络-NSConnection-POST */;
+			targetProxy = B8E194BD1D620FFF00E08C84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8E194A41D620FFF00E08C84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8E194A51D620FFF00E08C84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8E194A91D620FFF00E08C84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8E194AA1D620FFF00E08C84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8E194C31D620FFF00E08C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8E194C41D620FFF00E08C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8E194C61D620FFF00E08C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "21-网络-NSConnection-POST/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1----NSConnection-POST";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B8E194C71D620FFF00E08C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "21-网络-NSConnection-POST/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1----NSConnection-POST";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B8E194C91D620FFF00E08C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "21-网络-NSConnection-POSTTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1----NSConnection-POSTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/21-网络-NSConnection-POST.app/21-网络-NSConnection-POST";
+			};
+			name = Debug;
+		};
+		B8E194CA1D620FFF00E08C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "21-网络-NSConnection-POSTTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1----NSConnection-POSTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/21-网络-NSConnection-POST.app/21-网络-NSConnection-POST";
+			};
+			name = Release;
+		};
+		B8E194CC1D620FFF00E08C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "21-网络-NSConnection-POSTUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1----NSConnection-POSTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "21-网络-NSConnection-POST";
+			};
+			name = Debug;
+		};
+		B8E194CD1D620FFF00E08C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "21-网络-NSConnection-POSTUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1----NSConnection-POSTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "21-网络-NSConnection-POST";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8E194931D620FFF00E08C84 /* Build configuration list for PBXProject "21-网络-NSConnection-POST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E194C31D620FFF00E08C84 /* Debug */,
+				B8E194C41D620FFF00E08C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8E194C51D620FFF00E08C84 /* Build configuration list for PBXNativeTarget "21-网络-NSConnection-POST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E194C61D620FFF00E08C84 /* Debug */,
+				B8E194C71D620FFF00E08C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B8E194C81D620FFF00E08C84 /* Build configuration list for PBXNativeTarget "21-网络-NSConnection-POSTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E194C91D620FFF00E08C84 /* Debug */,
+				B8E194CA1D620FFF00E08C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B8E194CB1D620FFF00E08C84 /* Build configuration list for PBXNativeTarget "21-网络-NSConnection-POSTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E194CC1D620FFF00E08C84 /* Debug */,
+				B8E194CD1D620FFF00E08C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8E194901D620FFF00E08C84 /* Project object */;
+}
