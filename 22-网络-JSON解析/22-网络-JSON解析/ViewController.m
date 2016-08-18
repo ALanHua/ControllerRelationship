@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "UIImageView+WebCache.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "YHPVideo.h"
+#import "MJExtension.h"
+
 
 @interface ViewController ()
 
@@ -28,7 +31,8 @@
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
         NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        self.videos = dict[@"videos"];
+//        self.videos = dict[@"videos"];
+        self.videos = [YHPVideo mj_objectArrayWithKeyValuesArray:dict[@"videos"]];
         // 刷新表格
         [self.tableView reloadData];
     }];
@@ -44,10 +48,10 @@
 {
     static NSString* ID = @"video";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    NSDictionary* video = self.videos[indexPath.row];
-    cell.textLabel.text = video[@"name"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"时长:%@",video[@"length"]];
-    NSString* image = [@"http://120.25.226.186:32812" stringByAppendingPathComponent:video[@"image"]];
+    YHPVideo* video = self.videos[indexPath.row];
+    cell.textLabel.text = video.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"时长:%zd",video.length];
+    NSString* image = [@"http://120.25.226.186:32812" stringByAppendingPathComponent:video.image];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"小新"]];
     
     return cell;
@@ -56,8 +60,8 @@
 #pragma mark - 代理方法
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary* video = self.videos[indexPath.row];
-    NSString* urlString = [@"http://120.25.226.186:32812" stringByAppendingPathComponent:video[@"url"]];
+    YHPVideo* video = self.videos[indexPath.row];
+    NSString* urlString = [@"http://120.25.226.186:32812" stringByAppendingPathComponent:video.url];
     //  创建视频播放器
    MPMoviePlayerViewController* vc = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:urlString]];
     //  显示视频

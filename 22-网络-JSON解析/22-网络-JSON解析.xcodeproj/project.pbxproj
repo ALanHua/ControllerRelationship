@@ -15,6 +15,7 @@
 		B8E194EA1D636F5300E08C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E194E81D636F5300E08C84 /* LaunchScreen.storyboard */; };
 		B8E194F51D636F5300E08C84 /* _2____JSON__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E194F41D636F5300E08C84 /* _2____JSON__Tests.m */; };
 		B8E195001D636F5300E08C84 /* _2____JSON__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E194FF1D636F5300E08C84 /* _2____JSON__UITests.m */; };
+		B8F9E86B1D65E3FD009A0925 /* YHPVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F9E86A1D65E3FD009A0925 /* YHPVideo.m */; };
 		E2AA0E0BC900D85AAECB8296 /* Pods_22____JSON__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC96281746F114F0DD094C32 /* Pods_22____JSON__.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		B8E194FB1D636F5300E08C84 /* 22-网络-JSON解析UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "22-网络-JSON解析UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E194FF1D636F5300E08C84 /* _2____JSON__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_2____JSON__UITests.m"; sourceTree = "<group>"; };
 		B8E195011D636F5300E08C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8F9E8691D65E3FD009A0925 /* YHPVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPVideo.h; sourceTree = "<group>"; };
+		B8F9E86A1D65E3FD009A0925 /* YHPVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPVideo.m; sourceTree = "<group>"; };
 		DC96281746F114F0DD094C32 /* Pods_22____JSON__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_22____JSON__.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +121,8 @@
 			children = (
 				B8E194DD1D636F5300E08C84 /* AppDelegate.h */,
 				B8E194DE1D636F5300E08C84 /* AppDelegate.m */,
+				B8F9E8691D65E3FD009A0925 /* YHPVideo.h */,
+				B8F9E86A1D65E3FD009A0925 /* YHPVideo.m */,
 				B8E194E01D636F5300E08C84 /* ViewController.h */,
 				B8E194E11D636F5300E08C84 /* ViewController.m */,
 				B8E194E31D636F5300E08C84 /* Main.storyboard */,
@@ -350,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8E194E21D636F5300E08C84 /* ViewController.m in Sources */,
+				B8F9E86B1D65E3FD009A0925 /* YHPVideo.m in Sources */,
 				B8E194DF1D636F5300E08C84 /* AppDelegate.m in Sources */,
 				B8E194DC1D636F5300E08C84 /* main.m in Sources */,
 			);

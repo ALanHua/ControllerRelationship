@@ -3,4 +3,5 @@ platform :ios, "9.3"
 use_frameworks!
 target ‘22-网络-JSON解析’ do
    pod "SDWebImage"
+   pod "MJExtension"
 end
