@@ -11,33 +11,110 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "YHPVideo.h"
 #import "MJExtension.h"
+#import "GDataXMLNode.h"
 
-
-@interface ViewController ()
+@interface ViewController () <NSXMLParserDelegate>
 
 /** 视频数据 */
+@property(nonatomic,strong)NSMutableArray* videos;
+#if 0     // JSON
 @property(nonatomic,strong)NSArray* videos;
+#endif
+
 @end
 
 @implementation ViewController
 
+- (NSMutableArray *)videos
+{
+    if (!_videos) {
+        _videos = [NSMutableArray array];
+    }
+    return _videos;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 1,路径
+#if 0 // JSON
     NSURL* url = [NSURL URLWithString:@"http://120.25.226.186:32812/video"];
+#endif
+    NSURL* url = [NSURL URLWithString:@"http://120.25.226.186:32812/video?type=XML"];
     // 2，请求对象
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     // 3，发送请求
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+#if 0   // JSON 解析方式
         NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-//        self.videos = dict[@"videos"];
         self.videos = [YHPVideo mj_objectArrayWithKeyValuesArray:dict[@"videos"]];
+#endif
+#if 0  // NSXMLParser
+        NSXMLParser* parser = [[NSXMLParser alloc]initWithData:data];
+        // 设置代理 ，监听解析
+        parser.delegate = self;
+        // 开始解析
+        [parser parse]; // 阻塞方式
+#endif
+        GDataXMLDocument* doc = [[GDataXMLDocument alloc]initWithData:data error:nil];
+        //  获取vide 元素
+        NSArray* elements = [doc.rootElement elementsForName:@"video"];
+        for (GDataXMLElement* ele in elements) {
+            YHPVideo* video = [[YHPVideo alloc]init];
+            video.name = [[ele attributeForName:@"name"]stringValue];
+            video.image = [[ele attributeForName:@"image"]stringValue];
+            video.url = [[ele attributeForName:@"url"]stringValue];
+            video.length = [[[ele attributeForName:@"length"]stringValue]integerValue];
+            
+            [self.videos addObject:video];
+        }
+        
         // 刷新表格
         [self.tableView reloadData];
     }];
 }
 
+#pragma mark - <NSXMLParserDelegate>
+#if 0
+/*
+ *  解析到某个元素结尾
+ */
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+    
+}
+
+/*
+ *  解析到某个元素
+ */
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict
+{
+    if ([elementName isEqualToString:@"videos"]) {
+        return;
+    }
+    NSLog(@"%@",attributeDict);
+    YHPVideo* video = [YHPVideo mj_objectWithKeyValues:attributeDict];
+    
+    [self.videos addObject:video];
+    
+    
+}
+/*
+ *  开始解析
+ */
+-(void)parserDidStartDocument:(NSXMLParser *)parser
+{
+    
+}
+/**
+ *  解析完毕
+ */
+-(void)parserDidEndDocument:(NSXMLParser *)parser
+{
+    
+}
+#endif
 #pragma mark - 数据源方法
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

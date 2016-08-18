@@ -4,4 +4,5 @@ use_frameworks!
 target ‘22-网络-JSON解析’ do
    pod "SDWebImage"
    pod "MJExtension"
+   pod "GDataXML-HTML"
 end
