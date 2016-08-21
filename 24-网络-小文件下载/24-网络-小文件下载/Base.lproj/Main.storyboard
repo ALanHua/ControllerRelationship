@@ -16,8 +16,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qjr-S5-Wdv">
+                                <rect key="frame" x="50" y="70" width="500" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Faw-c8-MHF"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qjr-S5-Wdv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="4HC-yk-PC3"/>
+                            <constraint firstAttribute="trailing" secondItem="qjr-S5-Wdv" secondAttribute="trailing" constant="50" id="hCM-Eg-5Cy"/>
+                            <constraint firstItem="qjr-S5-Wdv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="lIQ-Cv-Ia1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="qjr-S5-Wdv" id="FNA-O1-gE5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
