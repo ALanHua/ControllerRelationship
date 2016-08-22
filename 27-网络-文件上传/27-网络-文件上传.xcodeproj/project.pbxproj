@@ -16,6 +16,8 @@
 		B84272851D6B420F00BA3815 /* _7________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B84272841D6B420F00BA3815 /* _7________Tests.m */; };
 		B84272901D6B420F00BA3815 /* _7________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B842728F1D6B420F00BA3815 /* _7________UITests.m */; };
 		B842729E1D6B53B600BA3815 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = B842729D1D6B53B600BA3815 /* Foundation+Log.m */; };
+		B84272A01D6B5B2200BA3815 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B842729F1D6B5B2200BA3815 /* MobileCoreServices.framework */; };
+		B84272A31D6B5BD900BA3815 /* NSString+YHPMIMEType.m in Sources */ = {isa = PBXBuildFile; fileRef = B84272A21D6B5BD900BA3815 /* NSString+YHPMIMEType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		B842728F1D6B420F00BA3815 /* _7________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_7________UITests.m"; sourceTree = "<group>"; };
 		B84272911D6B420F00BA3815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B842729D1D6B53B600BA3815 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Foundation+Log.m"; path = "../../../../../Downloads/06-网络/0713JSON:XML:解压缩/0713JSONXML解压缩/代码/10-掌握-文件上传/10-掌握-文件上传/Foundation+Log.m"; sourceTree = "<group>"; };
+		B842729F1D6B5B2200BA3815 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B84272A11D6B5BD900BA3815 /* NSString+YHPMIMEType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YHPMIMEType.h"; sourceTree = "<group>"; };
+		B84272A21D6B5BD900BA3815 /* NSString+YHPMIMEType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YHPMIMEType.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84272A01D6B5B2200BA3815 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,9 @@
 		B842725E1D6B420E00BA3815 = {
 			isa = PBXGroup;
 			children = (
+				B84272A11D6B5BD900BA3815 /* NSString+YHPMIMEType.h */,
+				B84272A21D6B5BD900BA3815 /* NSString+YHPMIMEType.m */,
+				B842729F1D6B5B2200BA3815 /* MobileCoreServices.framework */,
 				B84272691D6B420F00BA3815 /* 27-网络-文件上传 */,
 				B84272831D6B420F00BA3815 /* 27-网络-文件上传Tests */,
 				B842728E1D6B420F00BA3815 /* 27-网络-文件上传UITests */,
@@ -278,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84272721D6B420F00BA3815 /* ViewController.m in Sources */,
+				B84272A31D6B5BD900BA3815 /* NSString+YHPMIMEType.m in Sources */,
 				B842726F1D6B420F00BA3815 /* AppDelegate.m in Sources */,
 				B842726C1D6B420F00BA3815 /* main.m in Sources */,
 				B842729E1D6B53B600BA3815 /* Foundation+Log.m in Sources */,

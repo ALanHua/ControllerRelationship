@@ -7,6 +7,8 @@
 //  好恶心-----写过一次再也不想写了
 
 #import "ViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "NSString+YHPMIMEType.h"
 
 #define YHPBoundary         @"520it"   // 顺便写暂时
 #define YHPEncode(string)   [string dataUsingEncoding:NSUTF8StringEncoding]
@@ -20,6 +22,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSLog(@"%@", [ViewController mimeTypeForFileAtPath:@"/Users/smartwater/Downloads/LuckyCenterButton@2x.png"]);
+    NSLog(@"1-%@", [@"/Users/smartwater/Downloads/LuckyCenterButton@2x.png" MIMEType]);
+    NSLog(@"2-%@", [@"/Users/smartwater/Downloads/LuckyCenterButton@2x.png" MIMEType2]);
+}
+
+
++(NSString *)mimeTypeForFileAtPath:(NSString *)path
+{
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        return nil;
+    }
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge  CFStringRef)[path pathExtension], NULL);
+    CFStringRef MIMEType = UTTypeCopyPreferredTagWithClass (UTI, kUTTagClassMIMEType);
+    CFRelease(UTI);
+    if (!MIMEType) {
+        return @"application/octet-stream";
+    }
+    return (__bridge NSString *)MIMEType;
+}
+
+-(void)getMINIEType
+{
+    NSURL* url = [NSURL fileURLWithPath:@"/Users/smartwater/Downloads/LuckyCenterButton@2x.png"];
+    NSLog(@"%@",[self getMIMEType:url]);
+}
+
+-(NSString*)getMIMEType:(NSURL*)url
+{
+    NSURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+    NSURLResponse* response = nil;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    return response.MIMEType;
+}
+
+-(void)getMIMETypeAsync
+{
+    NSURL* url = [NSURL URLWithString:@"file:///Users/smartwater/Downloads/LuckyCenterButton@2x.png"];
+    NSURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+            NSLog(@"%@",response.MIMEType);
+        }];
+}
+-(void)upLoadData
+{
     //    创建请求
     NSURL* url = [NSURL URLWithString:@"http://120.25.226.186:32812/upload"];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
@@ -85,9 +131,6 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
         NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
     }];
-    
 }
-
-
 
 @end
