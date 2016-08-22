@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9414442DC28632FEAEA7A435 /* libPods-26-网络-解压缩.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2D3C6C63A77864ABAA4DDF /* libPods-26-网络-解压缩.a */; };
+		B82EFE6D1D6B371C00672F86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B82EFE6C1D6B371C00672F86 /* main.m */; };
+		B82EFE701D6B371C00672F86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B82EFE6F1D6B371C00672F86 /* AppDelegate.m */; };
+		B82EFE731D6B371C00672F86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82EFE721D6B371C00672F86 /* ViewController.m */; };
+		B82EFE761D6B371C00672F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82EFE741D6B371C00672F86 /* Main.storyboard */; };
+		B82EFE781D6B371C00672F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFE771D6B371C00672F86 /* Assets.xcassets */; };
+		B82EFE7B1D6B371C00672F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82EFE791D6B371C00672F86 /* LaunchScreen.storyboard */; };
+		B82EFE861D6B371C00672F86 /* _6_______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B82EFE851D6B371C00672F86 /* _6_______Tests.m */; };
+		B82EFE911D6B371C00672F86 /* _6_______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B82EFE901D6B371C00672F86 /* _6_______UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B82EFE821D6B371C00672F86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B82EFE601D6B371C00672F86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B82EFE671D6B371C00672F86;
+			remoteInfo = "26-网络-解压缩";
+		};
+		B82EFE8D1D6B371C00672F86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B82EFE601D6B371C00672F86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B82EFE671D6B371C00672F86;
+			remoteInfo = "26-网络-解压缩";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DFDCC1BEA502630DDB69564 /* Pods-26-网络-解压缩.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-26-网络-解压缩.release.xcconfig"; path = "Pods/Target Support Files/Pods-26-网络-解压缩/Pods-26-网络-解压缩.release.xcconfig"; sourceTree = "<group>"; };
+		9480D4E0247B9F64B0A26A34 /* Pods-26-网络-解压缩.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-26-网络-解压缩.debug.xcconfig"; path = "Pods/Target Support Files/Pods-26-网络-解压缩/Pods-26-网络-解压缩.debug.xcconfig"; sourceTree = "<group>"; };
+		B82EFE681D6B371C00672F86 /* 26-网络-解压缩.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "26-网络-解压缩.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82EFE6C1D6B371C00672F86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B82EFE6E1D6B371C00672F86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B82EFE6F1D6B371C00672F86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B82EFE711D6B371C00672F86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B82EFE721D6B371C00672F86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B82EFE751D6B371C00672F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B82EFE771D6B371C00672F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B82EFE7A1D6B371C00672F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B82EFE7C1D6B371C00672F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82EFE811D6B371C00672F86 /* 26-网络-解压缩Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "26-网络-解压缩Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82EFE851D6B371C00672F86 /* _6_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_6_______Tests.m"; sourceTree = "<group>"; };
+		B82EFE871D6B371C00672F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82EFE8C1D6B371C00672F86 /* 26-网络-解压缩UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "26-网络-解压缩UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82EFE901D6B371C00672F86 /* _6_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_6_______UITests.m"; sourceTree = "<group>"; };
+		B82EFE921D6B371C00672F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA2D3C6C63A77864ABAA4DDF /* libPods-26-网络-解压缩.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-26-网络-解压缩.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B82EFE651D6B371C00672F86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9414442DC28632FEAEA7A435 /* libPods-26-网络-解压缩.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82EFE7E1D6B371C00672F86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82EFE891D6B371C00672F86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F1B5670F52A8D3AFE2D823C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9480D4E0247B9F64B0A26A34 /* Pods-26-网络-解压缩.debug.xcconfig */,
+				3DFDCC1BEA502630DDB69564 /* Pods-26-网络-解压缩.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B82EFE5F1D6B371C00672F86 = {
+			isa = PBXGroup;
+			children = (
+				B82EFE6A1D6B371C00672F86 /* 26-网络-解压缩 */,
+				B82EFE841D6B371C00672F86 /* 26-网络-解压缩Tests */,
+				B82EFE8F1D6B371C00672F86 /* 26-网络-解压缩UITests */,
+				B82EFE691D6B371C00672F86 /* Products */,
+				3F1B5670F52A8D3AFE2D823C /* Pods */,
+				F7645194B3B06026DB616FA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B82EFE691D6B371C00672F86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B82EFE681D6B371C00672F86 /* 26-网络-解压缩.app */,
+				B82EFE811D6B371C00672F86 /* 26-网络-解压缩Tests.xctest */,
+				B82EFE8C1D6B371C00672F86 /* 26-网络-解压缩UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B82EFE6A1D6B371C00672F86 /* 26-网络-解压缩 */ = {
+			isa = PBXGroup;
+			children = (
+				B82EFE6E1D6B371C00672F86 /* AppDelegate.h */,
+				B82EFE6F1D6B371C00672F86 /* AppDelegate.m */,
+				B82EFE711D6B371C00672F86 /* ViewController.h */,
+				B82EFE721D6B371C00672F86 /* ViewController.m */,
+				B82EFE741D6B371C00672F86 /* Main.storyboard */,
+				B82EFE771D6B371C00672F86 /* Assets.xcassets */,
+				B82EFE791D6B371C00672F86 /* LaunchScreen.storyboard */,
+				B82EFE7C1D6B371C00672F86 /* Info.plist */,
+				B82EFE6B1D6B371C00672F86 /* Supporting Files */,
+			);
+			path = "26-网络-解压缩";
+			sourceTree = "<group>";
+		};
+		B82EFE6B1D6B371C00672F86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B82EFE6C1D6B371C00672F86 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B82EFE841D6B371C00672F86 /* 26-网络-解压缩Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B82EFE851D6B371C00672F86 /* _6_______Tests.m */,
+				B82EFE871D6B371C00672F86 /* Info.plist */,
+			);
+			path = "26-网络-解压缩Tests";
+			sourceTree = "<group>";
+		};
+		B82EFE8F1D6B371C00672F86 /* 26-网络-解压缩UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B82EFE901D6B371C00672F86 /* _6_______UITests.m */,
+				B82EFE921D6B371C00672F86 /* Info.plist */,
+			);
+			path = "26-网络-解压缩UITests";
+			sourceTree = "<group>";
+		};
+		F7645194B3B06026DB616FA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA2D3C6C63A77864ABAA4DDF /* libPods-26-网络-解压缩.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B82EFE671D6B371C00672F86 /* 26-网络-解压缩 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82EFE951D6B371C00672F86 /* Build configuration list for PBXNativeTarget "26-网络-解压缩" */;
+			buildPhases = (
+				47565B5F9256C2D2584FE06C /* [CP] Check Pods Manifest.lock */,
+				B82EFE641D6B371C00672F86 /* Sources */,
+				B82EFE651D6B371C00672F86 /* Frameworks */,
+				B82EFE661D6B371C00672F86 /* Resources */,
+				2D79F0FCC2674C211929C130 /* [CP] Embed Pods Frameworks */,
+				28C0606A18FDA54420829610 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "26-网络-解压缩";
+			productName = "26-网络-解压缩";
+			productReference = B82EFE681D6B371C00672F86 /* 26-网络-解压缩.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B82EFE801D6B371C00672F86 /* 26-网络-解压缩Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82EFE981D6B371C00672F86 /* Build configuration list for PBXNativeTarget "26-网络-解压缩Tests" */;
+			buildPhases = (
+				B82EFE7D1D6B371C00672F86 /* Sources */,
+				B82EFE7E1D6B371C00672F86 /* Frameworks */,
+				B82EFE7F1D6B371C00672F86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B82EFE831D6B371C00672F86 /* PBXTargetDependency */,
+			);
+			name = "26-网络-解压缩Tests";
+			productName = "26-网络-解压缩Tests";
+			productReference = B82EFE811D6B371C00672F86 /* 26-网络-解压缩Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B82EFE8B1D6B371C00672F86 /* 26-网络-解压缩UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B82EFE9B1D6B371C00672F86 /* Build configuration list for PBXNativeTarget "26-网络-解压缩UITests" */;
+			buildPhases = (
+				B82EFE881D6B371C00672F86 /* Sources */,
+				B82EFE891D6B371C00672F86 /* Frameworks */,
+				B82EFE8A1D6B371C00672F86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B82EFE8E1D6B371C00672F86 /* PBXTargetDependency */,
+			);
+			name = "26-网络-解压缩UITests";
+			productName = "26-网络-解压缩UITests";
+			productReference = B82EFE8C1D6B371C00672F86 /* 26-网络-解压缩UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B82EFE601D6B371C00672F86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YHP;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = YouHuaPei;
+				TargetAttributes = {
+					B82EFE671D6B371C00672F86 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U9A585N65C;
+					};
+					B82EFE801D6B371C00672F86 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U9A585N65C;
+						TestTargetID = B82EFE671D6B371C00672F86;
+					};
+					B82EFE8B1D6B371C00672F86 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U9A585N65C;
+						TestTargetID = B82EFE671D6B371C00672F86;
+					};
+				};
+			};
+			buildConfigurationList = B82EFE631D6B371C00672F86 /* Build configuration list for PBXProject "26-网络-解压缩" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B82EFE5F1D6B371C00672F86;
+			productRefGroup = B82EFE691D6B371C00672F86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B82EFE671D6B371C00672F86 /* 26-网络-解压缩 */,
+				B82EFE801D6B371C00672F86 /* 26-网络-解压缩Tests */,
+				B82EFE8B1D6B371C00672F86 /* 26-网络-解压缩UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B82EFE661D6B371C00672F86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82EFE7B1D6B371C00672F86 /* LaunchScreen.storyboard in Resources */,
+				B82EFE781D6B371C00672F86 /* Assets.xcassets in Resources */,
+				B82EFE761D6B371C00672F86 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82EFE7F1D6B371C00672F86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82EFE8A1D6B371C00672F86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28C0606A18FDA54420829610 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-26-网络-解压缩/Pods-26-网络-解压缩-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D79F0FCC2674C211929C130 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-26-网络-解压缩/Pods-26-网络-解压缩-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47565B5F9256C2D2584FE06C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B82EFE641D6B371C00672F86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82EFE731D6B371C00672F86 /* ViewController.m in Sources */,
+				B82EFE701D6B371C00672F86 /* AppDelegate.m in Sources */,
+				B82EFE6D1D6B371C00672F86 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82EFE7D1D6B371C00672F86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82EFE861D6B371C00672F86 /* _6_______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82EFE881D6B371C00672F86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82EFE911D6B371C00672F86 /* _6_______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B82EFE831D6B371C00672F86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B82EFE671D6B371C00672F86 /* 26-网络-解压缩 */;
+			targetProxy = B82EFE821D6B371C00672F86 /* PBXContainerItemProxy */;
+		};
+		B82EFE8E1D6B371C00672F86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B82EFE671D6B371C00672F86 /* 26-网络-解压缩 */;
+			targetProxy = B82EFE8D1D6B371C00672F86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B82EFE741D6B371C00672F86 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B82EFE751D6B371C00672F86 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B82EFE791D6B371C00672F86 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B82EFE7A1D6B371C00672F86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B82EFE931D6B371C00672F86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B82EFE941D6B371C00672F86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B82EFE961D6B371C00672F86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9480D4E0247B9F64B0A26A34 /* Pods-26-网络-解压缩.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Headers/Public",
+					"${PODS_ROOT}/Headers/Public/SSZipArchive",
+					"$(PODS_ROOT)",
+				);
+				INFOPLIST_FILE = "26-网络-解压缩/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B82EFE971D6B371C00672F86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DFDCC1BEA502630DDB69564 /* Pods-26-网络-解压缩.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Headers/Public",
+					"${PODS_ROOT}/Headers/Public/SSZipArchive",
+					"$(PODS_ROOT)",
+				);
+				INFOPLIST_FILE = "26-网络-解压缩/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B82EFE991D6B371C00672F86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "26-网络-解压缩Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/26-网络-解压缩.app/26-网络-解压缩";
+			};
+			name = Debug;
+		};
+		B82EFE9A1D6B371C00672F86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "26-网络-解压缩Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/26-网络-解压缩.app/26-网络-解压缩";
+			};
+			name = Release;
+		};
+		B82EFE9C1D6B371C00672F86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "26-网络-解压缩UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "26-网络-解压缩";
+			};
+			name = Debug;
+		};
+		B82EFE9D1D6B371C00672F86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "26-网络-解压缩UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "26-网络-解压缩";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B82EFE631D6B371C00672F86 /* Build configuration list for PBXProject "26-网络-解压缩" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82EFE931D6B371C00672F86 /* Debug */,
+				B82EFE941D6B371C00672F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B82EFE951D6B371C00672F86 /* Build configuration list for PBXNativeTarget "26-网络-解压缩" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82EFE961D6B371C00672F86 /* Debug */,
+				B82EFE971D6B371C00672F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B82EFE981D6B371C00672F86 /* Build configuration list for PBXNativeTarget "26-网络-解压缩Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82EFE991D6B371C00672F86 /* Debug */,
+				B82EFE9A1D6B371C00672F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B82EFE9B1D6B371C00672F86 /* Build configuration list for PBXNativeTarget "26-网络-解压缩UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82EFE9C1D6B371C00672F86 /* Debug */,
+				B82EFE9D1D6B371C00672F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B82EFE601D6B371C00672F86 /* Project object */;
+}
