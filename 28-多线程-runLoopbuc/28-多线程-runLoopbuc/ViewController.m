@@ -14,6 +14,11 @@
 
 @implementation ViewController
 
+/**
+ *  kCFRunLoopEntry; // 创建一个自动释放池
+ *  kCFRunLoopBeforeWaiting; // 销毁自动释放池，创建一个新的自动释放池
+  * kCFRunLoopExit; // 销毁自动释放池
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     
