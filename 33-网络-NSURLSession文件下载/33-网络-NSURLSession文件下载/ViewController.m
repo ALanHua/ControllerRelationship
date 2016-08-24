@@ -8,8 +8,15 @@
 
 #import "ViewController.h"
 
+#define YHPResumeDataFile   [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)lastObject]stringByAppendingPathComponent:@"resumeData.tmp"]
 @interface ViewController () <NSURLSessionDownloadDelegate>
-
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+/** 下载任务 */
+@property(nonatomic,strong)NSURLSessionDownloadTask* task;
+/** 保存上一次的下载信息 */
+@property(nonatomic,strong)NSData* resumeData;
+/** NSSession */
+@property(nonatomic,strong)NSURLSession* session;
 @end
 
 @implementation ViewController
@@ -19,19 +26,56 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (NSURLSession *)session
 {
-    [self download];
+    if (_session == nil) {
+        _session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
+    }
+    return _session;
+}
+
+-(NSData *)resumeData
+{
+    if (_resumeData == nil) {
+        _resumeData = [NSData dataWithContentsOfFile:YHPResumeDataFile];
+    }
+    return _resumeData;
+}
+
+- (IBAction)start:(UIButton *)sender {
+    if (self.resumeData) {
+        self.task = [self.session downloadTaskWithResumeData:self.resumeData];
+        [self.task resume];
+    }else{
+        [self download];
+    }
+
+}
+
+- (IBAction)goOn:(UIButton *)sender {
+//    [self.task resume]; //
+    // 断点下载
+    self.task = [self.session downloadTaskWithResumeData:self.resumeData];
+    [self.task resume];
+}
+
+- (IBAction)pause:(UIButton *)sender {
+//    [self.task suspend];
+    // 取消下载任务
+   [self.task cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+       self.resumeData = resumeData;
+       // 将resumeData写入沙盒保存起来，继续下载，下次读取数据继续下载
+       [resumeData writeToFile:YHPResumeDataFile atomically:YES];
+   }];
 }
 
 -(void)download
 {
-    NSURLSession* session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc]init]];
     
     NSURL* url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_15.mp4"];
-    NSURLSessionDownloadTask* task = [session downloadTaskWithURL:url];
+    self.task = [self.session downloadTaskWithURL:url];
     
-    [task resume];
+    [self.task resume];
 }
 #pragma mark - <NSURLSessionDownloadDelegate>
 
@@ -57,8 +101,10 @@
  */
 -(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
 {
-//     NSLog(@"didWriteData");
-    NSLog(@"--------%f",1.0 * totalBytesWritten / totalBytesExpectedToWrite);
+//    NSLog(@"--------%f",1.0 * totalBytesWritten / totalBytesExpectedToWrite);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progressView.progress = 1.0 * totalBytesWritten / totalBytesExpectedToWrite;
+    });
 }
 /*
  * 下载完毕调用
