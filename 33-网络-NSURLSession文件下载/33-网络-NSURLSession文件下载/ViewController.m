@@ -34,21 +34,25 @@
     return _session;
 }
 
--(NSData *)resumeData
-{
-    if (_resumeData == nil) {
-        _resumeData = [NSData dataWithContentsOfFile:YHPResumeDataFile];
-    }
-    return _resumeData;
-}
+//-(NSData *)resumeData
+//{
+//    if (_resumeData == nil) {
+//        _resumeData = [NSData dataWithContentsOfFile:YHPResumeDataFile];
+//    }
+//    return _resumeData;
+//}
 
 - (IBAction)start:(UIButton *)sender {
-    if (self.resumeData) {
-        self.task = [self.session downloadTaskWithResumeData:self.resumeData];
-        [self.task resume];
-    }else{
-        [self download];
-    }
+//    if (self.resumeData) {
+//        self.task = [self.session downloadTaskWithResumeData:self.resumeData];
+//        // 将上一次的临时文件方法temp
+//        
+//        // [self.task resume];
+//    }else{
+//        [self download];
+//    }
+    
+  [self download];
 
 }
 
@@ -64,10 +68,32 @@
     // 取消下载任务
    [self.task cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
        self.resumeData = resumeData;
+       
+       
+       
        // 将resumeData写入沙盒保存起来，继续下载，下次读取数据继续下载
-       [resumeData writeToFile:YHPResumeDataFile atomically:YES];
+//       [resumeData writeToFile:YHPResumeDataFile atomically:YES];
+//       
+//        // 临时文件
+//       NSString* tmp = NSTemporaryDirectory();
+//       NSFileManager* mgr = [NSFileManager defaultManager];
+//       NSArray* subpath = [mgr subpathsAtPath:tmp];
+//       NSString* file = [tmp stringByAppendingPathComponent:[subpath lastObject]];
+//       
+//       NSString* caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];
+//       NSString* cachesTempFile = [caches stringByAppendingPathComponent:[file lastPathComponent]];
+//       [mgr moveItemAtPath:file toPath:cachesTempFile error:nil];
+//       
+//       [@{@"tempFile":cachesTempFile} writeToFile:[caches stringByAppendingPathComponent:@"tempFile.plist"] atomically:YES];
    }];
 }
+
+/**
+ 请求:http://120.25.226.186:32812/resources/videos/minion_15.mp4
+ 设置请求头
+ Range:1024 ---
+ *  响应头
+ */
 
 -(void)download
 {
@@ -81,7 +107,8 @@
 
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
-    NSLog(@"didCompleteWithError");
+//    NSLog(@"didCompleteWithError");
+    self.resumeData = error.userInfo[NSURLSessionDownloadTaskResumeData];
 }
 /*
  * 写入数据到临时文件时,会调用
