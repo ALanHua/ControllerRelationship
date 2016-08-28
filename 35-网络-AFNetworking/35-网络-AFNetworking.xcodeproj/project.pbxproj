@@ -16,6 +16,7 @@
 		B84274791D6F32A900BA3815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84274771D6F32A900BA3815 /* LaunchScreen.storyboard */; };
 		B84274841D6F32A900BA3815 /* _5____AFNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B84274831D6F32A900BA3815 /* _5____AFNetworkingTests.m */; };
 		B842748F1D6F32A900BA3815 /* _5____AFNetworkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B842748E1D6F32A900BA3815 /* _5____AFNetworkingUITests.m */; };
+		B84E41271D732A9200DB9E40 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E41261D732A9200DB9E40 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		B842748A1D6F32A900BA3815 /* 35-网络-AFNetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "35-网络-AFNetworkingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B842748E1D6F32A900BA3815 /* _5____AFNetworkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_5____AFNetworkingUITests.m"; sourceTree = "<group>"; };
 		B84274901D6F32A900BA3815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B84E41251D732A9200DB9E40 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		B84E41261D732A9200DB9E40 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				B842746D1D6F32A900BA3815 /* AppDelegate.m */,
 				B842746F1D6F32A900BA3815 /* ViewController.h */,
 				B84274701D6F32A900BA3815 /* ViewController.m */,
+				B84E41251D732A9200DB9E40 /* Reachability.h */,
+				B84E41261D732A9200DB9E40 /* Reachability.m */,
 				B84274721D6F32A900BA3815 /* Main.storyboard */,
 				B84274751D6F32A900BA3815 /* Assets.xcassets */,
 				B84274771D6F32A900BA3815 /* LaunchScreen.storyboard */,
@@ -351,6 +356,7 @@
 			files = (
 				B84274711D6F32A900BA3815 /* ViewController.m in Sources */,
 				B842746E1D6F32A900BA3815 /* AppDelegate.m in Sources */,
+				B84E41271D732A9200DB9E40 /* Reachability.m in Sources */,
 				B842746B1D6F32A900BA3815 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +505,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
-					"${SRCROOT}",
+					"${SRCROOT}/**",
 				);
 				INFOPLIST_FILE = "35-网络-AFNetworking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -522,7 +528,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
-					"${SRCROOT}",
+					"${SRCROOT}/**",
 				);
 				INFOPLIST_FILE = "35-网络-AFNetworking/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
