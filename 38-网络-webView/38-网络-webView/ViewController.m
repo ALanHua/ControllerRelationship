@@ -29,13 +29,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    self.webView.delegate =self;
+//    [self.webView loadHTMLString:@"<html><body>哈哈哈</body></html>" baseURL:nil];
+//    NSURL* url = [NSURL fileURLWithPath:@"/Users/smartwater/Downloads/01.pptx"];
+//    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+//    [self.webView loadRequest:request];
+    [self loadRequest2];
+  
+}
+-(void)loadRequest2
+{
+
+    self.webView.delegate =self;
+    
+    // 检测各种特殊字符串
+    self.webView.dataDetectorTypes = UIDataDetectorTypeAll;
+    
+    NSURL* url = [[NSBundle mainBundle]URLForResource:@"test" withExtension:@"html"];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+    // 距离顶部下拉20
+    self.webView.scrollView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+}
+
+-(void)loadRequest
+{
     // Native + HTML5
-    NSURL* url = [NSURL URLWithString:@"https://www.baidu.com/"];
+    NSURL* url = [NSURL URLWithString:@"http://www.520it.com/"];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     
     self.webView.delegate =self;
-    [self.webView loadRequest:request];
+    // 网页内容自适应
+    self.webView.scalesPageToFit = YES;
     
+    [self.webView loadRequest:request];
+    // 距离顶部下拉20
+    self.webView.scrollView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 }
 
 #pragma mark - <UIWebViewDelegate>
