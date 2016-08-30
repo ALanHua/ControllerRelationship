@@ -55,6 +55,24 @@
     self.backItem.enabled = webView.canGoBack;
     self.forwardItem.enabled = webView.canGoForward;
 }
-
+/**
+ *  每当webView即将发送一个请求之间，都会调用这个方法
+ *
+ *  @param webView        <#webView description#>
+ *  @param request        <#request description#>
+ *  @param navigationType <#navigationType description#>
+ *
+ *  @return YES: 允许加载这个请求
+             NO:  静止加载这个请求
+ */
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSLog(@"%@",request.URL);
+    if ([request.URL.absoluteString containsString:@"video"]) {
+        return NO;
+    }
+    
+    return YES;
+}
 
 @end
