@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 #import <JavaScriptCore/JSContextRef.h>
-
+#import "NSObject+YHPExtension.h"
+// 去除Xcode编译警告
+//#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//#pragma clang diagnostic pop
 @interface ViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
@@ -30,6 +34,9 @@
     [super viewDidLoad];
    
     [self.webView loadRequest:[NSURLRequest requestWithURL: [[NSBundle mainBundle]URLForResource:@"index" withExtension:@"html"]]];
+//    [self performSelector:@selector(call:) withObjects:@[@"10086"]];
+//    [self performSelector:@selector(sendMessage:number2:number3:) withObjects:
+//                    @[[NSNull null],@"200",@"300"]];
 }
 
 -(void)call:(NSString*)number
@@ -39,9 +46,9 @@
     NSLog(@"%s,%@",__func__,number);
 }
 
--(void)sendMessage:(NSString*)number
+-(void)sendMessage:(NSString*)number number2:(NSString*)number2 number3:(NSString*)number3
 {
-    NSLog(@"%s,%@",__func__,number);
+    NSLog(@"%s,%@,%@,%@",__func__,number,number2,number3);
 }
 
 -(void)openCamera:(NSString*)number
@@ -73,8 +80,13 @@
         NSArray* subPaths = [path componentsSeparatedByString:@"?"];
         // 方法名
         NSString* methodName = [[subPaths firstObject] stringByReplacingOccurrencesOfString:@"_" withString:@":"];
-        NSString* params = [subPaths lastObject];
-        [self performSelector:NSSelectorFromString(methodName) withObject:params];
+        
+        NSArray* subParams = nil;
+        NSString* param = [subPaths lastObject];
+        if ([param containsString:@"&"]) {
+            subParams = [param componentsSeparatedByString:@"&"];
+        }
+        [self performSelector:NSSelectorFromString(methodName) withObjects:subParams];
         return  NO;
     }
     

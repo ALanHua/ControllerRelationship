@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80302EF1D7729BD00BE49FD /* NSObject+YHPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B80302EE1D7729BD00BE49FD /* NSObject+YHPExtension.m */; };
 		B84E41F91D75D19000DB9E40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E41F81D75D19000DB9E40 /* main.m */; };
 		B84E41FC1D75D19000DB9E40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E41FB1D75D19000DB9E40 /* AppDelegate.m */; };
 		B84E41FF1D75D19000DB9E40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E41FE1D75D19000DB9E40 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B80302ED1D7729B900BE49FD /* NSObject+YHPExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YHPExtension.h"; sourceTree = "<group>"; };
+		B80302EE1D7729BD00BE49FD /* NSObject+YHPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YHPExtension.m"; sourceTree = "<group>"; };
 		B84E41F41D75D19000DB9E40 /* 39-网络-网页相关.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "39-网络-网页相关.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84E41F81D75D19000DB9E40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B84E41FA1D75D19000DB9E40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 		B84E41F71D75D19000DB9E40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B80302ED1D7729B900BE49FD /* NSObject+YHPExtension.h */,
+				B80302EE1D7729BD00BE49FD /* NSObject+YHPExtension.m */,
 				B84E41F81D75D19000DB9E40 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -281,6 +286,7 @@
 				B84E41FF1D75D19000DB9E40 /* ViewController.m in Sources */,
 				B84E41FC1D75D19000DB9E40 /* AppDelegate.m in Sources */,
 				B84E41F91D75D19000DB9E40 /* main.m in Sources */,
+				B80302EF1D7729BD00BE49FD /* NSObject+YHPExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +512,7 @@
 				B84E42231D75D19000DB9E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B84E42241D75D19000DB9E40 /* Build configuration list for PBXNativeTarget "39-网络-网页相关Tests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +521,7 @@
 				B84E42261D75D19000DB9E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B84E42271D75D19000DB9E40 /* Build configuration list for PBXNativeTarget "39-网络-网页相关UITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +530,7 @@
 				B84E42291D75D19000DB9E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
