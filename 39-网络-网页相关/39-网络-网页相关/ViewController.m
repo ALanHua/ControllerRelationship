@@ -37,6 +37,20 @@
 //    [self performSelector:@selector(call:) withObjects:@[@"10086"]];
 //    [self performSelector:@selector(sendMessage:number2:number3:) withObjects:
 //                    @[[NSNull null],@"200",@"300"]];
+    
+}
+// 程序崩溃分析报告
+
+
+-(void)exceptionTryCatch
+{
+        @try {
+            // 正常代码逻辑
+        } @catch (NSException *exception) {
+            NSLog(@"---代码异常------");
+        } @finally {
+            NSLog(@"finally");
+        }
 }
 
 -(void)call:(NSString*)number
@@ -80,13 +94,13 @@
         NSArray* subPaths = [path componentsSeparatedByString:@"?"];
         // 方法名
         NSString* methodName = [[subPaths firstObject] stringByReplacingOccurrencesOfString:@"_" withString:@":"];
-        
-        NSArray* subParams = nil;
-        NSString* param = [subPaths lastObject];
-        if ([param containsString:@"&"]) {
-            subParams = [param componentsSeparatedByString:@"&"];
+        // 参数
+        NSArray* params = nil;
+        if (subPaths.count == 2) {
+           params = [[subPaths lastObject]componentsSeparatedByString:@"&"];
         }
-        [self performSelector:NSSelectorFromString(methodName) withObjects:subParams];
+        
+        [self performSelector:NSSelectorFromString(methodName) withObjects:params];
         return  NO;
     }
     

@@ -15,7 +15,9 @@
     NSMethodSignature* signature = [[self class] instanceMethodSignatureForSelector:selector];
     
     if (signature == nil) {
-        return nil;
+        // 抛异常
+//       @throw [NSException exceptionWithName:@"error" reason:@"方法找不到" userInfo:nil];
+        [NSException raise:@"error" format:@"%@",NSStringFromSelector(selector)];
     }
     
     NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:signature];

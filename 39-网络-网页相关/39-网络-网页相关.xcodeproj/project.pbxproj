@@ -110,6 +110,8 @@
 				B84E41FB1D75D19000DB9E40 /* AppDelegate.m */,
 				B84E41FD1D75D19000DB9E40 /* ViewController.h */,
 				B84E41FE1D75D19000DB9E40 /* ViewController.m */,
+				B80302ED1D7729B900BE49FD /* NSObject+YHPExtension.h */,
+				B80302EE1D7729BD00BE49FD /* NSObject+YHPExtension.m */,
 				B84E42001D75D19000DB9E40 /* Main.storyboard */,
 				B84E42031D75D19000DB9E40 /* Assets.xcassets */,
 				B84E42051D75D19000DB9E40 /* LaunchScreen.storyboard */,
@@ -123,8 +125,6 @@
 		B84E41F71D75D19000DB9E40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B80302ED1D7729B900BE49FD /* NSObject+YHPExtension.h */,
-				B80302EE1D7729BD00BE49FD /* NSObject+YHPExtension.m */,
 				B84E41F81D75D19000DB9E40 /* main.m */,
 			);
 			name = "Supporting Files";

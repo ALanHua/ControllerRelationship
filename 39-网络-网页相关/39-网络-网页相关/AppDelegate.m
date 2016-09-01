@@ -14,9 +14,37 @@
 
 @implementation AppDelegate
 
+/**
+ *  崩溃统计：
+ *  1,友盟
+ *  2，Flurry
+ *  3,Crashlytics
+ */
 
+/*
+ *  拦截异常
+ */
+void handleException2(NSException* exception)
+{
+   
+    NSMutableDictionary* info = [NSMutableDictionary dictionary];
+    info[@"callStack"] =  [exception callStackSymbols];// 调用栈信息，错误来源
+    info[@"name"] = [exception name];  // 异常名字
+    info[@"reason"] = [exception reason]; // 报错理由
+    // 写入沙盒
+}
+
+void handleException(NSException* exception)
+{
+    
+  
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 读取沙盒信息
+    
+    // 设置捕获异常回调
+    NSSetUncaughtExceptionHandler(handleException);
+    
     return YES;
 }
 

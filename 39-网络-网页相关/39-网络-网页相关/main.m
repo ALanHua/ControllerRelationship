@@ -10,7 +10,24 @@
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
+    
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+
+}
+/**
+ *  非主流
+ */
+void tryCatchMainException(void)
+{
+    @try {
+//        @autoreleasepool {
+//            return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+//        }
+    } @catch (NSException *exception) {
+        NSLog(@"-----%@",exception);
+    } @finally {
+        
     }
 }
