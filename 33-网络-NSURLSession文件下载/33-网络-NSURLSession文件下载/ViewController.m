@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-#define YHPMp4File   [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)lastObject]stringByAppendingPathComponent:@"test.mp4"]
+#define YHPMp4File          [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)lastObject]stringByAppendingPathComponent:@"test.mp4"]
+// 文件下载长度
+#define YHPDownloadLength   [[[NSFileManager defaultManager]attributesOfItemAtPath:YHPMp4File error:nil][NSFileSize] integerValue]
+
 @interface ViewController () <NSURLSessionDataDelegate>
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 /** 下载任务 */
@@ -18,7 +21,7 @@
 /** 写入文件的流对象 */
 @property(nonatomic,strong)NSOutputStream* stream;
 /** 文件总长度 */
-@property(nonatomic,assign)NSInteger contentLength;
+@property(nonatomic,assign)NSInteger totalLength;
 @end
 
 @implementation ViewController
@@ -26,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSFileManager defaultManager] removeItemAtPath:YHPMp4File error:nil];
+//    [[NSFileManager defaultManager] removeItemAtPath:YHPMp4File error:nil];
 }
 
 - (NSURLSession *)session
@@ -48,8 +51,14 @@
 - (IBAction)start:(UIButton *)sender {
 
     NSURL* url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_15.mp4"];
-    self.task = [self.session dataTaskWithURL:url];
+    // 创建请求
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+    // 设置请求头
+    // Range:bytes=xxx-xxx
+    NSString* range = [NSString stringWithFormat:@"bytes=%ld-",YHPDownloadLength];
+    [request setValue:range forHTTPHeaderField:@"Range"];
     
+    self.task = [self.session dataTaskWithRequest:request];
     [self.task resume];
 
 
@@ -75,8 +84,8 @@
 {
     // 打开流
     [self.stream open];
-    // 获得文件总长度
-    self.contentLength = [response.allHeaderFields[@"Content-Length"]integerValue];
+    // 获得服务器这一返回文件的总长度
+    self.totalLength = [response.allHeaderFields[@"Content-Length"]integerValue] + YHPDownloadLength;
     // 接收响应,允许接收服务器数据
     completionHandler(NSURLSessionResponseAllow);
     
@@ -88,11 +97,9 @@
 {
     // 写入数据
     [self.stream write:data.bytes maxLength:data.length];
-
-    NSInteger downloadLemgth = [[[NSFileManager defaultManager]attributesOfItemAtPath:YHPMp4File error:nil][NSFileSize] integerValue];
     // 下载进度
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.progressView.progress = 1.0 * downloadLemgth  / self.contentLength;
+        self.progressView.progress = 1.0 * YHPDownloadLength  / self.totalLength;
     });
 
 }
