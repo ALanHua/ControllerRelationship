@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UIAlertViewDelegate>
 
 @end
 
@@ -33,12 +33,26 @@ void handleException2(NSException* exception)
     info[@"reason"] = [exception reason]; // 报错理由
     // 写入沙盒
 }
+-(void)handle
+{
+    UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:@"sb Project" delegate:self cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+    [alertView show];
+    // 重新启动RunLoop
+    [[NSRunLoop currentRunLoop]addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop]run];
+}
 
 void handleException(NSException* exception)
 {
-    
-  
+    [[UIApplication sharedApplication].delegate performSelector:@selector(handle)];
 }
+
+#pragma mark - <UIAlertViewDelegate>
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    exit(0);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 读取沙盒信息
     

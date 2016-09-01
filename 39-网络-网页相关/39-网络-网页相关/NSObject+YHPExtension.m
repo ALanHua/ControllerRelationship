@@ -23,8 +23,10 @@
     NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:signature];
     invocation.target = self;
     invocation.selector = selector;
+    NSInteger paramsCount = signature.numberOfArguments-2;
+    paramsCount = MIN(paramsCount, objects.count);
     // 设置参数
-    for (NSInteger i = 0; i<objects.count; i++) {
+    for (NSInteger i = 0; i < paramsCount; i++) {
         id object = objects[i];
         if ([object isKindOfClass:[NSNull class]]) {
             continue;

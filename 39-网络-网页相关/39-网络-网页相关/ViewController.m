@@ -37,10 +37,13 @@
 //    [self performSelector:@selector(call:) withObjects:@[@"10086"]];
 //    [self performSelector:@selector(sendMessage:number2:number3:) withObjects:
 //                    @[[NSNull null],@"200",@"300"]];
-    
+    [self performSelector:@selector(call:) withObjects:@[]];
 }
 // 程序崩溃分析报告
 
+- (IBAction)btnClick:(UIBarButtonItem *)sender {
+    @[][0];
+}
 
 -(void)exceptionTryCatch
 {

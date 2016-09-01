@@ -33,7 +33,13 @@
                             <constraint firstAttribute="trailing" secondItem="3h5-Fc-iW1" secondAttribute="trailing" id="rW8-Ib-5Lx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pWw-Cm-kUb"/>
+                    <navigationItem key="navigationItem" id="pWw-Cm-kUb">
+                        <barButtonItem key="leftBarButtonItem" title="Test" id="Wb4-xH-Lba">
+                            <connections>
+                                <action selector="btnClick:" destination="BYZ-38-t0r" id="VKj-kP-G9L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="3h5-Fc-iW1" id="rFB-VR-Q5x"/>
                     </connections>
