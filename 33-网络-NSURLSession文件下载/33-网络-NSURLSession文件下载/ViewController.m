@@ -7,10 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "NSString+Hash.h"
 
-#define YHPMp4File          [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)lastObject]stringByAppendingPathComponent:@"test.mp4"]
+// 所需要下载的文件的URL
+#define YHPFileURL   @"http://120.25.226.186:32812/resources/videos/minion_15.mp4"
+// 文件名
+#define YHPFileName  YHPFileURL.md5String
+// 沙盒里的文件名
+#define YHPMp4FileFullPath  [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)lastObject]stringByAppendingPathComponent:YHPFileName]
+
+// 存储文件总长度的文件路径
+#define YHPTotalLengthFullPath  [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES)lastObject]stringByAppendingPathComponent:@"totalLength.plist"]
+
 // 文件下载长度
-#define YHPDownloadLength   [[[NSFileManager defaultManager]attributesOfItemAtPath:YHPMp4File error:nil][NSFileSize] integerValue]
+#define YHPDownloadLength   [[[NSFileManager defaultManager]attributesOfItemAtPath:YHPMp4FileFullPath error:nil][NSFileSize] integerValue]
 
 @interface ViewController () <NSURLSessionDataDelegate>
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
@@ -28,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    NSLog(@"%@",YHPMp4FileFullPath);
 //    [[NSFileManager defaultManager] removeItemAtPath:YHPMp4File error:nil];
 }
 
@@ -43,31 +53,37 @@
 -(NSOutputStream *)stream
 {
     if (_stream == nil) {
-        _stream = [NSOutputStream outputStreamToFileAtPath:YHPMp4File append:YES];
+        _stream = [NSOutputStream outputStreamToFileAtPath:YHPMp4FileFullPath append:YES];
     }
     return _stream;
 }
 
+- (NSURLSessionDataTask *)task
+{
+    if (_task == nil) {
+        NSInteger totalLength = [[NSDictionary dictionaryWithContentsOfFile:YHPTotalLengthFullPath][YHPFileName] integerValue];
+        if (totalLength && YHPDownloadLength == totalLength) {
+            return nil;
+        }
+        
+        NSURL* url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_15.mp4"];
+        // 创建请求
+        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+        // 设置请求头
+        // Range:bytes=xxx-xxx
+        NSString* range = [NSString stringWithFormat:@"bytes=%ld-",YHPDownloadLength];
+        [request setValue:range forHTTPHeaderField:@"Range"];
+        _task = [self.session dataTaskWithRequest:request];
+    }
+    
+    return _task;
+}
+
 - (IBAction)start:(UIButton *)sender {
-
-    NSURL* url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_15.mp4"];
-    // 创建请求
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
-    // 设置请求头
-    // Range:bytes=xxx-xxx
-    NSString* range = [NSString stringWithFormat:@"bytes=%ld-",YHPDownloadLength];
-    [request setValue:range forHTTPHeaderField:@"Range"];
-    
-    self.task = [self.session dataTaskWithRequest:request];
+    // 启动任务
     [self.task resume];
-
-
 }
 
-- (IBAction)goOn:(UIButton *)sender {
-    [self.task resume];
-    
-}
 /**
  *  暂停下载
  */
@@ -86,6 +102,14 @@
     [self.stream open];
     // 获得服务器这一返回文件的总长度
     self.totalLength = [response.allHeaderFields[@"Content-Length"]integerValue] + YHPDownloadLength;
+    // 存取总长度
+    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithContentsOfFile:YHPTotalLengthFullPath];
+    if (dict == nil) {
+        dict = [NSMutableDictionary dictionary];
+    }
+    dict[YHPFileName] = @(self.totalLength);
+    [dict writeToFile:YHPTotalLengthFullPath atomically:YES];
+    
     // 接收响应,允许接收服务器数据
     completionHandler(NSURLSessionResponseAllow);
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80302F41D7B1C2300BE49FD /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = B80302F31D7B1C2300BE49FD /* NSString+Hash.m */; };
+		B80302F71D7B27AF00BE49FD /* YHPDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B80302F61D7B27AF00BE49FD /* YHPDownLoadManager.m */; };
 		B84273ED1D6DE63D00BA3815 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B84273EC1D6DE63D00BA3815 /* main.m */; };
 		B84273F01D6DE63D00BA3815 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B84273EF1D6DE63D00BA3815 /* AppDelegate.m */; };
 		B84273F31D6DE63D00BA3815 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84273F21D6DE63D00BA3815 /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B80302F21D7B1C2300BE49FD /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		B80302F31D7B1C2300BE49FD /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		B80302F51D7B27AF00BE49FD /* YHPDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPDownLoadManager.h; sourceTree = "<group>"; };
+		B80302F61D7B27AF00BE49FD /* YHPDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPDownLoadManager.m; sourceTree = "<group>"; };
 		B84273E81D6DE63D00BA3815 /* 33-网络-NSURLSession文件下载.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "33-网络-NSURLSession文件下载.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84273EC1D6DE63D00BA3815 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B84273EE1D6DE63D00BA3815 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B80302F11D7B1C2300BE49FD /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				B80302F21D7B1C2300BE49FD /* NSString+Hash.h */,
+				B80302F31D7B1C2300BE49FD /* NSString+Hash.m */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
 		B84273DF1D6DE63D00BA3815 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +121,9 @@
 				B84273F11D6DE63D00BA3815 /* ViewController.h */,
 				B84273F21D6DE63D00BA3815 /* ViewController.m */,
 				B84273F41D6DE63D00BA3815 /* Main.storyboard */,
+				B80302F51D7B27AF00BE49FD /* YHPDownLoadManager.h */,
+				B80302F61D7B27AF00BE49FD /* YHPDownLoadManager.m */,
+				B80302F11D7B1C2300BE49FD /* MD5 */,
 				B84273F71D6DE63D00BA3815 /* Assets.xcassets */,
 				B84273F91D6DE63D00BA3815 /* LaunchScreen.storyboard */,
 				B84273FC1D6DE63D00BA3815 /* Info.plist */,
@@ -275,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84273F31D6DE63D00BA3815 /* ViewController.m in Sources */,
+				B80302F71D7B27AF00BE49FD /* YHPDownLoadManager.m in Sources */,
+				B80302F41D7B1C2300BE49FD /* NSString+Hash.m in Sources */,
 				B84273F01D6DE63D00BA3815 /* AppDelegate.m in Sources */,
 				B84273ED1D6DE63D00BA3815 /* main.m in Sources */,
 			);
@@ -502,6 +522,7 @@
 				B84274171D6DE63E00BA3815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B84274181D6DE63E00BA3815 /* Build configuration list for PBXNativeTarget "33-网络-NSURLSession文件下载Tests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +531,7 @@
 				B842741A1D6DE63E00BA3815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B842741B1D6DE63E00BA3815 /* Build configuration list for PBXNativeTarget "33-网络-NSURLSession文件下载UITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +540,7 @@
 				B842741D1D6DE63E00BA3815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
