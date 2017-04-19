@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>isConsumable</key>
+		<true/>
+		<key>productId</key>
+		<string>iapdemo.huojian</string>
+	</dict>
+	<dict>
+		<key>isConsumable</key>
+		<false/>
+		<key>productId</key>
+		<string>iapdemo.car</string>
+	</dict>
+	<dict>
+		<key>isConsumable</key>
+		<true/>
+		<key>productId</key>
+		<string>iapdemo.huanledou</string>
+	</dict>
+	<dict>
+		<key>isConsumable</key>
+		<false/>
+		<key>productId</key>
+		<string>iapdemo.shenzhuang</string>
+	</dict>
+	<dict>
+		<key>isConsumable</key>
+		<false/>
+		<key>productId</key>
+		<string>iapdemo.xiaomianyang</string>
+	</dict>
+	<dict>
+		<key>isConsumable</key>
+		<true/>
+		<key>productId</key>
+		<string>iapdemo.hongzuan</string>
+	</dict>
+</array>
+</plist>
