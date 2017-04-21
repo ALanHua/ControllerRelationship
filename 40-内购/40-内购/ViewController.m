@@ -13,6 +13,7 @@
 @interface ViewController ()<SKProductsRequestDelegate,SKPaymentTransactionObserver>
 /** 所有商品 */
 @property(nonatomic,strong)NSArray* products;
+
 @end
 
 @implementation ViewController
@@ -30,6 +31,25 @@
     request.delegate = self;
     [request start];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    // 添加观察者
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    // 移除观察者
+    [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
+}
+
+#pragma mark - 恢复购买
+- (IBAction)restore:(id)sender {
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
 }
 
 #pragma mark - <SKProductsRequestDelegate>
@@ -79,8 +99,6 @@
     SKPayment* payment = [SKPayment paymentWithProduct:product];
     // 2，将票据加入到队列中
     [[SKPaymentQueue defaultQueue]addPayment:payment];
-    // 添加观察者
-    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 }
 
 #pragma mark - <SKPaymentTransactionObserver>

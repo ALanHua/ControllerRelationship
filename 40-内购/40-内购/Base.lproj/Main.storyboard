@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dfb-k4-eXv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="dfb-k4-eXv">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfb-k4-eXv" id="0O4-yp-SAr">
@@ -32,7 +32,13 @@
                             <outlet property="delegate" destination="5Hr-5k-90A" id="bM7-xI-FQc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hkK-Lt-WvC"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="hkK-Lt-WvC">
+                        <barButtonItem key="rightBarButtonItem" title="恢复" id="WoT-1j-hXV">
+                            <connections>
+                                <action selector="restore:" destination="5Hr-5k-90A" id="Lnr-m5-YJr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7e-24-RYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
