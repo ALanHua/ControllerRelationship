@@ -53,7 +53,7 @@
         <!--朋友圈-->
         <scene sceneID="VeW-Fb-6IL">
             <objects>
-                <viewController id="DIq-mw-0Pn" sceneMemberID="viewController">
+                <viewController id="DIq-mw-0Pn" customClass="TimeLineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vby-Rh-trN"/>
                         <viewControllerLayoutGuide type="bottom" id="U2h-v3-6qg"/>
@@ -61,7 +61,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ap5-6f-Qht">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-dJ-qHj">
+                                <rect key="frame" x="157.5" y="318.5" width="60" height="30"/>
+                                <state key="normal" title="跳回APP"/>
+                                <connections>
+                                    <action selector="backToApp:" destination="DIq-mw-0Pn" eventType="touchUpInside" id="53S-Zs-36X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hJB-dJ-qHj" firstAttribute="centerX" secondItem="Ap5-6f-Qht" secondAttribute="centerX" id="4tW-27-mD5"/>
+                            <constraint firstItem="hJB-dJ-qHj" firstAttribute="centerY" secondItem="Ap5-6f-Qht" secondAttribute="centerY" id="nI6-ju-db5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="朋友圈" id="i6S-Dt-Q3Y"/>
                 </viewController>

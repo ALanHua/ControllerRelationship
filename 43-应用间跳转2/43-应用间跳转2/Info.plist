@@ -5,6 +5,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
+		<string>news</string>
 	</array>
 	<key>CFBundleDisplayName</key>
 	<string></string>

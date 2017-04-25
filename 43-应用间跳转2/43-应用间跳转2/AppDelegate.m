@@ -23,11 +23,15 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+//    self.url = url.absoluteString;
     // url 转成字符串
     NSString* urlString = url.absoluteString;
     // 获取控制器
     UINavigationController* rootNav = (UINavigationController*)self.window.rootViewController;
+    [rootNav popToRootViewControllerAnimated:YES];
+    
     ViewController* homeVc = [rootNav.childViewControllers firstObject];
+    homeVc.urlString = url.absoluteString;
     
     if ([urlString containsString:@"session"]) {
         [homeVc performSegueWithIdentifier:@"homeToSession" sender:nil];

@@ -15,6 +15,7 @@
 		B85AF8F61EAAF82E006940F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85AF8F41EAAF82E006940F2 /* LaunchScreen.storyboard */; };
 		B85AF9011EAAF82F006940F2 /* _3______2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B85AF9001EAAF82F006940F2 /* _3______2Tests.m */; };
 		B85AF90C1EAAF82F006940F2 /* _3______2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B85AF90B1EAAF82F006940F2 /* _3______2UITests.m */; };
+		B8C9C3E51EAE531700873096 /* TimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C9C3E41EAE531700873096 /* TimeLineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		B85AF9071EAAF82F006940F2 /* 43-应用间跳转2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "43-应用间跳转2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85AF90B1EAAF82F006940F2 /* _3______2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_3______2UITests.m"; sourceTree = "<group>"; };
 		B85AF90D1EAAF82F006940F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C9C3E31EAE531700873096 /* TimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineViewController.h; sourceTree = "<group>"; };
+		B8C9C3E41EAE531700873096 /* TimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				B85AF8F41EAAF82E006940F2 /* LaunchScreen.storyboard */,
 				B85AF8F71EAAF82E006940F2 /* Info.plist */,
 				B85AF8E61EAAF82E006940F2 /* Supporting Files */,
+				B8C9C3E31EAE531700873096 /* TimeLineViewController.h */,
+				B8C9C3E41EAE531700873096 /* TimeLineViewController.m */,
 			);
 			path = "43-应用间跳转2";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85AF8EE1EAAF82E006940F2 /* ViewController.m in Sources */,
+				B8C9C3E51EAE531700873096 /* TimeLineViewController.m in Sources */,
 				B85AF8EB1EAAF82E006940F2 /* AppDelegate.m in Sources */,
 				B85AF8E81EAAF82E006940F2 /* main.m in Sources */,
 			);
@@ -427,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "43-应用间跳转2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3------2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "43-应用间跳转2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3------2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +517,7 @@
 				B85AF9121EAAF82F006940F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B85AF9131EAAF82F006940F2 /* Build configuration list for PBXNativeTarget "43-应用间跳转2Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +526,7 @@
 				B85AF9151EAAF82F006940F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B85AF9161EAAF82F006940F2 /* Build configuration list for PBXNativeTarget "43-应用间跳转2UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +535,7 @@
 				B85AF9181EAAF82F006940F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

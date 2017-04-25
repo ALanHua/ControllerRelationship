@@ -30,11 +30,11 @@
 }
 
 - (IBAction)skipToTimeline {
-   [self openURLWithString:@"weixin://timeline"];
+   [self openURLWithString:@"weixin://timeline?news"];
 }
 
 - (IBAction)skipToSession {
-   [self openURLWithString:@"weixin://session"];
+   [self openURLWithString:@"weixin://session?news"];
 }
 
 -(void)openURLWithString:(NSString*)url
