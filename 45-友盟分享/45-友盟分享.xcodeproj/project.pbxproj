@@ -30,6 +30,12 @@
 		B84FBA591EB0FB42003D18DF /* libUMSocialLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA491EB0FB42003D18DF /* libUMSocialLog.a */; };
 		B84FBA5A1EB0FB42003D18DF /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B84FBA4B1EB0FB42003D18DF /* UMSocialSDKResources.bundle */; };
 		B84FBA5B1EB0FB42003D18DF /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA4C1EB0FB42003D18DF /* UShareUI.framework */; };
+		B84FBA5E1EB24698003D18DF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA5D1EB24698003D18DF /* libsqlite3.tbd */; };
+		B84FBA601EB246A2003D18DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA5F1EB246A2003D18DF /* CoreGraphics.framework */; };
+		B84FBA621EB246D3003D18DF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA611EB246D3003D18DF /* SystemConfiguration.framework */; };
+		B84FBA641EB246DF003D18DF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA631EB246DF003D18DF /* CoreTelephony.framework */; };
+		B84FBA661EB246F1003D18DF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA651EB246F1003D18DF /* libc++.tbd */; };
+		B84FBA681EB246FD003D18DF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B84FBA671EB246FD003D18DF /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +107,12 @@
 		B84FBA491EB0FB42003D18DF /* libUMSocialLog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSocialLog.a; sourceTree = "<group>"; };
 		B84FBA4B1EB0FB42003D18DF /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
 		B84FBA4C1EB0FB42003D18DF /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
+		B84FBA5D1EB24698003D18DF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B84FBA5F1EB246A2003D18DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B84FBA611EB246D3003D18DF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B84FBA631EB246DF003D18DF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B84FBA651EB246F1003D18DF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B84FBA671EB246FD003D18DF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84FBA681EB246FD003D18DF /* libz.tbd in Frameworks */,
+				B84FBA661EB246F1003D18DF /* libc++.tbd in Frameworks */,
+				B84FBA5E1EB24698003D18DF /* libsqlite3.tbd in Frameworks */,
+				B84FBA641EB246DF003D18DF /* CoreTelephony.framework in Frameworks */,
+				B84FBA621EB246D3003D18DF /* SystemConfiguration.framework in Frameworks */,
+				B84FBA601EB246A2003D18DF /* CoreGraphics.framework in Frameworks */,
 				B84FBA561EB0FB42003D18DF /* UMSocialCore.framework in Frameworks */,
 				B84FBA541EB0FB42003D18DF /* libWeChatSDK.a in Frameworks */,
 				B84FBA521EB0FB42003D18DF /* libSocialUniqueId.a in Frameworks */,
@@ -146,6 +164,7 @@
 				B84FBA051EB0FB26003D18DF /* 45-友盟分享Tests */,
 				B84FBA101EB0FB26003D18DF /* 45-友盟分享UITests */,
 				B84FB9EA1EB0FB26003D18DF /* Products */,
+				B84FBA5C1EB24698003D18DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -322,6 +341,19 @@
 				B84FBA4C1EB0FB42003D18DF /* UShareUI.framework */,
 			);
 			path = UMSocialUI;
+			sourceTree = "<group>";
+		};
+		B84FBA5C1EB24698003D18DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B84FBA671EB246FD003D18DF /* libz.tbd */,
+				B84FBA651EB246F1003D18DF /* libc++.tbd */,
+				B84FBA631EB246DF003D18DF /* CoreTelephony.framework */,
+				B84FBA611EB246D3003D18DF /* SystemConfiguration.framework */,
+				B84FBA5F1EB246A2003D18DF /* CoreGraphics.framework */,
+				B84FBA5D1EB24698003D18DF /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
