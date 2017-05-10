@@ -33,6 +33,8 @@
     localNote.soundName = UILocalNotificationDefaultSoundName;
     // 设置图标数字
     localNote.applicationIconBadgeNumber = 100;
+    // 设置额外信息
+    localNote.userInfo = @{@"type":@1};
     // 3,调用通知
     [[UIApplication sharedApplication]scheduleLocalNotification:localNote];
 }
