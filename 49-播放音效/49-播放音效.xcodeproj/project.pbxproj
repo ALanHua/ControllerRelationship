@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8AFAC4C1ED5DE3F007FAC5D /* YHPAudioTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAC4B1ED5DE3F007FAC5D /* YHPAudioTools.m */; };
 		B8F8BF541ED47D4A00A4D155 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F8BF531ED47D4A00A4D155 /* main.m */; };
 		B8F8BF571ED47D4A00A4D155 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F8BF561ED47D4A00A4D155 /* AppDelegate.m */; };
 		B8F8BF5A1ED47D4A00A4D155 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F8BF591ED47D4A00A4D155 /* ViewController.m */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8AFAC4A1ED5DE3F007FAC5D /* YHPAudioTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPAudioTools.h; sourceTree = "<group>"; };
+		B8AFAC4B1ED5DE3F007FAC5D /* YHPAudioTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPAudioTools.m; sourceTree = "<group>"; };
 		B8F8BF4F1ED47D4A00A4D155 /* 49-播放音效.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "49-播放音效.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F8BF531ED47D4A00A4D155 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8F8BF551ED47D4A00A4D155 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				B8F8BF581ED47D4A00A4D155 /* ViewController.h */,
 				B8F8BF591ED47D4A00A4D155 /* ViewController.m */,
 				B8F8BF5B1ED47D4A00A4D155 /* Main.storyboard */,
+				B8AFAC4A1ED5DE3F007FAC5D /* YHPAudioTools.h */,
+				B8AFAC4B1ED5DE3F007FAC5D /* YHPAudioTools.m */,
 				B8F8BF5E1ED47D4A00A4D155 /* Assets.xcassets */,
 				B8F8BF601ED47D4A00A4D155 /* LaunchScreen.storyboard */,
 				B8F8BF631ED47D4A00A4D155 /* Info.plist */,
@@ -363,6 +368,7 @@
 			files = (
 				B8F8BF5A1ED47D4A00A4D155 /* ViewController.m in Sources */,
 				B8F8BF571ED47D4A00A4D155 /* AppDelegate.m in Sources */,
+				B8AFAC4C1ED5DE3F007FAC5D /* YHPAudioTools.m in Sources */,
 				B8F8BF541ED47D4A00A4D155 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +603,7 @@
 				B8F8BF7E1ED47D4A00A4D155 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8F8BF7F1ED47D4A00A4D155 /* Build configuration list for PBXNativeTarget "49-播放音效Tests" */ = {
 			isa = XCConfigurationList;
@@ -605,6 +612,7 @@
 				B8F8BF811ED47D4A00A4D155 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8F8BF821ED47D4A00A4D155 /* Build configuration list for PBXNativeTarget "49-播放音效UITests" */ = {
 			isa = XCConfigurationList;
@@ -613,6 +621,7 @@
 				B8F8BF841ED47D4A00A4D155 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
