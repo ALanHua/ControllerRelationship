@@ -37,6 +37,9 @@ static NSMutableDictionary* _players;
         // 创建SystemSoundID
         NSURL* url = [[NSBundle mainBundle] URLForResource:soundName withExtension:nil];
         CFURLRef urlRef = (__bridge CFURLRef _Nonnull)(url);
+        if (!urlRef) {
+            return;
+        }
         AudioServicesCreateSystemSoundID(urlRef, &soundID);
         // 存入字典
         [_soundIDs setObject:@(soundID) forKey:soundName];
@@ -47,6 +50,7 @@ static NSMutableDictionary* _players;
 
 +(void)playMusicWithMusicName:(NSString*)musicName
 {
+    assert(musicName);
     // 定义一个播放器
     AVAudioPlayer* player = nil;
     // 从字典中去player
@@ -54,6 +58,9 @@ static NSMutableDictionary* _players;
     if (!player) {
         // 创建播放器
         NSURL* fileUrl = [[NSBundle mainBundle] URLForResource:musicName withExtension:nil];
+        if (!fileUrl) {
+            return;
+        }
         // 创建播放器
         player = [[AVAudioPlayer alloc]initWithContentsOfURL:fileUrl error:nil];
         [player prepareToPlay];
@@ -66,6 +73,7 @@ static NSMutableDictionary* _players;
 
 +(void)stopMusicWithMusicName:(NSString*)musicName
 {
+    assert(musicName);
     AVAudioPlayer*  player = _players[musicName];
     if (player) {
         [player stop];
@@ -75,6 +83,7 @@ static NSMutableDictionary* _players;
 }
 +(void)pauseMusicWithMusicName:(NSString*)musicName
 {
+    assert(musicName);
     AVAudioPlayer*  player = _players[musicName];
     if (player) {
         [player pause];
