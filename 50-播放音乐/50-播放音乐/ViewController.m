@@ -66,6 +66,7 @@
 }
 
 - (IBAction)otherMusic:(UIButton *)sender {
+    [YHPAudioTools playMusicWithMusicName:@"309769.mp3"];
 }
 
 
