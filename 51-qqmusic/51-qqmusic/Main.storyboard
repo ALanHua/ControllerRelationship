@@ -182,6 +182,12 @@
                     </view>
                     <connections>
                         <outlet property="albumView" destination="I5x-D6-8bZ" id="402-0y-ls6"/>
+                        <outlet property="currentTimeLabel" destination="EsP-71-af6" id="7lC-59-LFf"/>
+                        <outlet property="iconView" destination="WCW-Sc-oyS" id="7XM-nw-Ahf"/>
+                        <outlet property="progressSlider" destination="XGP-o7-H1m" id="h3T-ES-Zzl"/>
+                        <outlet property="singerLabel" destination="mh5-Rl-z0P" id="KCa-VG-cMN"/>
+                        <outlet property="songLabel" destination="nPr-ya-SNS" id="LZs-dH-pun"/>
+                        <outlet property="totalTimeLabel" destination="xg3-Oa-iwv" id="dsK-1X-8C4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc1-2M-nmq" sceneMemberID="firstResponder"/>
