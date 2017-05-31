@@ -107,6 +107,12 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XGP-o7-H1m">
                                         <rect key="frame" x="48" y="6" width="279" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.14901960780000001" green="0.73333333329999995" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="endSlide" destination="LPh-3E-VT8" eventType="touchUpInside" id="b2V-WQ-f3k"/>
+                                            <action selector="sliderValueChange" destination="LPh-3E-VT8" eventType="valueChanged" id="zyw-rl-FvZ"/>
+                                            <action selector="startSlider" destination="LPh-3E-VT8" eventType="touchDownRepeat" id="9fF-Dw-hG1"/>
+                                            <outletCollection property="gestureRecognizers" destination="YDT-eF-CkB" appends="YES" id="E1r-Hj-NHD"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsP-71-af6">
                                         <rect key="frame" x="0.0" y="14" width="50" height="16"/>
@@ -191,6 +197,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc1-2M-nmq" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YDT-eF-CkB">
+                    <connections>
+                        <action selector="sliderClick:" destination="LPh-3E-VT8" id="AAM-vH-RTv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="246" y="197"/>
         </scene>

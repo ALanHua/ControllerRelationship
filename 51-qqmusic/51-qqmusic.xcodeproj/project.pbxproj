@@ -35,6 +35,7 @@
 		B810C6671EDDB372007F7EFE /* YHPMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6661EDDB372007F7EFE /* YHPMusicTool.m */; };
 		B810C66A1EDDB408007F7EFE /* YHPMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6691EDDB408007F7EFE /* YHPMusic.m */; };
 		B810C66D1EDDBCBE007F7EFE /* YHPAudioTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C66C1EDDBCBE007F7EFE /* YHPAudioTools.m */; };
+		B810C6751EDF117A007F7EFE /* NSString+YHPTimeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6741EDF117A007F7EFE /* NSString+YHPTimeExtension.m */; };
 		B8AFAD0B1ED87592007FAC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AFAD091ED87592007FAC5D /* LaunchScreen.storyboard */; };
 		B8AFAD161ED87592007FAC5D /* _1_qqmusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD151ED87592007FAC5D /* _1_qqmusicTests.m */; };
 		B8AFAD211ED87592007FAC5D /* _1_qqmusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD201ED87592007FAC5D /* _1_qqmusicUITests.m */; };
@@ -162,6 +163,8 @@
 		B810C6691EDDB408007F7EFE /* YHPMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPMusic.m; sourceTree = "<group>"; };
 		B810C66B1EDDBCBE007F7EFE /* YHPAudioTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPAudioTools.h; sourceTree = "<group>"; };
 		B810C66C1EDDBCBE007F7EFE /* YHPAudioTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPAudioTools.m; sourceTree = "<group>"; };
+		B810C6731EDF117A007F7EFE /* NSString+YHPTimeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YHPTimeExtension.h"; sourceTree = "<group>"; };
+		B810C6741EDF117A007F7EFE /* NSString+YHPTimeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YHPTimeExtension.m"; sourceTree = "<group>"; };
 		B8AFACF81ED87592007FAC5D /* 51-qqmusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "51-qqmusic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AFAD0A1ED87592007FAC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AFAD0C1ED87592007FAC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,9 +277,10 @@
 		B810C6101EDDB1A3007F7EFE /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B810C6721EDF117A007F7EFE /* Category */,
+				B810C6131EDDB1A3007F7EFE /* Lib */,
 				B810C6111EDDB1A3007F7EFE /* AppDelegate.h */,
 				B810C6121EDDB1A3007F7EFE /* AppDelegate.m */,
-				B810C6131EDDB1A3007F7EFE /* Lib */,
 				B810C6491EDDB1A3007F7EFE /* main.m */,
 			);
 			path = Other;
@@ -379,6 +383,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B810C6721EDF117A007F7EFE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B810C6731EDF117A007F7EFE /* NSString+YHPTimeExtension.h */,
+				B810C6741EDF117A007F7EFE /* NSString+YHPTimeExtension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		B8AFACEF1ED87592007FAC5D = {
@@ -690,6 +703,7 @@
 				B810C6521EDDB1A3007F7EFE /* MASConstraintMaker.m in Sources */,
 				B810C65A1EDDB1A3007F7EFE /* MJExtensionConst.m in Sources */,
 				B810C64D1EDDB1A3007F7EFE /* AppDelegate.m in Sources */,
+				B810C6751EDF117A007F7EFE /* NSString+YHPTimeExtension.m in Sources */,
 				B810C64C1EDDB1A3007F7EFE /* ViewController.m in Sources */,
 				B810C6611EDDB1A3007F7EFE /* NSObject+MJKeyValue.m in Sources */,
 				B810C6511EDDB1A3007F7EFE /* MASConstraint.m in Sources */,

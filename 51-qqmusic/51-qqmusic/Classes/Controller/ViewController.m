@@ -11,25 +11,53 @@
 #import "YHPMusicTool.h"
 #import "YHPMusic.h"
 #import "YHPAudioTools.h"
+#import "NSString+YHPTimeExtension.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *albumView;
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
-
-/* 滑块*/
-@property (weak, nonatomic) IBOutlet UISlider *progressSlider;
-
 @property (weak, nonatomic) IBOutlet UILabel *songLabel;
 @property (weak, nonatomic) IBOutlet UILabel *singerLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
-
+/* 滑块*/
+@property (weak, nonatomic) IBOutlet UISlider *progressSlider;
+/** 定时器 */
+@property(nonatomic,strong)NSTimer* progressTimer;
+/** 当前的播放器 */
+@property(nonatomic,strong)AVAudioPlayer* currentPlayer;
 @end
+
 
 @implementation ViewController
 
+#pragma mark - slider 的时间处理
+- (IBAction)startSlider {
+    [self removeProgressTimer];
+}
+- (IBAction)sliderValueChange {
+    
+    self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.duration * self.progressSlider.value];
+    
+}
+- (IBAction)endSlide {
+    // 设置歌曲的播放时间
+    self.currentPlayer.currentTime = self.currentPlayer.duration * self.progressSlider.value;
+    // 添加定时器
+    [self addProgressTimer];
+}
+
+- (IBAction)sliderClick:(UITapGestureRecognizer *)sender {
+    // 获取手势点击位置
+    CGPoint point = [sender locationInView:sender.view];
+    // 获取点击在slider中的比例
+    CGFloat ratio = point.x / self.progressSlider.bounds.size.width;
+    // 改变滑块位置
+    self. currentPlayer.currentTime = ratio * self.currentPlayer.duration;
+    [self updateProgressInfo];
+}
+
+#pragma mark - 加载UIView
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置毛玻璃效果
@@ -50,10 +78,11 @@
     toolBar.translatesAutoresizingMaskIntoConstraints = NO;
     // VFL 添加约束
     [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.albumView.mas_top);
-        make.bottom.equalTo(self.albumView.mas_bottom);
-        make.left.equalTo(self.albumView.mas_left);
-        make.right.equalTo(self.albumView.mas_right);
+//        make.top.equalTo(self.albumView.mas_top);
+//        make.bottom.equalTo(self.albumView.mas_bottom);
+//        make.left.equalTo(self.albumView.mas_left);
+//        make.right.equalTo(self.albumView.mas_right);
+        make.edges.equalTo(self.albumView);
     }];
 }
 
@@ -83,16 +112,49 @@
     self.singerLabel.text = playingMusic.singer;
     
     AVAudioPlayer* currentPlayer = [YHPAudioTools playMusicWithMusicName:playingMusic.filename];
-    self.totalTimeLabel.text = [self stringWithTime:currentPlayer.duration];
-    self.currentTimeLabel.text = [self stringWithTime:currentPlayer.currentTime];
-    
+    self.totalTimeLabel.text = [NSString stringWithTime:currentPlayer.duration];
+    self.currentTimeLabel.text = [NSString stringWithTime:currentPlayer.currentTime];
+    self.currentPlayer = currentPlayer;
+    // 开始播放动画
+    [self startIconViewAnimation];
 }
 
--(NSString*)stringWithTime:(NSTimeInterval)time
+-(void)startIconViewAnimation
 {
-    NSInteger min = (NSInteger)time / 60;
-    NSInteger second = (NSInteger)time % 60;
-    return [NSString stringWithFormat:@"%02ld:%02ld",min,second];
+    // 创建基本动画
+    CABasicAnimation* rotateAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    // 设置基本动画属性
+    rotateAnim.fromValue   = @(0);
+    rotateAnim.toValue     = @(M_PI * 2);
+    rotateAnim.repeatCount = NSIntegerMax;
+    rotateAnim.duration    = 30;
+    // 添加动画到图层上
+    [self.iconView.layer addAnimation:rotateAnim forKey:nil];
+    // 添加定时器
+    [self removeProgressTimer];
+    [self addProgressTimer];
+    
+}
+#pragma mark - 定时器
+-(void)addProgressTimer
+{
+    [self updateProgressInfo];
+    self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateProgressInfo) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.progressTimer forMode:NSRunLoopCommonModes];
+}
+-(void)removeProgressTimer
+{
+    [self.progressTimer invalidate];
+    self.progressTimer = nil;
+    
+}
+#pragma mark - 更新进度界面
+-(void)updateProgressInfo
+{
+    // 设置当前的播放时间
+    self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
+    // 更新滑块的位置
+    self.progressSlider.value = self.currentPlayer.currentTime / self.currentPlayer.duration;
 }
 
 @end
