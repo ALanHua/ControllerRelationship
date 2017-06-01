@@ -12,6 +12,7 @@
 #import "YHPMusic.h"
 #import "YHPAudioTools.h"
 #import "NSString+YHPTimeExtension.h"
+#import "CALayer+PauseAimate.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *albumView;
@@ -22,10 +23,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
 /* 滑块*/
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
+@property (weak, nonatomic) IBOutlet UIButton *playOrPauseBtn;
 /** 定时器 */
 @property(nonatomic,strong)NSTimer* progressTimer;
 /** 当前的播放器 */
 @property(nonatomic,strong)AVAudioPlayer* currentPlayer;
+
 @end
 
 
@@ -55,6 +58,30 @@
     // 改变滑块位置
     self. currentPlayer.currentTime = ratio * self.currentPlayer.duration;
     [self updateProgressInfo];
+}
+
+#pragma mark - 监听按钮点击
+- (IBAction)playOrPause {
+    self.playOrPauseBtn.selected = !self.playOrPauseBtn.selected;
+    if (self.currentPlayer.isPlaying) {
+        [self.currentPlayer pause];
+        [self removeProgressTimer];
+        [self.iconView.layer pauseAnimate];
+    }else{
+        [self.currentPlayer play];
+        [self addProgressTimer];
+        [self.iconView.layer resumeAnimate];
+    }
+}
+
+- (IBAction)previous {
+    YHPMusic* previousMusic = [YHPMusicTool previousMusic];
+    [self playingMusicWithMusic:previousMusic];
+}
+
+- (IBAction)next {
+    YHPMusic* nextMusic = [YHPMusicTool nextMusic];
+    [self playingMusicWithMusic:nextMusic];
 }
 
 #pragma mark - 加载UIView
@@ -110,6 +137,7 @@
     self.iconView.image = [UIImage imageNamed:playingMusic.icon];
     self.songLabel.text = playingMusic.name;
     self.singerLabel.text = playingMusic.singer;
+    self.playOrPauseBtn.selected = !self.currentPlayer.isPlaying;
     
     AVAudioPlayer* currentPlayer = [YHPAudioTools playMusicWithMusicName:playingMusic.filename];
     self.totalTimeLabel.text = [NSString stringWithTime:currentPlayer.duration];
@@ -119,6 +147,18 @@
     [self startIconViewAnimation];
 }
 
+-(void)playingMusicWithMusic:(YHPMusic*)music
+{
+    // 停止当前歌曲
+    YHPMusic* playingMusic = [YHPMusicTool playingMusic];
+    [YHPAudioTools stopMusicWithMusicName:playingMusic.filename];
+    // 将工具类中的当前歌曲切换成下一首
+    [YHPMusicTool setPlayingMusic:music];
+    // 改变界面信息
+    [self startPlayingMusic];
+}
+
+#pragma mark - 开始IcomView动画
 -(void)startIconViewAnimation
 {
     // 创建基本动画

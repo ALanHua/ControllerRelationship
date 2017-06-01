@@ -87,6 +87,9 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected" image="player_btn_pause_normal"/>
+                                        <connections>
+                                            <action selector="playOrPause" destination="LPh-3E-VT8" eventType="touchUpInside" id="QfN-MX-0dS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRy-f6-DuB">
                                         <rect key="frame" x="249.5" y="56" width="64" height="64"/>
@@ -95,6 +98,9 @@
                                         </state>
                                         <state key="selected" image="player_btn_next_normal"/>
                                         <state key="highlighted" image="player_btn_next_highlight"/>
+                                        <connections>
+                                            <action selector="next" destination="LPh-3E-VT8" eventType="touchUpInside" id="Ixy-So-Yjo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8n-oW-IxY">
                                         <rect key="frame" x="61.5" y="56" width="64" height="64"/>
@@ -103,6 +109,9 @@
                                         </state>
                                         <state key="selected" image="player_btn_pause_normal"/>
                                         <state key="highlighted" image="player_btn_pre_highlight"/>
+                                        <connections>
+                                            <action selector="previous" destination="LPh-3E-VT8" eventType="touchUpInside" id="mNV-12-Fwc"/>
+                                        </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XGP-o7-H1m">
                                         <rect key="frame" x="48" y="6" width="279" height="31"/>
@@ -190,6 +199,7 @@
                         <outlet property="albumView" destination="I5x-D6-8bZ" id="402-0y-ls6"/>
                         <outlet property="currentTimeLabel" destination="EsP-71-af6" id="7lC-59-LFf"/>
                         <outlet property="iconView" destination="WCW-Sc-oyS" id="7XM-nw-Ahf"/>
+                        <outlet property="playOrPauseBtn" destination="yCN-4T-4CU" id="SZY-O3-QZ8"/>
                         <outlet property="progressSlider" destination="XGP-o7-H1m" id="h3T-ES-Zzl"/>
                         <outlet property="singerLabel" destination="mh5-Rl-z0P" id="KCa-VG-cMN"/>
                         <outlet property="songLabel" destination="nPr-ya-SNS" id="LZs-dH-pun"/>
