@@ -13,17 +13,22 @@
 #import "YHPAudioTools.h"
 #import "NSString+YHPTimeExtension.h"
 #import "CALayer+PauseAimate.h"
+#import "YHPLrcView.h"
 
-@interface ViewController ()
+@interface ViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *albumView;
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UILabel *songLabel;
 @property (weak, nonatomic) IBOutlet UILabel *singerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lrcLabel;
+
 /* 滑块*/
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
 @property (weak, nonatomic) IBOutlet UIButton *playOrPauseBtn;
+@property (weak, nonatomic) IBOutlet YHPLrcView *lrcView;
+
 /** 定时器 */
 @property(nonatomic,strong)NSTimer* progressTimer;
 /** 当前的播放器 */
@@ -33,6 +38,53 @@
 
 
 @implementation ViewController
+
+#pragma mark - 加载UIView
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // 设置毛玻璃效果
+    [self setUpBlurView];
+    // 设置滑块的图片
+    [self.progressSlider setThumbImage:[UIImage imageNamed:@"player_slider_playback_thumb"]forState:UIControlStateNormal];
+    // 展示界面信息
+    [self startPlayingMusic];
+    // 设置歌词的View的contentSize
+    self.lrcView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 0);
+    
+}
+
+-(void)setUpBlurView
+{
+    // 添加毛玻璃效果
+    UITabBar* toolBar = [[UITabBar alloc]init];
+    [self.albumView addSubview:toolBar];
+    [toolBar setBarStyle:UIBarStyleBlack];
+    toolBar.translatesAutoresizingMaskIntoConstraints = NO;
+    // VFL 添加约束
+    [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        //        make.top.equalTo(self.albumView.mas_top);
+        //        make.bottom.equalTo(self.albumView.mas_bottom);
+        //        make.left.equalTo(self.albumView.mas_left);
+        //        make.right.equalTo(self.albumView.mas_right);
+        make.edges.equalTo(self.albumView);
+    }];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    // 设置图片圆角
+    self.iconView.layer.cornerRadius = self.iconView.bounds.size.width * 0.5;
+    self.iconView.layer.masksToBounds = YES;
+    self.iconView.layer.borderWidth = 4.0;
+    self.iconView.layer.borderColor = [UIColor colorWithRed:36 / 255.0 green:36 / 255.0 blue:36 / 255.0 alpha:1].CGColor;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 
 #pragma mark - slider 的时间处理
 - (IBAction)startSlider {
@@ -82,50 +134,6 @@
 - (IBAction)next {
     YHPMusic* nextMusic = [YHPMusicTool nextMusic];
     [self playingMusicWithMusic:nextMusic];
-}
-
-#pragma mark - 加载UIView
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // 设置毛玻璃效果
-    [self setUpBlurView];
-    // 设置滑块的图片
-    [self.progressSlider setThumbImage:[UIImage imageNamed:@"player_slider_playback_thumb"]forState:UIControlStateNormal];
-    // 展示界面信息
-    [self startPlayingMusic];
-    
-}
-
--(void)setUpBlurView
-{
-    // 添加毛玻璃效果
-    UITabBar* toolBar = [[UITabBar alloc]init];
-    [self.albumView addSubview:toolBar];
-    [toolBar setBarStyle:UIBarStyleBlack];
-    toolBar.translatesAutoresizingMaskIntoConstraints = NO;
-    // VFL 添加约束
-    [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.albumView.mas_top);
-//        make.bottom.equalTo(self.albumView.mas_bottom);
-//        make.left.equalTo(self.albumView.mas_left);
-//        make.right.equalTo(self.albumView.mas_right);
-        make.edges.equalTo(self.albumView);
-    }];
-}
-
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    // 设置图片圆角
-    self.iconView.layer.cornerRadius = self.iconView.bounds.size.width * 0.5;
-    self.iconView.layer.masksToBounds = YES;
-    self.iconView.layer.borderWidth = 4.0;
-    self.iconView.layer.borderColor = [UIColor colorWithRed:36 / 255.0 green:36 / 255.0 blue:36 / 255.0 alpha:1].CGColor;
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - 开始播放音乐
@@ -195,6 +203,18 @@
     self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
     // 更新滑块的位置
     self.progressSlider.value = self.currentPlayer.currentTime / self.currentPlayer.duration;
+}
+
+#pragma mark - <UIScrollViewDelegate>
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // 1，获取到滑动多少
+    CGPoint point = scrollView.contentOffset;
+    // 2，计算滑动比例
+    CGFloat ratio = 1 - point.x / scrollView.bounds.size.width;
+    // 3，设置icomView和label的透明度
+    self.iconView.alpha = ratio;
+    self.lrcLabel.alpha = ratio;
 }
 
 @end

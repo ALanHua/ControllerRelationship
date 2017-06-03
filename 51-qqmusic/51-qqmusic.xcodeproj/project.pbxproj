@@ -37,6 +37,7 @@
 		B810C66D1EDDBCBE007F7EFE /* YHPAudioTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C66C1EDDBCBE007F7EFE /* YHPAudioTools.m */; };
 		B810C6751EDF117A007F7EFE /* NSString+YHPTimeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6741EDF117A007F7EFE /* NSString+YHPTimeExtension.m */; };
 		B810C68B1EE067E6007F7EFE /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C68A1EE067E6007F7EFE /* CALayer+PauseAimate.m */; };
+		B810C68E1EE30C23007F7EFE /* YHPLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C68D1EE30C23007F7EFE /* YHPLrcView.m */; };
 		B8AFAD0B1ED87592007FAC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AFAD091ED87592007FAC5D /* LaunchScreen.storyboard */; };
 		B8AFAD161ED87592007FAC5D /* _1_qqmusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD151ED87592007FAC5D /* _1_qqmusicTests.m */; };
 		B8AFAD211ED87592007FAC5D /* _1_qqmusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD201ED87592007FAC5D /* _1_qqmusicUITests.m */; };
@@ -168,6 +169,8 @@
 		B810C6741EDF117A007F7EFE /* NSString+YHPTimeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YHPTimeExtension.m"; sourceTree = "<group>"; };
 		B810C6891EE067E6007F7EFE /* CALayer+PauseAimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+PauseAimate.h"; sourceTree = "<group>"; };
 		B810C68A1EE067E6007F7EFE /* CALayer+PauseAimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+PauseAimate.m"; sourceTree = "<group>"; };
+		B810C68C1EE30C23007F7EFE /* YHPLrcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPLrcView.h; sourceTree = "<group>"; };
+		B810C68D1EE30C23007F7EFE /* YHPLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcView.m; sourceTree = "<group>"; };
 		B8AFACF81ED87592007FAC5D /* 51-qqmusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "51-qqmusic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AFAD0A1ED87592007FAC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AFAD0C1ED87592007FAC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,9 +255,9 @@
 			children = (
 				B810C60C1EDDB1A3007F7EFE /* Controller */,
 				B810C60F1EDDB1A3007F7EFE /* Model */,
+				B810C64B1EDDB1A3007F7EFE /* View */,
 				B810C6101EDDB1A3007F7EFE /* Other */,
 				B810C64A1EDDB1A3007F7EFE /* Tool */,
-				B810C64B1EDDB1A3007F7EFE /* View */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -384,6 +387,8 @@
 		B810C64B1EDDB1A3007F7EFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B810C68C1EE30C23007F7EFE /* YHPLrcView.h */,
+				B810C68D1EE30C23007F7EFE /* YHPLrcView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -727,6 +732,7 @@
 				B810C68B1EE067E6007F7EFE /* CALayer+PauseAimate.m in Sources */,
 				B810C6601EDDB1A3007F7EFE /* NSObject+MJCoding.m in Sources */,
 				B810C6581EDDB1A3007F7EFE /* View+MASAdditions.m in Sources */,
+				B810C68E1EE30C23007F7EFE /* YHPLrcView.m in Sources */,
 				B810C66A1EDDB408007F7EFE /* YHPMusic.m in Sources */,
 				B810C65D1EDDB1A3007F7EFE /* MJPropertyKey.m in Sources */,
 				B810C6621EDDB1A3007F7EFE /* NSObject+MJProperty.m in Sources */,
