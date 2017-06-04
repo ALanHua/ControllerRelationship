@@ -15,7 +15,7 @@
 #import "CALayer+PauseAimate.h"
 #import "YHPLrcView.h"
 
-@interface ViewController () <UIScrollViewDelegate>
+@interface ViewController () <UIScrollViewDelegate,AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *albumView;
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UILabel *songLabel;
@@ -217,6 +217,14 @@
     // 3，设置icomView和label的透明度
     self.iconView.alpha = ratio;
     self.lrcLabel.alpha = ratio;
+}
+
+#pragma mark - 实现AVAudioPlayer的代理方法
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    if (flag) {
+        [self next];
+    }
 }
 
 @end
