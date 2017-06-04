@@ -151,6 +151,7 @@
     self.totalTimeLabel.text = [NSString stringWithTime:currentPlayer.duration];
     self.currentTimeLabel.text = [NSString stringWithTime:currentPlayer.currentTime];
     self.currentPlayer = currentPlayer;
+    self.currentPlayer.delegate = self;
     // 开始播放动画
     [self startIconViewAnimation];
     // 设置歌词
