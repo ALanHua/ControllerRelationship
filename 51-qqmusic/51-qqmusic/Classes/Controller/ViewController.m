@@ -153,6 +153,12 @@
     self.currentPlayer = currentPlayer;
     // 开始播放动画
     [self startIconViewAnimation];
+    // 设置歌词
+    self.lrcView.lrcName = playingMusic.lrcname;
+    // 添加定时器
+    [self removeProgressTimer];
+    [self addProgressTimer];
+    
 }
 
 -(void)playingMusicWithMusic:(YHPMusic*)music
@@ -178,10 +184,6 @@
     rotateAnim.duration    = 30;
     // 添加动画到图层上
     [self.iconView.layer addAnimation:rotateAnim forKey:nil];
-    // 添加定时器
-    [self removeProgressTimer];
-    [self addProgressTimer];
-    
 }
 #pragma mark - 定时器
 -(void)addProgressTimer

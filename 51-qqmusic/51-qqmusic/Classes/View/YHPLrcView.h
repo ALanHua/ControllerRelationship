@@ -10,4 +10,6 @@
 
 @interface YHPLrcView : UIScrollView
 
+/** 歌词的名字 */
+@property(nonatomic,copy)NSString* lrcName;
 @end

@@ -39,6 +39,8 @@
 		B810C68B1EE067E6007F7EFE /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C68A1EE067E6007F7EFE /* CALayer+PauseAimate.m */; };
 		B810C68E1EE30C23007F7EFE /* YHPLrcView.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C68D1EE30C23007F7EFE /* YHPLrcView.m */; };
 		B810C6911EE3BAFB007F7EFE /* YHPLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6901EE3BAFB007F7EFE /* YHPLrcCell.m */; };
+		B810C6941EE439C4007F7EFE /* YHPLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6931EE439C4007F7EFE /* YHPLrcTool.m */; };
+		B810C6971EE43E2F007F7EFE /* YHPLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6961EE43E2F007F7EFE /* YHPLrcLine.m */; };
 		B8AFAD0B1ED87592007FAC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AFAD091ED87592007FAC5D /* LaunchScreen.storyboard */; };
 		B8AFAD161ED87592007FAC5D /* _1_qqmusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD151ED87592007FAC5D /* _1_qqmusicTests.m */; };
 		B8AFAD211ED87592007FAC5D /* _1_qqmusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD201ED87592007FAC5D /* _1_qqmusicUITests.m */; };
@@ -174,6 +176,10 @@
 		B810C68D1EE30C23007F7EFE /* YHPLrcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcView.m; sourceTree = "<group>"; };
 		B810C68F1EE3BAFB007F7EFE /* YHPLrcCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPLrcCell.h; sourceTree = "<group>"; };
 		B810C6901EE3BAFB007F7EFE /* YHPLrcCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcCell.m; sourceTree = "<group>"; };
+		B810C6921EE439C4007F7EFE /* YHPLrcTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPLrcTool.h; sourceTree = "<group>"; };
+		B810C6931EE439C4007F7EFE /* YHPLrcTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcTool.m; sourceTree = "<group>"; };
+		B810C6951EE43E2F007F7EFE /* YHPLrcLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPLrcLine.h; sourceTree = "<group>"; };
+		B810C6961EE43E2F007F7EFE /* YHPLrcLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcLine.m; sourceTree = "<group>"; };
 		B8AFACF81ED87592007FAC5D /* 51-qqmusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "51-qqmusic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AFAD0A1ED87592007FAC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AFAD0C1ED87592007FAC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -279,6 +285,8 @@
 			children = (
 				B810C6681EDDB408007F7EFE /* YHPMusic.h */,
 				B810C6691EDDB408007F7EFE /* YHPMusic.m */,
+				B810C6951EE43E2F007F7EFE /* YHPLrcLine.h */,
+				B810C6961EE43E2F007F7EFE /* YHPLrcLine.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -383,6 +391,8 @@
 				B810C66C1EDDBCBE007F7EFE /* YHPAudioTools.m */,
 				B810C6651EDDB372007F7EFE /* YHPMusicTool.h */,
 				B810C6661EDDB372007F7EFE /* YHPMusicTool.m */,
+				B810C6921EE439C4007F7EFE /* YHPLrcTool.h */,
+				B810C6931EE439C4007F7EFE /* YHPLrcTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -732,6 +742,7 @@
 				B810C6551EDDB1A3007F7EFE /* MASViewConstraint.m in Sources */,
 				B810C6541EDDB1A3007F7EFE /* MASViewAttribute.m in Sources */,
 				B810C65E1EDDB1A3007F7EFE /* MJPropertyType.m in Sources */,
+				B810C6941EE439C4007F7EFE /* YHPLrcTool.m in Sources */,
 				B810C6641EDDB1A3007F7EFE /* main.m in Sources */,
 				B810C65F1EDDB1A3007F7EFE /* NSObject+MJClass.m in Sources */,
 				B810C68B1EE067E6007F7EFE /* CALayer+PauseAimate.m in Sources */,
@@ -745,6 +756,7 @@
 				B810C64F1EDDB1A3007F7EFE /* UIImage+BoxBlur.m in Sources */,
 				B810C64E1EDDB1A3007F7EFE /* DRNRealTimeBlurView.m in Sources */,
 				B810C6501EDDB1A3007F7EFE /* MASCompositeConstraint.m in Sources */,
+				B810C6971EE43E2F007F7EFE /* YHPLrcLine.m in Sources */,
 				B810C6571EDDB1A3007F7EFE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				B810C6671EDDB372007F7EFE /* YHPMusicTool.m in Sources */,
 			);

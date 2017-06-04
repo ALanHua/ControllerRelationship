@@ -9,13 +9,26 @@
 #import "YHPLrcView.h"
 #import "Masonry.h"
 #import "YHPLrcCell.h"
+#import "YHPLrcLine.h"
+#import "YHPLrcTool.h"
 
 @interface YHPLrcView () <UITableViewDataSource>
 /** tableView */
 @property(nonatomic,strong)UITableView* tableView;
+/** 歌词列表 */
+@property(nonatomic,strong)NSArray* lrcList;
 @end
 
 @implementation YHPLrcView
+
+- (NSArray *)lrcList
+{
+    if (!_lrcList) {
+        _lrcList = [NSArray array];
+    }
+    return _lrcList;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
@@ -36,13 +49,13 @@
 {
     // 创建tableView
     UITableView* tableView = [[UITableView alloc]init];
-    tableView.backgroundColor = [UIColor clearColor];
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    tableView.rowHeight = 35;
-    [self addSubview:tableView];
     tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    tableView.dataSource = self;
+    [self addSubview:tableView];
     self.tableView = tableView;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight = 35;
+    self.tableView.dataSource = self;
 }
 
 - (void)layoutSubviews
@@ -63,15 +76,28 @@
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.lrcList.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YHPLrcCell* cell = [YHPLrcCell lrcCellWithTableView:tableView];
-    cell.textLabel.text = [NSString stringWithFormat:@"测试数据:%zd",indexPath.row];
     
+    YHPLrcLine* lrcLine = self.lrcList[indexPath.row];
+    cell.textLabel.text = lrcLine .text;
+
     return cell;
+}
+
+#pragma mark 重写lrcName
+
+-(void)setLrcName:(NSString *)lrcName
+{
+    _lrcName = [lrcName copy];
+    // 解析歌词
+    self.lrcList = [YHPLrcTool lrcWithLrcName:lrcName];
+    // 刷新表格
+    [self.tableView reloadData];
 }
 
 @end
