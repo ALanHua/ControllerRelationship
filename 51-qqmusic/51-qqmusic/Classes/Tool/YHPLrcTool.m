@@ -30,7 +30,6 @@
         || ![lrcLineString hasPrefix:@"["]){
             continue;
         }
-        NSLog(@"%@",lrcLineString);
         // 转模型
         YHPLrcLine* lrcLine = [YHPLrcLine lrcLineWithLrcLineString:lrcLineString];
         [tempArrary addObject:lrcLine];

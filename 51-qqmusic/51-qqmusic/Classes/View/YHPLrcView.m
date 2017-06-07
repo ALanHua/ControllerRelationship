@@ -17,6 +17,8 @@
 @property(nonatomic,strong)UITableView* tableView;
 /** 歌词列表 */
 @property(nonatomic,strong)NSArray* lrcList;
+/** 滚动时档期下标值 */
+@property(nonatomic,assign)NSInteger currentIndex;
 @end
 
 @implementation YHPLrcView
@@ -83,8 +85,14 @@
 {
     YHPLrcCell* cell = [YHPLrcCell lrcCellWithTableView:tableView];
     
+    if (self.currentIndex == indexPath.row) {
+        cell.textLabel.font = [UIFont systemFontOfSize:20.0];
+    }else{
+        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+    }
+    
     YHPLrcLine* lrcLine = self.lrcList[indexPath.row];
-    cell.textLabel.text = lrcLine .text;
+    cell.textLabel.text = lrcLine.text;
 
     return cell;
 }
@@ -98,6 +106,39 @@
     self.lrcList = [YHPLrcTool lrcWithLrcName:lrcName];
     // 刷新表格
     [self.tableView reloadData];
+}
+
+#pragma mark - 重写currentTime
+- (void)setCurrentTime:(NSTimeInterval)currentTime
+{
+    _currentTime = currentTime;
+    // 1,匹配歌词时间
+    NSInteger count = self.lrcList.count;
+    NSInteger nextIndex = 0;
+    for (int i = 0; i < count; i++) {
+        // 当前行
+        YHPLrcLine* currentLrcLine = self.lrcList[i];
+        // 下一行
+        nextIndex = i + 1;
+        YHPLrcLine* nextLrcLine = nil;
+        if (nextIndex < count) {
+            nextLrcLine = self.lrcList[nextIndex];
+        }
+ 
+        // 当前时间和i位置歌词和下一句比较
+        if (self.currentIndex != i &&
+        currentTime >= currentLrcLine.time &&
+        currentTime <= nextLrcLine.time) {
+            NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            NSIndexPath* previousIndexPath = [NSIndexPath indexPathForRow:self.currentIndex inSection:0];
+            // 显示对应歌词
+            self.currentIndex = i;
+            [self.tableView reloadRowsAtIndexPaths:@[previousIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+    }
+    
 }
 
 @end

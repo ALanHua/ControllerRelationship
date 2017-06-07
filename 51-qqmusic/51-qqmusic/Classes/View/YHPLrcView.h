@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface YHPLrcView : UIScrollView
-
 /** 歌词的名字 */
 @property(nonatomic,copy)NSString* lrcName;
+/** 当前播放的时间 */
+@property(nonatomic,assign)NSTimeInterval currentTime;
 @end

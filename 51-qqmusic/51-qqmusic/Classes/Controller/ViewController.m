@@ -31,6 +31,8 @@
 
 /** 定时器 */
 @property(nonatomic,strong)NSTimer* progressTimer;
+/** 歌词显示定时器 */
+@property(nonatomic,strong)CADisplayLink* lrcTimer;
 /** 当前的播放器 */
 @property(nonatomic,strong)AVAudioPlayer* currentPlayer;
 
@@ -160,6 +162,8 @@
     [self removeProgressTimer];
     [self addProgressTimer];
     
+    [self removeLrcTimer];
+    [self addLrcTimer];
 }
 
 -(void)playingMusicWithMusic:(YHPMusic*)music
@@ -199,6 +203,18 @@
     self.progressTimer = nil;
     
 }
+-(void)addLrcTimer
+{
+    self.lrcTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateLrcInfo)];
+    [self.lrcTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+}
+
+-(void)removeLrcTimer
+{
+    [self.lrcTimer invalidate];
+    self.lrcTimer = nil;
+}
+
 #pragma mark - 更新进度界面
 -(void)updateProgressInfo
 {
@@ -206,6 +222,11 @@
     self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
     // 更新滑块的位置
     self.progressSlider.value = self.currentPlayer.currentTime / self.currentPlayer.duration;
+}
+#pragma mark - 更新歌词
+-(void)updateLrcInfo
+{
+    self.lrcView.currentTime = self.currentPlayer.currentTime;
 }
 
 #pragma mark - <UIScrollViewDelegate>
