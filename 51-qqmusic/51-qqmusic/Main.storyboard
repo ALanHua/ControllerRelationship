@@ -160,8 +160,8 @@
                                     <constraint firstItem="EsP-71-af6" firstAttribute="leading" secondItem="MGF-ha-Qmw" secondAttribute="leading" id="vlK-Hr-HkX"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌词的Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrg-3s-EWa">
-                                <rect key="frame" x="146" y="479" width="83" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrg-3s-EWa" customClass="YHPLrcLabel">
+                                <rect key="frame" x="187.5" y="479" width="0.0" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="ppl-pk-T9a"/>
                                 </constraints>

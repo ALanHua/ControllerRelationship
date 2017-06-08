@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class YHPLrcLabel;
 @interface YHPLrcView : UIScrollView
 /** 歌词的名字 */
 @property(nonatomic,copy)NSString* lrcName;
 /** 当前播放的时间 */
 @property(nonatomic,assign)NSTimeInterval currentTime;
+/** lrcLabel */
+@property(nonatomic,strong)YHPLrcLabel* LrcViewlrcLabel;
 @end

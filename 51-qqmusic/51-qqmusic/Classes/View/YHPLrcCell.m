@@ -7,8 +7,27 @@
 //
 
 #import "YHPLrcCell.h"
+#import "YHPLrcLabel.h"
+#import "Masonry.h"
 
 @implementation YHPLrcCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        YHPLrcLabel* lrcLabel = [[YHPLrcLabel alloc]init];
+        lrcLabel.textColor = [UIColor whiteColor];
+        lrcLabel.font = [UIFont systemFontOfSize:14];
+        lrcLabel.textAlignment = NSTextAlignmentCenter;
+        [self.contentView addSubview:lrcLabel];
+        lrcLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        _lrcLabel = lrcLabel;
+        [lrcLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.contentView);
+        }];
+    }
+    return self;
+}
 
 + (instancetype)lrcCellWithTableView:(UITableView *)tableView
 {
@@ -17,9 +36,6 @@
     if (cell == nil) {
         cell = [[YHPLrcCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         cell.backgroundColor = [UIColor blackColor];
-        cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.font = [UIFont systemFontOfSize:14];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;

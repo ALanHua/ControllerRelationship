@@ -41,6 +41,7 @@
 		B810C6911EE3BAFB007F7EFE /* YHPLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6901EE3BAFB007F7EFE /* YHPLrcCell.m */; };
 		B810C6941EE439C4007F7EFE /* YHPLrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6931EE439C4007F7EFE /* YHPLrcTool.m */; };
 		B810C6971EE43E2F007F7EFE /* YHPLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = B810C6961EE43E2F007F7EFE /* YHPLrcLine.m */; };
+		B841732B1EE9A2170077D523 /* YHPLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B841732A1EE9A2170077D523 /* YHPLrcLabel.m */; };
 		B8AFAD0B1ED87592007FAC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AFAD091ED87592007FAC5D /* LaunchScreen.storyboard */; };
 		B8AFAD161ED87592007FAC5D /* _1_qqmusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD151ED87592007FAC5D /* _1_qqmusicTests.m */; };
 		B8AFAD211ED87592007FAC5D /* _1_qqmusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AFAD201ED87592007FAC5D /* _1_qqmusicUITests.m */; };
@@ -180,6 +181,8 @@
 		B810C6931EE439C4007F7EFE /* YHPLrcTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcTool.m; sourceTree = "<group>"; };
 		B810C6951EE43E2F007F7EFE /* YHPLrcLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPLrcLine.h; sourceTree = "<group>"; };
 		B810C6961EE43E2F007F7EFE /* YHPLrcLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcLine.m; sourceTree = "<group>"; };
+		B84173291EE9A2170077D523 /* YHPLrcLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPLrcLabel.h; sourceTree = "<group>"; };
+		B841732A1EE9A2170077D523 /* YHPLrcLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPLrcLabel.m; sourceTree = "<group>"; };
 		B8AFACF81ED87592007FAC5D /* 51-qqmusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "51-qqmusic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8AFAD0A1ED87592007FAC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AFAD0C1ED87592007FAC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 				B810C68D1EE30C23007F7EFE /* YHPLrcView.m */,
 				B810C68F1EE3BAFB007F7EFE /* YHPLrcCell.h */,
 				B810C6901EE3BAFB007F7EFE /* YHPLrcCell.m */,
+				B84173291EE9A2170077D523 /* YHPLrcLabel.h */,
+				B841732A1EE9A2170077D523 /* YHPLrcLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -754,6 +759,7 @@
 				B810C6911EE3BAFB007F7EFE /* YHPLrcCell.m in Sources */,
 				B810C6621EDDB1A3007F7EFE /* NSObject+MJProperty.m in Sources */,
 				B810C64F1EDDB1A3007F7EFE /* UIImage+BoxBlur.m in Sources */,
+				B841732B1EE9A2170077D523 /* YHPLrcLabel.m in Sources */,
 				B810C64E1EDDB1A3007F7EFE /* DRNRealTimeBlurView.m in Sources */,
 				B810C6501EDDB1A3007F7EFE /* MASCompositeConstraint.m in Sources */,
 				B810C6971EE43E2F007F7EFE /* YHPLrcLine.m in Sources */,

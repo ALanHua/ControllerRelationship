@@ -11,6 +11,7 @@
 #import "YHPLrcCell.h"
 #import "YHPLrcLine.h"
 #import "YHPLrcTool.h"
+#import "YHPLrcLabel.h"
 
 @interface YHPLrcView () <UITableViewDataSource>
 /** tableView */
@@ -86,13 +87,14 @@
     YHPLrcCell* cell = [YHPLrcCell lrcCellWithTableView:tableView];
     
     if (self.currentIndex == indexPath.row) {
-        cell.textLabel.font = [UIFont systemFontOfSize:20.0];
+        cell.lrcLabel.font = [UIFont systemFontOfSize:20.0];
     }else{
-        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+        cell.lrcLabel.font = [UIFont systemFontOfSize:14.0];
+        cell.lrcLabel.progress = 0.0;
     }
     
     YHPLrcLine* lrcLine = self.lrcList[indexPath.row];
-    cell.textLabel.text = lrcLine.text;
+    cell.lrcLabel.text = lrcLine.text;
 
     return cell;
 }
@@ -115,7 +117,7 @@
     // 1,匹配歌词时间
     NSInteger count = self.lrcList.count;
     NSInteger nextIndex = 0;
-    for (int i = 0; i < count; i++) {
+    for (NSInteger i = 0; i < count; i++) {
         // 当前行
         YHPLrcLine* currentLrcLine = self.lrcList[i];
         // 下一行
@@ -124,7 +126,6 @@
         if (nextIndex < count) {
             nextLrcLine = self.lrcList[nextIndex];
         }
- 
         // 当前时间和i位置歌词和下一句比较
         if (self.currentIndex != i &&
         currentTime >= currentLrcLine.time &&
@@ -136,6 +137,19 @@
             [self.tableView reloadRowsAtIndexPaths:@[previousIndexPath] withRowAnimation:UITableViewRowAnimationNone];
             [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
             [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            // 外面的歌词
+            self.LrcViewlrcLabel.text = currentLrcLine.text;
+        }
+        // 根据进度画lrcLabel
+        if (self.currentIndex == i) {
+            // 1，i 拿到这个cell
+            NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            YHPLrcCell* cell = (YHPLrcCell*)[self.tableView cellForRowAtIndexPath:indexPath];
+            // 更新label 进度
+            CGFloat progress = (currentTime - currentLrcLine.time) / (nextLrcLine.time - currentLrcLine.time);
+            cell.lrcLabel.progress = progress;
+            // 设置外面歌词label的进度
+            self.LrcViewlrcLabel.progress = progress;
         }
     }
     

@@ -14,6 +14,7 @@
 #import "NSString+YHPTimeExtension.h"
 #import "CALayer+PauseAimate.h"
 #import "YHPLrcView.h"
+#import "YHPLrcLabel.h"
 
 @interface ViewController () <UIScrollViewDelegate,AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *albumView;
@@ -22,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *singerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *lrcLabel;
+@property (weak, nonatomic) IBOutlet YHPLrcLabel *lrcLabel;
 
 /* 滑块*/
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
@@ -52,7 +53,7 @@
     [self startPlayingMusic];
     // 设置歌词的View的contentSize
     self.lrcView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 0);
-    
+    self.lrcView.LrcViewlrcLabel = self.lrcLabel;
 }
 
 -(void)setUpBlurView
@@ -120,10 +121,12 @@
     if (self.currentPlayer.isPlaying) {
         [self.currentPlayer pause];
         [self removeProgressTimer];
+        [self removeLrcTimer];
         [self.iconView.layer pauseAnimate];
     }else{
         [self.currentPlayer play];
         [self addProgressTimer];
+        [self addLrcTimer];
         [self.iconView.layer resumeAnimate];
     }
 }
@@ -197,16 +200,18 @@
     self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateProgressInfo) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:self.progressTimer forMode:NSRunLoopCommonModes];
 }
+
+-(void)addLrcTimer
+{
+    self.lrcTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateLrcInfo)];
+    [self.lrcTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+}
+
 -(void)removeProgressTimer
 {
     [self.progressTimer invalidate];
     self.progressTimer = nil;
     
-}
--(void)addLrcTimer
-{
-    self.lrcTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateLrcInfo)];
-    [self.lrcTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 -(void)removeLrcTimer
