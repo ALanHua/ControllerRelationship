@@ -162,14 +162,13 @@
     [self startIconViewAnimation];
     // 设置歌词
     self.lrcView.lrcName = playingMusic.lrcname;
+    self.lrcView.duration = currentPlayer.duration;
     // 添加定时器
     [self removeProgressTimer];
     [self addProgressTimer];
     
     [self removeLrcTimer];
     [self addLrcTimer];
-    // 设置锁屏界面信息
-    [self setUpLockScreemInfo];
 }
 
 -(void)playingMusicWithMusic:(YHPMusic*)music
@@ -255,40 +254,6 @@
     if (flag) {
         [self next];
     }
-}
-
-// MPMediaItemPropertyAlbumTitle
-// MPMediaItemPropertyAlbumTrackCount
-// MPMediaItemPropertyAlbumTrackNumber
-// MPMediaItemPropertyArtist
-// MPMediaItemPropertyArtwork
-// MPMediaItemPropertyComposer
-// MPMediaItemPropertyDiscCount
-// MPMediaItemPropertyDiscNumber
-// MPMediaItemPropertyGenre
-// MPMediaItemPropertyPersistentID
-// MPMediaItemPropertyPlaybackDuration
-// MPMediaItemPropertyTitle
-
-#pragma mark - 锁屏界面信息
- -(void)setUpLockScreemInfo
-{
-    // 获取当前正在播放的歌曲
-    YHPMusic* playingMusic = [YHPMusicTool playingMusic];
-    // 获取锁屏界面中心
-    MPNowPlayingInfoCenter* playingInfoCenter = [MPNowPlayingInfoCenter defaultCenter];
-    NSMutableDictionary* playingInfo = [NSMutableDictionary dictionary];
-    [playingInfo setObject:playingMusic.name forKey:MPMediaItemPropertyAlbumTitle];
-    [playingInfo setObject:playingMusic.singer forKey:MPMediaItemPropertyArtist];
-    UIImage* artWorkInage = [UIImage imageNamed:playingMusic.icon];
-    MPMediaItemArtwork* artWork = [[MPMediaItemArtwork alloc]initWithBoundsSize:artWorkInage.size requestHandler:^UIImage * _Nonnull(CGSize size) {
-        return artWorkInage;
-    }];
-    [playingInfo setObject:artWork forKey:MPMediaItemPropertyArtwork];
-    [playingInfo setObject:@(self.currentPlayer.duration) forKey:MPMediaItemPropertyPlaybackDuration];
-    playingInfoCenter.nowPlayingInfo = playingInfo;
-    // 让应用程序接收远程时间
-    [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
 }
 
 #pragma mark - 监听远程事件

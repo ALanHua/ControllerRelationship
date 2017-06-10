@@ -15,4 +15,7 @@
 @property(nonatomic,assign)NSTimeInterval currentTime;
 /** lrcLabel */
 @property(nonatomic,strong)YHPLrcLabel* LrcViewlrcLabel;
+/** 当前播放歌曲总时长 */
+@property(nonatomic,assign)NSTimeInterval duration;
+
 @end

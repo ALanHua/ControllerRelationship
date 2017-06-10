@@ -12,6 +12,9 @@
 #import "YHPLrcLine.h"
 #import "YHPLrcTool.h"
 #import "YHPLrcLabel.h"
+#import "YHPMusicTool.h"
+#import "YHPMusic.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface YHPLrcView () <UITableViewDataSource>
 /** tableView */
@@ -142,6 +145,8 @@
             [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
             // 外面的歌词
             self.LrcViewlrcLabel.text = currentLrcLine.text;
+            // 生成锁屏界面的图片
+            [self generatorLockImage];
         }
         // 根据进度画lrcLabel
         if (self.currentIndex == i) {
@@ -156,6 +161,85 @@
         }
     }
     
+}
+
+#pragma mark - 生成说破界面图片
+-(void)generatorLockImage
+{
+// 歌曲图片
+    YHPMusic* playingMusic = [YHPMusicTool playingMusic];
+    UIImage* currentImage = [UIImage imageNamed:playingMusic.icon];
+// 拿到三句歌词
+    YHPLrcLine* currentLrc = self.lrcList[self.currentIndex];
+    // 上一句歌词
+    NSInteger previousIndex = self.currentIndex - 1;
+    YHPLrcLine* previuosLrc = nil;
+    if (previuosLrc >= 0) {
+        previuosLrc = self.lrcList[previousIndex];
+    }
+    // 下一句歌词
+    NSInteger nextIndex = self.currentIndex + 1;
+    YHPLrcLine* nextLrc = nil;
+    if (nextIndex < self.lrcList.count) {
+       nextLrc = self.lrcList[nextIndex];
+    }
+    // 生成水印图片
+    UIGraphicsBeginImageContext(currentImage.size);
+    [currentImage drawInRect:CGRectMake(0, 0, currentImage.size.width, currentImage.size.height)];
+    // 上一句
+    CGFloat tittleH = 25;
+    // 设置对齐属性
+    NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc]init];
+    style.alignment = NSTextAlignmentCenter;
+    // 设置属性
+    NSDictionary* attribute1 = @{
+                 NSFontAttributeName:[UIFont systemFontOfSize:14.0],
+                 NSForegroundColorAttributeName: [UIColor lightGrayColor],
+                  NSParagraphStyleAttributeName: style};
+    [previuosLrc.text drawInRect:CGRectMake(0, currentImage.size.height - 3 * tittleH,currentImage.size.width, tittleH) withAttributes:attribute1];
+    
+    [nextLrc.text drawInRect:CGRectMake(0, currentImage.size.height - tittleH,currentImage.size.width, tittleH) withAttributes:attribute1];
+    NSDictionary* attribute2 = @{
+                 NSFontAttributeName:[UIFont systemFontOfSize:16.0],
+                 NSForegroundColorAttributeName: [UIColor whiteColor],
+                 NSParagraphStyleAttributeName: style};
+    [currentLrc.text drawInRect:CGRectMake(0, currentImage.size.height - 2 *tittleH,currentImage.size.width, tittleH) withAttributes:attribute2];
+    UIImage* lrcImage = UIGraphicsGetImageFromCurrentImageContext();
+    // 发送通知
+    [self setUpLockScreemInfoWithLockImage:lrcImage];
+}
+/*
+// MPMediaItemPropertyAlbumTitle
+// MPMediaItemPropertyAlbumTrackCount
+// MPMediaItemPropertyAlbumTrackNumber
+// MPMediaItemPropertyArtist
+// MPMediaItemPropertyArtwork
+// MPMediaItemPropertyComposer
+// MPMediaItemPropertyDiscCount
+// MPMediaItemPropertyDiscNumber
+// MPMediaItemPropertyGenre
+// MPMediaItemPropertyPersistentID
+// MPMediaItemPropertyPlaybackDuration
+// MPMediaItemPropertyTitle
+*/
+#pragma mark - 锁屏界面信息
+-(void)setUpLockScreemInfoWithLockImage:(UIImage*)lockImage
+{
+    // 获取当前正在播放的歌曲
+    YHPMusic* playingMusic = [YHPMusicTool playingMusic];
+    // 获取锁屏界面中心
+    MPNowPlayingInfoCenter* playingInfoCenter = [MPNowPlayingInfoCenter defaultCenter];
+    NSMutableDictionary* playingInfo = [NSMutableDictionary dictionary];
+    [playingInfo setObject:playingMusic.name forKey:MPMediaItemPropertyAlbumTitle];
+    [playingInfo setObject:playingMusic.singer forKey:MPMediaItemPropertyArtist];
+    MPMediaItemArtwork* artWork = [[MPMediaItemArtwork alloc]initWithBoundsSize:lockImage.size requestHandler:^UIImage * _Nonnull(CGSize size) {
+        return lockImage;
+    }];
+    [playingInfo setObject:artWork forKey:MPMediaItemPropertyArtwork];
+    [playingInfo setObject:@(self.duration) forKey:MPMediaItemPropertyPlaybackDuration];
+    playingInfoCenter.nowPlayingInfo = playingInfo;
+    // 让应用程序接收远程时间
+    [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
 }
 
 @end
