@@ -18,11 +18,13 @@
 
 @interface YHPLrcView () <UITableViewDataSource>
 /** tableView */
-@property(nonatomic,strong)UITableView* tableView;
+//@property(nonatomic,strong)UITableView* tableView;
 /** 歌词列表 */
 @property(nonatomic,strong)NSArray* lrcList;
 /** 滚动时档期下标值 */
 @property(nonatomic,assign)NSInteger currentIndex;
+/** tableView */
+@property(nonatomic,strong)UITableView* tableView;
 @end
 
 @implementation YHPLrcView
@@ -58,8 +60,6 @@
     tableView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:tableView];
     self.tableView = tableView;
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = 35;
     self.tableView.dataSource = self;
 }
@@ -103,7 +103,6 @@
 }
 
 #pragma mark 重写lrcName
-
 -(void)setLrcName:(NSString *)lrcName
 {
     // 重置当前位置的下标值
@@ -237,9 +236,15 @@
     }];
     [playingInfo setObject:artWork forKey:MPMediaItemPropertyArtwork];
     [playingInfo setObject:@(self.duration) forKey:MPMediaItemPropertyPlaybackDuration];
+    [playingInfo setObject:@(self.currentTime) forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
     playingInfoCenter.nowPlayingInfo = playingInfo;
     // 让应用程序接收远程时间
     [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
 }
-
+#pragma mark - 设置tableView的属性
+- (void)setUpInterTableViewSeparatorStyle:(UITableViewCellSeparatorStyle)style withInterTableViewBackgroundColor:(UIColor*)color
+{
+    self.tableView.separatorStyle  = style;
+    self.tableView.backgroundColor = color;
+}
 @end

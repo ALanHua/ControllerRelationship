@@ -177,6 +177,7 @@
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z23-My-v5K" customClass="YHPLrcView">
                                 <rect key="frame" x="0.0" y="100" width="375" height="417"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="LPh-3E-VT8" id="trz-gE-USX"/>
                                 </connections>

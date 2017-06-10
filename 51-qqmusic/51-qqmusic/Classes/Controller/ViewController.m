@@ -37,12 +37,9 @@
 @property(nonatomic,strong)CADisplayLink* lrcTimer;
 /** 当前的播放器 */
 @property(nonatomic,strong)AVAudioPlayer* currentPlayer;
-
 @end
 
-
 @implementation ViewController
-
 #pragma mark - 加载UIView
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,6 +54,11 @@
     self.lrcView.LrcViewlrcLabel = self.lrcLabel;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self.lrcView setUpInterTableViewSeparatorStyle:UITableViewCellSeparatorStyleNone withInterTableViewBackgroundColor:[UIColor clearColor]];
+}
+#pragma mark - 设置毛玻璃效果
 -(void)setUpBlurView
 {
     // 添加毛玻璃效果

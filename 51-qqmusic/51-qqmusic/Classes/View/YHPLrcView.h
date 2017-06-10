@@ -18,4 +18,11 @@
 /** 当前播放歌曲总时长 */
 @property(nonatomic,assign)NSTimeInterval duration;
 
+
+/**
+ 设置tableView的属性 这些属性必须在ViewDidAppear中设置不然不起作用
+ @param style tabeleView Cell 分割线模式
+ @param color 背景颜色
+ */
+- (void)setUpInterTableViewSeparatorStyle:(UITableViewCellSeparatorStyle)style withInterTableViewBackgroundColor:(UIColor*)color;
 @end
