@@ -15,6 +15,7 @@
 #import "CALayer+PauseAimate.h"
 #import "YHPLrcView.h"
 #import "YHPLrcLabel.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface ViewController () <UIScrollViewDelegate,AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *albumView;
@@ -167,6 +168,8 @@
     
     [self removeLrcTimer];
     [self addLrcTimer];
+    // 设置锁屏界面信息
+    [self setUpLockScreemInfo];
 }
 
 -(void)playingMusicWithMusic:(YHPMusic*)music
@@ -254,4 +257,56 @@
     }
 }
 
+// MPMediaItemPropertyAlbumTitle
+// MPMediaItemPropertyAlbumTrackCount
+// MPMediaItemPropertyAlbumTrackNumber
+// MPMediaItemPropertyArtist
+// MPMediaItemPropertyArtwork
+// MPMediaItemPropertyComposer
+// MPMediaItemPropertyDiscCount
+// MPMediaItemPropertyDiscNumber
+// MPMediaItemPropertyGenre
+// MPMediaItemPropertyPersistentID
+// MPMediaItemPropertyPlaybackDuration
+// MPMediaItemPropertyTitle
+
+#pragma mark - 锁屏界面信息
+ -(void)setUpLockScreemInfo
+{
+    // 获取当前正在播放的歌曲
+    YHPMusic* playingMusic = [YHPMusicTool playingMusic];
+    // 获取锁屏界面中心
+    MPNowPlayingInfoCenter* playingInfoCenter = [MPNowPlayingInfoCenter defaultCenter];
+    NSMutableDictionary* playingInfo = [NSMutableDictionary dictionary];
+    [playingInfo setObject:playingMusic.name forKey:MPMediaItemPropertyAlbumTitle];
+    [playingInfo setObject:playingMusic.singer forKey:MPMediaItemPropertyArtist];
+    UIImage* artWorkInage = [UIImage imageNamed:playingMusic.icon];
+    MPMediaItemArtwork* artWork = [[MPMediaItemArtwork alloc]initWithBoundsSize:artWorkInage.size requestHandler:^UIImage * _Nonnull(CGSize size) {
+        return artWorkInage;
+    }];
+    [playingInfo setObject:artWork forKey:MPMediaItemPropertyArtwork];
+    [playingInfo setObject:@(self.currentPlayer.duration) forKey:MPMediaItemPropertyPlaybackDuration];
+    playingInfoCenter.nowPlayingInfo = playingInfo;
+    // 让应用程序接收远程时间
+    [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
+}
+
+#pragma mark - 监听远程事件
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    switch (event.subtype) {
+        case UIEventSubtypeRemoteControlPlay:
+        case UIEventSubtypeRemoteControlPause:
+            [self playOrPause];
+            break;
+        case UIEventSubtypeRemoteControlNextTrack:
+            [self next];
+            break;
+        case UIEventSubtypeRemoteControlPreviousTrack:
+            [self previous];
+            break;
+        default:
+            break;
+    }
+}
 @end

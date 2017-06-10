@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -15,8 +16,23 @@
 @implementation AppDelegate
 
 
+/**
+ 设置音频后台播放模式
+ */
+-(void)setUpAudioPlayBackMode
+{
+    // 获取音频会话
+    AVAudioSession* session = [AVAudioSession sharedInstance];
+    // 设置后台播放
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    // 激活会话
+    [session setActive:YES error:nil];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [self setUpAudioPlayBackMode];
+    
     return YES;
 }
 

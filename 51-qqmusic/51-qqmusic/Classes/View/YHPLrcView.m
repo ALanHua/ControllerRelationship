@@ -103,6 +103,9 @@
 
 -(void)setLrcName:(NSString *)lrcName
 {
+    // 重置当前位置的下标值
+    self.currentIndex = 0;
+    // 更新歌词
     _lrcName = [lrcName copy];
     // 解析歌词
     self.lrcList = [YHPLrcTool lrcWithLrcName:lrcName];

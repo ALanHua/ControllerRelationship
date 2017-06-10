@@ -211,7 +211,7 @@
                         <outlet property="iconView" destination="WCW-Sc-oyS" id="7XM-nw-Ahf"/>
                         <outlet property="lrcLabel" destination="Wrg-3s-EWa" id="MT5-Qc-3Iv"/>
                         <outlet property="lrcView" destination="z23-My-v5K" id="mVP-N1-kJp"/>
-                        <outlet property="playOrPauseBtn" destination="yCN-4T-4CU" id="SZY-O3-QZ8"/>
+                        <outlet property="playOrPauseBtn" destination="yCN-4T-4CU" id="aYb-oK-OgM"/>
                         <outlet property="progressSlider" destination="XGP-o7-H1m" id="h3T-ES-Zzl"/>
                         <outlet property="singerLabel" destination="mh5-Rl-z0P" id="KCa-VG-cMN"/>
                         <outlet property="songLabel" destination="nPr-ya-SNS" id="LZs-dH-pun"/>

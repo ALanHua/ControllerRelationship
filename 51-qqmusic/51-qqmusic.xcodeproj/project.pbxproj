@@ -424,6 +424,13 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		B841732D1EEBAD820077D523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8AFACEF1ED87592007FAC5D = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +438,7 @@
 				B8AFAD141ED87592007FAC5D /* 51-qqmusicTests */,
 				B8AFAD1F1ED87592007FAC5D /* 51-qqmusicUITests */,
 				B8AFACF91ED87592007FAC5D /* Products */,
+				B841732D1EEBAD820077D523 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -623,7 +631,16 @@
 				TargetAttributes = {
 					B8AFACF71ED87592007FAC5D = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = U9A585N65C;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 					B8AFAD101ED87592007FAC5D = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -908,6 +925,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U9A585N65C;
 				INFOPLIST_FILE = "51-qqmusic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1-qqmusic";
@@ -921,6 +939,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U9A585N65C;
 				INFOPLIST_FILE = "51-qqmusic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-1-qqmusic";
