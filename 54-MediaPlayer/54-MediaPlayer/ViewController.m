@@ -51,8 +51,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(next) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+-(void)next
+{
+    self.playerController.contentURL = nil;
+    [self.playerController play];
+}
 
 @end
