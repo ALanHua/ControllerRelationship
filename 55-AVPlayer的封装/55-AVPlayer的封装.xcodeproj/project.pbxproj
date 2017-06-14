@@ -15,6 +15,8 @@
 		B8B4D6EB1EEEEBCC002DF2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B4D6E91EEEEBCC002DF2D7 /* LaunchScreen.storyboard */; };
 		B8B4D6F61EEEEBCC002DF2D7 /* _5_AVPlayer___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B4D6F51EEEEBCC002DF2D7 /* _5_AVPlayer___Tests.m */; };
 		B8B4D7011EEEEBCC002DF2D7 /* _5_AVPlayer___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B4D7001EEEEBCC002DF2D7 /* _5_AVPlayer___UITests.m */; };
+		B8FD51551EF186A800937221 /* YHPVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FD51541EF186A800937221 /* YHPVideoPlayView.m */; };
+		B8FD51571EF186C900937221 /* YHPVideoPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8FD51561EF186C900937221 /* YHPVideoPlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		B8B4D6FC1EEEEBCC002DF2D7 /* 55-AVPlayer的封装UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "55-AVPlayer的封装UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B4D7001EEEEBCC002DF2D7 /* _5_AVPlayer___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_5_AVPlayer___UITests.m"; sourceTree = "<group>"; };
 		B8B4D7021EEEEBCC002DF2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8FD51531EF186A800937221 /* YHPVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPVideoPlayView.h; sourceTree = "<group>"; };
+		B8FD51541EF186A800937221 /* YHPVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPVideoPlayView.m; sourceTree = "<group>"; };
+		B8FD51561EF186C900937221 /* YHPVideoPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPVideoPlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		B8B4D6DA1EEEEBCC002DF2D7 /* 55-AVPlayer的封装 */ = {
 			isa = PBXGroup;
 			children = (
+				B8FD51521EF1866500937221 /* VIdeoPlayView */,
 				B8B4D6DE1EEEEBCC002DF2D7 /* AppDelegate.h */,
 				B8B4D6DF1EEEEBCC002DF2D7 /* AppDelegate.m */,
 				B8B4D6E11EEEEBCC002DF2D7 /* ViewController.h */,
@@ -138,6 +144,16 @@
 				B8B4D7021EEEEBCC002DF2D7 /* Info.plist */,
 			);
 			path = "55-AVPlayer的封装UITests";
+			sourceTree = "<group>";
+		};
+		B8FD51521EF1866500937221 /* VIdeoPlayView */ = {
+			isa = PBXGroup;
+			children = (
+				B8FD51531EF186A800937221 /* YHPVideoPlayView.h */,
+				B8FD51541EF186A800937221 /* YHPVideoPlayView.m */,
+				B8FD51561EF186C900937221 /* YHPVideoPlayView.xib */,
+			);
+			path = VIdeoPlayView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +218,7 @@
 		B8B4D6D01EEEEBCC002DF2D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YHP;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = YouHuaPei;
 				TargetAttributes = {
@@ -248,6 +265,7 @@
 			files = (
 				B8B4D6EB1EEEEBCC002DF2D7 /* LaunchScreen.storyboard in Resources */,
 				B8B4D6E81EEEEBCC002DF2D7 /* Assets.xcassets in Resources */,
+				B8FD51571EF186C900937221 /* YHPVideoPlayView.xib in Resources */,
 				B8B4D6E61EEEEBCC002DF2D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +293,7 @@
 			files = (
 				B8B4D6E31EEEEBCC002DF2D7 /* ViewController.m in Sources */,
 				B8B4D6E01EEEEBCC002DF2D7 /* AppDelegate.m in Sources */,
+				B8FD51551EF186A800937221 /* YHPVideoPlayView.m in Sources */,
 				B8B4D6DD1EEEEBCC002DF2D7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +528,7 @@
 				B8B4D7071EEEEBCC002DF2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8B4D7081EEEEBCC002DF2D7 /* Build configuration list for PBXNativeTarget "55-AVPlayer的封装Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +537,7 @@
 				B8B4D70A1EEEEBCC002DF2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8B4D70B1EEEEBCC002DF2D7 /* Build configuration list for PBXNativeTarget "55-AVPlayer的封装UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +546,7 @@
 				B8B4D70D1EEEEBCC002DF2D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
