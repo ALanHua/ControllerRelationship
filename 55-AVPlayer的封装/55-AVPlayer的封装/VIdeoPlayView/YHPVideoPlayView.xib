@@ -93,11 +93,11 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="ImageView" destination="ViA-AD-wAE" id="lm6-iz-rl6"/>
-                <outlet property="ToolView" destination="6EN-7s-vVQ" id="U62-jj-vHO"/>
+                <outlet property="imageView" destination="ViA-AD-wAE" id="2jU-A0-tT8"/>
                 <outlet property="playOrPauseBtn" destination="5DZ-NY-Vay" id="ugp-YK-xLj"/>
                 <outlet property="progressSlider" destination="boY-q6-lUr" id="ZJB-uM-ddb"/>
                 <outlet property="timeLabel" destination="Pet-7Y-xJA" id="t0J-Jn-vXq"/>
+                <outlet property="toolView" destination="6EN-7s-vVQ" id="0Z1-Ut-Wv5"/>
             </connections>
             <point key="canvasLocation" x="8" y="-482"/>
         </view>

@@ -10,4 +10,12 @@
 
 @interface YHPVideoPlayView : UIView
 
+
+/**
+ 快速创建YHPVideoPlayView
+ */
++(instancetype)videoPlayView;
+
+
+
 @end
