@@ -17,6 +17,11 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_media_default" translatesAutoresizingMaskIntoConstraints="NO" id="ViA-AD-wAE">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="v3q-rd-JT3" appends="YES" id="C8J-7l-MJY"/>
+                        <outletCollection property="gestureRecognizers" destination="bjR-pv-2LX" appends="YES" id="c9t-m1-YNQ"/>
+                        <outletCollection property="gestureRecognizers" destination="X62-Ow-wlv" appends="YES" id="KZa-rY-ob0"/>
+                    </connections>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6EN-7s-vVQ">
                     <rect key="frame" x="0.0" y="130" width="320" height="50"/>
@@ -30,11 +35,12 @@
                             <state key="normal" image="full_play_btn">
                                 <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </state>
+                            <state key="selected" image="full_pause_btn"/>
                             <connections>
                                 <action selector="playOrPause:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fko-JW-ido"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhN-Cn-Ywh">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhN-Cn-Ywh" userLabel="全屏按钮">
                             <rect key="frame" x="270" y="0.0" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="2YN-G0-VxA"/>
@@ -120,6 +126,7 @@
     <resources>
         <image name="bg_media_default" width="320" height="180"/>
         <image name="full_minimize_btn" width="50" height="50"/>
+        <image name="full_pause_btn" width="50" height="50"/>
         <image name="full_play_btn" width="50" height="50"/>
         <image name="mini_launchFullScreen_btn" width="50" height="40"/>
     </resources>

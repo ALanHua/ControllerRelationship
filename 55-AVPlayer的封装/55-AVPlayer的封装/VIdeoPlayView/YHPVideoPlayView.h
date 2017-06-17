@@ -15,7 +15,7 @@
  快速创建YHPVideoPlayView
  */
 +(instancetype)videoPlayView;
-
-
+/** 需要播放的视频资源 */
+@property (nonatomic,copy) NSString *urlString;
 
 @end
