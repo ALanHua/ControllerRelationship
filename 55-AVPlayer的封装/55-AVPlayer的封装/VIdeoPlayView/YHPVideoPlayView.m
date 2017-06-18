@@ -8,6 +8,7 @@
 
 #import "YHPVideoPlayView.h"
 #import <AVFoundation/AVFoundation.h>
+#import "YHPFullViewController.h"
 
 @interface YHPVideoPlayView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -33,6 +34,9 @@
 /** 工具栏显示时间 */
 @property(nonatomic,assign)NSTimeInterval showTime;
 
+/** 全屏控制器 */
+@property(nonatomic,strong)YHPFullViewController* fullVc;
+
 #pragma mark - 监听点击事件
 - (IBAction)playOrPause:(UIButton *)sender;
 - (IBAction)switchOrientation:(UIButton *)sender;
@@ -47,6 +51,16 @@
 @end
 
 @implementation YHPVideoPlayView
+
+#pragma mark - 懒加载
+
+- (YHPFullViewController *)fullVc
+{
+    if (!_fullVc) {
+        _fullVc = [[YHPFullViewController alloc]init];
+    }
+    return _fullVc;
+}
 
 #pragma mark -  快速创建YHPVideoPlayView
 + (instancetype)videoPlayView
@@ -196,7 +210,7 @@
     [self addProgressTimer];
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentItem.duration) * self.progressSlider.value;
     
-    [self.player seekToTime:CMTimeMake(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+    [self.player seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
 }
 
 - (IBAction)startSlider:(UISlider *)sender {
@@ -210,9 +224,33 @@
 }
 // 全屏展示
 - (IBAction)switchOrientation:(UIButton *)sender{
-    
+    sender.selected = !sender.selected;
+    [self videoPlayViewSwitchOrientation:sender.selected];
 }
-
+-(void)videoPlayViewSwitchOrientation:(BOOL)isFull{
+    
+    if (!self.contrainerViewController) {
+        return;
+    }
+    
+    if (isFull) {
+        [self.contrainerViewController presentViewController:self.fullVc animated:NO completion:^{
+            [self.fullVc.view addSubview:self];
+            self.center = self.fullVc.view.center;
+            [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+                self.frame = self.fullVc.view.bounds;
+            } completion:nil];
+        }];
+    }else{
+        [self.fullVc dismissViewControllerAnimated:NO completion:^{
+            [self.contrainerViewController.view addSubview:self];
+            
+            [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+                self.frame = CGRectMake(0, 0, self.contrainerViewController.view.bounds.size.width, self.contrainerViewController.view.bounds.size.width * 9 / 16);;
+            } completion:nil];
+        }];
+    }
+}
 #pragma mark - 手势
 
 -(void)showToolView:(BOOL)isShow

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B857316D1EF65FC3005F2C45 /* YHPFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B857316C1EF65FC3005F2C45 /* YHPFullViewController.m */; };
 		B8B4D6DD1EEEEBCC002DF2D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B4D6DC1EEEEBCC002DF2D7 /* main.m */; };
 		B8B4D6E01EEEEBCC002DF2D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B4D6DF1EEEEBCC002DF2D7 /* AppDelegate.m */; };
 		B8B4D6E31EEEEBCC002DF2D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B4D6E21EEEEBCC002DF2D7 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B857316B1EF65FC3005F2C45 /* YHPFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPFullViewController.h; sourceTree = "<group>"; };
+		B857316C1EF65FC3005F2C45 /* YHPFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPFullViewController.m; sourceTree = "<group>"; };
 		B8B4D6D81EEEEBCC002DF2D7 /* 55-AVPlayer的封装.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "55-AVPlayer的封装.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B4D6DC1EEEEBCC002DF2D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8B4D6DE1EEEEBCC002DF2D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				B8FD51531EF186A800937221 /* YHPVideoPlayView.h */,
 				B8FD51541EF186A800937221 /* YHPVideoPlayView.m */,
 				B8FD51561EF186C900937221 /* YHPVideoPlayView.xib */,
+				B857316B1EF65FC3005F2C45 /* YHPFullViewController.h */,
+				B857316C1EF65FC3005F2C45 /* YHPFullViewController.m */,
 			);
 			path = VIdeoPlayView;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				B8B4D6E31EEEEBCC002DF2D7 /* ViewController.m in Sources */,
 				B8B4D6E01EEEEBCC002DF2D7 /* AppDelegate.m in Sources */,
 				B8FD51551EF186A800937221 /* YHPVideoPlayView.m in Sources */,
+				B857316D1EF65FC3005F2C45 /* YHPFullViewController.m in Sources */,
 				B8B4D6DD1EEEEBCC002DF2D7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

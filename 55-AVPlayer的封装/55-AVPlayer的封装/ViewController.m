@@ -29,7 +29,7 @@
     playView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width * 9 / 16);
     [self.view addSubview:playView];
     self.playerView = playView;
-    
+    self.playerView.contrainerViewController = self;
 }
 
 

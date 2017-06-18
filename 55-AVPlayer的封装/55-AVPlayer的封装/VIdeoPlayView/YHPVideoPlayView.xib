@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_media_default" translatesAutoresizingMaskIntoConstraints="NO" id="ViA-AD-wAE">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_media_default" translatesAutoresizingMaskIntoConstraints="NO" id="ViA-AD-wAE">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="v3q-rd-JT3" appends="YES" id="C8J-7l-MJY"/>
@@ -57,9 +57,9 @@
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="boY-q6-lUr">
                             <rect key="frame" x="58" y="10" width="117" height="31"/>
                             <connections>
-                                <action selector="slider:" destination="iN0-l3-epB" eventType="touchDown" id="8PI-uL-1CP"/>
+                                <action selector="slider:" destination="iN0-l3-epB" eventType="touchUpInside" id="QFZ-lu-Vkh"/>
                                 <action selector="sliderValueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="g1m-mb-npW"/>
-                                <action selector="startSlider:" destination="iN0-l3-epB" eventType="touchUpInside" id="o7R-cf-wYf"/>
+                                <action selector="startSlider:" destination="iN0-l3-epB" eventType="touchDown" id="u9Z-Nk-ON3"/>
                             </connections>
                         </slider>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00/00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pet-7Y-xJA">
