@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B857317B1EFACBCA005F2C45 /* UIImage+YHPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B857317A1EFACBCA005F2C45 /* UIImage+YHPExtension.m */; };
 		B8FD51661EF2DCC500937221 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FD51651EF2DCC500937221 /* main.m */; };
 		B8FD51691EF2DCC500937221 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FD51681EF2DCC500937221 /* AppDelegate.m */; };
 		B8FD516C1EF2DCC500937221 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FD516B1EF2DCC500937221 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B85731791EFACBCA005F2C45 /* UIImage+YHPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YHPExtension.h"; sourceTree = "<group>"; };
+		B857317A1EFACBCA005F2C45 /* UIImage+YHPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YHPExtension.m"; sourceTree = "<group>"; };
 		B8FD51611EF2DCC500937221 /* 56-二维码.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "56-二维码.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FD51651EF2DCC500937221 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8FD51671EF2DCC500937221 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				B8FD51721EF2DCC500937221 /* LaunchScreen.storyboard */,
 				B8FD51751EF2DCC500937221 /* Info.plist */,
 				B8FD51641EF2DCC500937221 /* Supporting Files */,
+				B85731791EFACBCA005F2C45 /* UIImage+YHPExtension.h */,
+				B857317A1EFACBCA005F2C45 /* UIImage+YHPExtension.m */,
 			);
 			path = "56-二维码";
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				B8FD516C1EF2DCC500937221 /* ViewController.m in Sources */,
 				B8FD51691EF2DCC500937221 /* AppDelegate.m in Sources */,
 				B8FD51661EF2DCC500937221 /* main.m in Sources */,
+				B857317B1EFACBCA005F2C45 /* UIImage+YHPExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +516,7 @@
 				B8FD51901EF2DCC500937221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8FD51911EF2DCC500937221 /* Build configuration list for PBXNativeTarget "56-二维码Tests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +525,7 @@
 				B8FD51931EF2DCC500937221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8FD51941EF2DCC500937221 /* Build configuration list for PBXNativeTarget "56-二维码UITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +534,7 @@
 				B8FD51961EF2DCC500937221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

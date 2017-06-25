@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <CoreImage/CoreImage.h>
+#import "UIImage+YHPExtension.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -18,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 
 }
 
@@ -34,7 +34,7 @@
     [filter setValue:data forKeyPath:@"inputMessage"];
     // 获取输出二维码
     CIImage* outputImage = [filter outputImage];
-    self.imageView.image = [UIImage imageWithCIImage:outputImage];
+    self.imageView.image = [UIImage createNonInterpolatedUIImageFormCIImage:outputImage withSize:200];
 }
 
 @end
