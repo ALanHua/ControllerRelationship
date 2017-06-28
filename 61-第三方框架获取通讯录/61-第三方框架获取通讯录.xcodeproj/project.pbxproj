@@ -32,30 +32,30 @@
 			remoteGlobalIDString = B87325731F04060800066572;
 			remoteInfo = "61-第三方框架获取通讯录";
 		};
-		B87325C41F04088800066572 /* PBXContainerItemProxy */ = {
+		B87325E21F04099E00066572 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B87325BD1F04088800066572 /* RHAddressBook.xcodeproj */;
+			containerPortal = B87325DB1F04099E00066572 /* RHAddressBook.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 13C9D500146C5A8600327D15;
 			remoteInfo = RHAddressBook;
 		};
-		B87325C61F04088800066572 /* PBXContainerItemProxy */ = {
+		B87325E41F04099E00066572 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B87325BD1F04088800066572 /* RHAddressBook.xcodeproj */;
+			containerPortal = B87325DB1F04099E00066572 /* RHAddressBook.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 13D15189193E7688003B0F45;
 			remoteInfo = RHAddressBook.framework;
 		};
-		B87325C81F04088800066572 /* PBXContainerItemProxy */ = {
+		B87325E61F04099E00066572 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B87325BD1F04088800066572 /* RHAddressBook.xcodeproj */;
+			containerPortal = B87325DB1F04099E00066572 /* RHAddressBook.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 133DF0A81470F273005330C7;
 			remoteInfo = RHAddressBookTester;
 		};
-		B87325CA1F04088800066572 /* PBXContainerItemProxy */ = {
+		B87325E81F04099E00066572 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B87325BD1F04088800066572 /* RHAddressBook.xcodeproj */;
+			containerPortal = B87325DB1F04099E00066572 /* RHAddressBook.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 133DF0931470EE36005330C7;
 			remoteInfo = RHAddressBookLogicTests;
@@ -79,7 +79,7 @@
 		B87325981F04060800066572 /* 61-第三方框架获取通讯录UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "61-第三方框架获取通讯录UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B873259C1F04060800066572 /* _1___________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1___________UITests.m"; sourceTree = "<group>"; };
 		B873259E1F04060800066572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B87325BD1F04088800066572 /* RHAddressBook.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RHAddressBook.xcodeproj; sourceTree = "<group>"; };
+		B87325DB1F04099E00066572 /* RHAddressBook.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RHAddressBook.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,18 +173,18 @@
 		B87325AA1F04061100066572 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				B87325BD1F04088800066572 /* RHAddressBook.xcodeproj */,
+				B87325DB1F04099E00066572 /* RHAddressBook.xcodeproj */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
 		};
-		B87325BE1F04088800066572 /* Products */ = {
+		B87325DC1F04099E00066572 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B87325C51F04088800066572 /* libRHAddressBook.a */,
-				B87325C71F04088800066572 /* RHAddressBook.framework */,
-				B87325C91F04088800066572 /* RHAddressBookTester.app */,
-				B87325CB1F04088800066572 /* RHAddressBookLogicTests.xctest */,
+				B87325E31F04099E00066572 /* libRHAddressBook.a */,
+				B87325E51F04099E00066572 /* RHAddressBook.framework */,
+				B87325E71F04099E00066572 /* RHAddressBookTester.app */,
+				B87325E91F04099E00066572 /* RHAddressBookLogicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,8 +283,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B87325BE1F04088800066572 /* Products */;
-					ProjectRef = B87325BD1F04088800066572 /* RHAddressBook.xcodeproj */;
+					ProductGroup = B87325DC1F04099E00066572 /* Products */;
+					ProjectRef = B87325DB1F04099E00066572 /* RHAddressBook.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -297,32 +297,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B87325C51F04088800066572 /* libRHAddressBook.a */ = {
+		B87325E31F04099E00066572 /* libRHAddressBook.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRHAddressBook.a;
-			remoteRef = B87325C41F04088800066572 /* PBXContainerItemProxy */;
+			remoteRef = B87325E21F04099E00066572 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B87325C71F04088800066572 /* RHAddressBook.framework */ = {
+		B87325E51F04099E00066572 /* RHAddressBook.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RHAddressBook.framework;
-			remoteRef = B87325C61F04088800066572 /* PBXContainerItemProxy */;
+			remoteRef = B87325E41F04099E00066572 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B87325C91F04088800066572 /* RHAddressBookTester.app */ = {
+		B87325E71F04099E00066572 /* RHAddressBookTester.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = RHAddressBookTester.app;
-			remoteRef = B87325C81F04088800066572 /* PBXContainerItemProxy */;
+			remoteRef = B87325E61F04099E00066572 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B87325CB1F04088800066572 /* RHAddressBookLogicTests.xctest */ = {
+		B87325E91F04099E00066572 /* RHAddressBookLogicTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = RHAddressBookLogicTests.xctest;
-			remoteRef = B87325CA1F04088800066572 /* PBXContainerItemProxy */;
+			remoteRef = B87325E81F04099E00066572 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
