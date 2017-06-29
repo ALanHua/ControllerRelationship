@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <AddressBook/AddressBook.h>
+#import <RHAddressBook/AddressBook.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    RHAuthorizationStatus status = [RHAddressBook authorizationStatus];
+    if (status == RHAuthorizationStatusNotDetermined) {
+        // 创建通信录对象
+        RHAddressBook* addressBook = [[RHAddressBook alloc]init];
+        // 请求授权
+        [addressBook requestAuthorizationWithCompletion:^(bool granted, NSError *error) {
+            if (granted) {
+                NSLog(@"授权成功");
+            }else{
+                NSLog(@"授权失败");
+            }
+        }];
+    }
     
     return YES;
 }

@@ -18,9 +18,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    RHAuthorizationStatus status = [RHAddressBook authorizationStatus];
+    if (status != RHAuthorizationStatusAuthorized) {
+        return;
+    }
     
-
-
+    // 创建通讯录
+    RHAddressBook* addressBook = [[RHAddressBook alloc]init];
+    NSArray* people =  addressBook.people;
+    for (RHPerson* person in people) {
+        // 获取联系人的姓名
+        NSLog(@"%@,%@\n",person.firstName,person.lastName);
+        // 获取电话号码
+        RHMultiValue* phones = person.phoneNumbers;
+        for (int i = 0; i < phones.count; i++) {
+            // 获取电话号码
+            NSString* phoneLabel = [phones labelAtIndex:i];
+            NSString* phoneValue = [phones valueAtIndex:i];
+            NSLog(@"phoneLabel:%@,phoneValue:%@\n",phoneLabel,phoneValue);
+        }
+    }
+    
 }
 
 
