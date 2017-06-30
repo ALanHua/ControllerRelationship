@@ -15,8 +15,8 @@
 		B873263D1F054CEA00066572 /* _2___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B873263C1F054CEA00066572 /* _2___Tests.m */; };
 		B87326481F054CEA00066572 /* _2___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B87326471F054CEA00066572 /* _2___UITests.m */; };
 		B87326691F05552400066572 /* skin in Resources */ = {isa = PBXBuildFile; fileRef = B87326681F05552400066572 /* skin */; };
-		B873266F1F0557A400066572 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B873266E1F0557A400066572 /* TwoViewController.m */; };
 		B87326721F06A7E100066572 /* YHPSkinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B87326711F06A7E100066572 /* YHPSkinTool.m */; };
+		B87326751F06AE5B00066572 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87326741F06AE5B00066572 /* TwoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		B87326471F054CEA00066572 /* _2___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_2___UITests.m"; sourceTree = "<group>"; };
 		B87326491F054CEA00066572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B87326681F05552400066572 /* skin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = skin; sourceTree = "<group>"; };
-		B873266D1F0557A400066572 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
-		B873266E1F0557A400066572 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		B87326701F06A7E100066572 /* YHPSkinTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPSkinTool.h; sourceTree = "<group>"; };
 		B87326711F06A7E100066572 /* YHPSkinTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPSkinTool.m; sourceTree = "<group>"; };
+		B87326731F06AE5B00066572 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		B87326741F06AE5B00066572 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,14 +111,14 @@
 				B87326261F054CEA00066572 /* AppDelegate.m */,
 				B87326281F054CEA00066572 /* ViewController.h */,
 				B87326291F054CEA00066572 /* ViewController.m */,
-				B873266D1F0557A400066572 /* TwoViewController.h */,
-				B873266E1F0557A400066572 /* TwoViewController.m */,
 				B873262B1F054CEA00066572 /* Main.storyboard */,
 				B87326301F054CEA00066572 /* LaunchScreen.storyboard */,
 				B87326331F054CEA00066572 /* Info.plist */,
 				B87326221F054CEA00066572 /* Supporting Files */,
 				B87326701F06A7E100066572 /* YHPSkinTool.h */,
 				B87326711F06A7E100066572 /* YHPSkinTool.m */,
+				B87326731F06AE5B00066572 /* TwoViewController.h */,
+				B87326741F06AE5B00066572 /* TwoViewController.m */,
 			);
 			path = "62-换肤";
 			sourceTree = "<group>";
@@ -286,8 +286,8 @@
 				B87326721F06A7E100066572 /* YHPSkinTool.m in Sources */,
 				B873262A1F054CEA00066572 /* ViewController.m in Sources */,
 				B87326271F054CEA00066572 /* AppDelegate.m in Sources */,
+				B87326751F06AE5B00066572 /* TwoViewController.m in Sources */,
 				B87326241F054CEA00066572 /* main.m in Sources */,
-				B873266F1F0557A400066572 /* TwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,36 +2,27 @@
 //  TwoViewController.m
 //  62-换肤
 //
-//  Created by yhp on 2017/6/29.
+//  Created by yhp on 2017/7/1.
 //  Copyright © 2017年 YouHuaPei. All rights reserved.
 //
 
 #import "TwoViewController.h"
+#import "YHPSkinTool.h"
 
 @interface TwoViewController ()
-
+@property (weak, nonatomic) IBOutlet UIImageView *faceIageView;
+@property (weak, nonatomic) IBOutlet UIImageView *heartImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *rectImageView;
 @end
 
 @implementation TwoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.faceIageView.image = [YHPSkinTool skinToolWithImageName:@"face"];
+    self.heartImageView.image = [YHPSkinTool skinToolWithImageName:@"heart"];
+    self.rectImageView.image = [YHPSkinTool skinToolWithImageName:@"rect"];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
