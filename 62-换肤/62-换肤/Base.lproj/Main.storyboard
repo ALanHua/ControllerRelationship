@@ -63,7 +63,7 @@
                     <navigationItem key="navigationItem" id="UJO-68-mvI">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Bdn-Be-vw6">
                             <connections>
-                                <segue destination="j9A-hg-lIe" kind="showDetail" id="lh8-I5-maL"/>
+                                <segue destination="j9A-hg-lIe" kind="push" id="9Xx-wH-HgQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -105,6 +105,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tgB-75-5Cn"/>
+                    <connections>
+                        <outlet property="faceIageView" destination="YzA-fz-e7T" id="y9J-8D-8iZ"/>
+                        <outlet property="heartImageView" destination="Laq-ML-HmI" id="Dbs-mH-u1h"/>
+                        <outlet property="rectImageView" destination="TWv-km-FuL" id="bU0-Aj-5qh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8n-mx-9Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "YHPSkinTool.h"
 //NSString* const skinColor = @"skinColor";
 
 @interface ViewController ()
@@ -19,9 +19,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+-(void)setUpSkinColor
+{
     NSString* skinColor = [[NSUserDefaults standardUserDefaults]objectForKey:@"skinColor"];
     if (skinColor == nil) {
         skinColor = @"blue";
@@ -29,19 +28,37 @@
     [self changeSkinWithSkinColor:skinColor];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self changeImage];
+}
+
 
 - (IBAction)changeToBlueSkin {
-    [self changeSkinWithSkinColor:@"blue"];
+    [YHPSkinTool setSkinColor:@"blue"];
+    [self changeImage];
+//    [self changeSkinWithSkinColor:@"blue"];
 }
 
 - (IBAction)changeToRedSkin {
-    [self changeSkinWithSkinColor:@"red"];
+    [YHPSkinTool setSkinColor:@"red"];
+    [self changeImage];
+//    [self changeSkinWithSkinColor:@"red"];
 }
 
 - (IBAction)changeToGreenSkin {
-    [self changeSkinWithSkinColor:@"green"];
+    [YHPSkinTool setSkinColor:@"green"];
+    [self changeImage];
+//    [self changeSkinWithSkinColor:@"green"];
 }
 
+
+-(void)changeImage
+{
+    self.faceIageView.image = [YHPSkinTool skinToolWithImageName:@"face"];
+    self.heartImageView.image = [YHPSkinTool skinToolWithImageName:@"heart"];
+    self.rectImageView.image = [YHPSkinTool skinToolWithImageName:@"rect"];
+}
 
 /**
  设置不同颜色的图片
@@ -55,9 +72,6 @@
     self.faceIageView.image = [UIImage imageNamed:faceImageName];
     self.heartImageView.image = [UIImage imageNamed:heartImageName];
     self.rectImageView.image = [UIImage imageNamed:rectImageName];
-    // 记录选中的颜色
-    [[NSUserDefaults standardUserDefaults] setObject:skinColor forKey:@"skinColor"];
-    [[NSUserDefaults standardUserDefaults]synchronize];
 }
 
 
