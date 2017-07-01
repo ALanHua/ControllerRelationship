@@ -51,6 +51,11 @@
     [self changeImage];
 //    [self changeSkinWithSkinColor:@"green"];
 }
+- (IBAction)changeToOrangeSkin {
+    
+    [YHPSkinTool setSkinColor:@"orange"];
+    [self changeImage];
+}
 
 
 -(void)changeImage

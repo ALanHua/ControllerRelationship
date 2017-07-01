@@ -20,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
     self.faceIageView.image = [YHPSkinTool skinToolWithImageName:@"face"];
     self.heartImageView.image = [YHPSkinTool skinToolWithImageName:@"heart"];
     self.rectImageView.image = [YHPSkinTool skinToolWithImageName:@"rect"];
