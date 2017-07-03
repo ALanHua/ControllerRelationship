@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *faceIageView;
 @property (weak, nonatomic) IBOutlet UIImageView *heartImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *rectImageView;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 @end
 
 @implementation TwoViewController
@@ -29,6 +30,7 @@
     self.faceIageView.image = [YHPSkinTool skinToolWithImageName:@"face"];
     self.heartImageView.image = [YHPSkinTool skinToolWithImageName:@"heart"];
     self.rectImageView.image = [YHPSkinTool skinToolWithImageName:@"rect"];
+    self.textLabel.backgroundColor = [YHPSkinTool skinToolWithabelColor];
 }
 
 @end

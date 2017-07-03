@@ -17,6 +17,7 @@
 		B87326691F05552400066572 /* skin in Resources */ = {isa = PBXBuildFile; fileRef = B87326681F05552400066572 /* skin */; };
 		B87326721F06A7E100066572 /* YHPSkinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B87326711F06A7E100066572 /* YHPSkinTool.m */; };
 		B87326751F06AE5B00066572 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87326741F06AE5B00066572 /* TwoViewController.m */; };
+		B87326771F0A877500066572 /* bgColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = B87326761F0A877500066572 /* bgColor.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B87326711F06A7E100066572 /* YHPSkinTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPSkinTool.m; sourceTree = "<group>"; };
 		B87326731F06AE5B00066572 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		B87326741F06AE5B00066572 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		B87326761F0A877500066572 /* bgColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bgColor.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				B87326711F06A7E100066572 /* YHPSkinTool.m */,
 				B87326731F06AE5B00066572 /* TwoViewController.h */,
 				B87326741F06AE5B00066572 /* TwoViewController.m */,
+				B87326761F0A877500066572 /* bgColor.plist */,
 			);
 			path = "62-换肤";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				B87326321F054CEA00066572 /* LaunchScreen.storyboard in Resources */,
 				B87326691F05552400066572 /* skin in Resources */,
 				B873262D1F054CEA00066572 /* Main.storyboard in Resources */,
+				B87326771F0A877500066572 /* bgColor.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +525,7 @@
 				B873264E1F054CEA00066572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B873264F1F054CEA00066572 /* Build configuration list for PBXNativeTarget "62-换肤Tests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +534,7 @@
 				B87326511F054CEA00066572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B87326521F054CEA00066572 /* Build configuration list for PBXNativeTarget "62-换肤UITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +543,7 @@
 				B87326541F054CEA00066572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

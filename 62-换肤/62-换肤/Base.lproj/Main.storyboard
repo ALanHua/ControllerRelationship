@@ -122,6 +122,13 @@
                                 <rect key="frame" x="119" y="414" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMj-9G-O7R">
+                                <rect key="frame" x="158" y="570" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -131,6 +138,7 @@
                         <outlet property="faceIageView" destination="YzA-fz-e7T" id="y9J-8D-8iZ"/>
                         <outlet property="heartImageView" destination="Laq-ML-HmI" id="Dbs-mH-u1h"/>
                         <outlet property="rectImageView" destination="TWv-km-FuL" id="bU0-Aj-5qh"/>
+                        <outlet property="textLabel" destination="uMj-9G-O7R" id="V7z-XO-VBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8n-mx-9Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>

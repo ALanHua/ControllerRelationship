@@ -12,5 +12,6 @@
 
 +(void)setSkinColor:(NSString*)skinColor;
 +(UIImage*)skinToolWithImageName:(NSString*)imageName;
++(UIColor*)skinToolWithabelColor;
 
 @end
