@@ -19,23 +19,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // pull
-    if (![self.mgr isGyroAvailable]) {
-        NSLog(@"手机该换了");
+    // 获取磁力器值
+    if ([self.mgr isMagnetometerAvailable]) {
+        return;
     }
     
-    [self.mgr startGyroUpdates];
+    // 设置caiyangjiange
+    self.mgr.magnetometerUpdateInterval = 0.3;
+    
+    // 开始采样
+    [self.mgr startMagnetometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMMagnetometerData * _Nullable magnetometerData, NSError * _Nullable error) {
+        if (error) {
+            return;
+        }
+        
+        CMMagneticField field = magnetometerData.magneticField;
+         NSLog(@"x:%f,y:%f,z:%f",field.x,field.y,field.z);
+        
+    }];
     
 }
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+
+}
+
+#pragma mark - 获取陀螺仪信息
+
+-(void)getGyroInfo
+{
     CMRotationRate rotationrate = self.mgr.gyroData.rotationRate;
     NSLog(@"x:%f,y:%f,z:%f",rotationrate.x,rotationrate.y,rotationrate.z);
 }
 
-#pragma mark - 获取陀螺仪信息
+-(void)pullGyro
+{
+    // pull
+    if (![self.mgr isGyroAvailable]) {
+        NSLog(@"手机该换了");
+    }
+    
+    [self.mgr startGyroUpdates];
+}
+
 - (void)pushGyro
 {
     // 获取陀螺仪
