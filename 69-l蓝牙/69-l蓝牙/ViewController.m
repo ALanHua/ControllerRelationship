@@ -11,7 +11,8 @@
 
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,GKPeerPickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
+/** session */
+@property(nonatomic,strong)GKSession* session;
 @end
 
 @implementation ViewController
@@ -42,6 +43,9 @@
 
 - (IBAction)sendImage {
     
+    NSData* imageData = UIImageJPEGRepresentation(self.imageView.image, 1.0);
+    // 发送照片
+    [self.session sendDataToAllPeers:imageData withDataMode:GKSendDataReliable error:nil];
 }
 
 - (void)viewDidLoad {
@@ -59,7 +63,6 @@
 }
 
 #pragma mark - <GKPeerPickerControllerDelegate>
-
 /**
  当建立连接成功时，会调用该方法
  @param picker 控制器
@@ -68,8 +71,18 @@
  */
 - (void)peerPickerController:(GKPeerPickerController *)picker didConnectPeer:(NSString *)peerID toSession:(GKSession *)session
 {
-    NSLog(@"连接成功");
+//    NSLog(@"连接成功");
+    self.session = session;
+    // 设置句柄
+    [self.session setDataReceiveHandler:self withContext:nil];
+    
     [picker dismiss];
+}
+
+- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context;
+{
+    // 直接转成imge
+    self.imageView.image = [UIImage imageWithData:data];
 }
 
 @end
