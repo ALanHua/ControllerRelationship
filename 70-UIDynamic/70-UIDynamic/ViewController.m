@@ -20,14 +20,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.animator removeAllBehaviors];
+    // 创建捕捉行为
+    CGPoint point = [[touches anyObject]locationInView:self.view];
+    
+    UISnapBehavior* snap = [[UISnapBehavior alloc]initWithItem:self.redView snapToPoint:point];
+    // 设置阻力系数
+    snap.damping = 0.5;
+    // 添加到仿真器
+    [self.animator addBehavior:snap];
+    
 }
+
+-(void)gravityAndCollision
+{
+    // 创建仿真行为，并指定仿真元素
+    UIGravityBehavior* gravity = [[UIGravityBehavior alloc]initWithItems:@[self.redView]];
+    // 设置重力的向量值
+    gravity.gravityDirection = CGVectorMake(1.0, 3.0);
+    // 设置碰撞行为
+    UICollisionBehavior* collision = [[UICollisionBehavior alloc]initWithItems:@[self.redView,self.blueView]];
+    // 设置碰撞边界
+    collision.translatesReferenceBoundsIntoBoundary = YES;
+    // 给碰撞行为添加边界
+    CGPoint startPoint = CGPointMake(0, self.view.bounds.size.height * 2 / 3);
+    CGPoint endPoint   = CGPointMake(self.view.bounds.size.width, self.view.bounds.size.height * 2 / 3);
+    [collision addBoundaryWithIdentifier:@"lineBoundary" fromPoint:startPoint toPoint:endPoint];
+    UIBezierPath* bezierPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width)];
+    
+    [collision addBoundaryWithIdentifier:@"bezierPath" forPath:bezierPath];
+    // 将仿真行为加到仿真器中
+    [self.animator addBehavior:gravity];
+    [self.animator addBehavior:collision];
+}
+
 
 #pragma mark - 懒加载
 - (UIDynamicAnimator *)animator
