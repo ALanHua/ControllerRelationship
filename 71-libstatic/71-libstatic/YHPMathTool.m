@@ -10,6 +10,13 @@
 
 @implementation YHPMathTool
 
+/*
+ 静态库合并
+ lipo -create Debug-iphoneos/lib71-libstatic.a Debug-iphonesimulator/lib71-libstatic.a -output libstatic.a
+ 查看静态库信息
+ lips - info  *.a
+ */
+
 +(NSInteger)sumNum1:(NSInteger)num1 num2:(NSInteger)num2
 {
     return num1 + num2;
