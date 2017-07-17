@@ -1,0 +1,6 @@
+framework module mathTool {
+  umbrella header "mathTool.h"
+
+  export *
+  module * { export * }
+}

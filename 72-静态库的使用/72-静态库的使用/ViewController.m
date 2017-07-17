@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YHPMathTool.h"
+#import <mathTool.framework/MathTool.h>
 
 @interface ViewController ()
 
@@ -19,6 +20,8 @@
     [super viewDidLoad];
 
     NSLog(@"sum:%ld",[YHPMathTool sumNum1:20 num2:30]);
+    
+    NSLog(@"sum:%ld",[MathTool sumNum1:20 num2:30]);
 }
 
 
