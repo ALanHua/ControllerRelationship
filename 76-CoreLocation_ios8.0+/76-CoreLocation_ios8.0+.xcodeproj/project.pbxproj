@@ -431,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "76-CoreLocation_ios8.0+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-CoreLocation-ios8-0-";
@@ -442,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "76-CoreLocation_ios8.0+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mark.-6-CoreLocation-ios8-0-";
@@ -514,6 +516,7 @@
 				B8AA0B4B1F1FA39700382830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8AA0B4C1F1FA39700382830 /* Build configuration list for PBXNativeTarget "76-CoreLocation_ios8.0+Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +525,7 @@
 				B8AA0B4E1F1FA39700382830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8AA0B4F1F1FA39700382830 /* Build configuration list for PBXNativeTarget "76-CoreLocation_ios8.0+UITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +534,7 @@
 				B8AA0B511F1FA39700382830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

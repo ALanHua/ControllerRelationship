@@ -26,7 +26,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     // 使用位置管理者
-    [self.lM startUpdatingLocation];
+//    [self.lM startUpdatingLocation];
+    [self.lM requestLocation];
     
 }
 
@@ -60,7 +61,9 @@
         
         if ([_lM respondsToSelector:@selector(requestAlwaysAuthorization)]) {
              [_lM requestWhenInUseAuthorization];
-            
+            if ([[UIDevice currentDevice].systemVersion floatValue] >= 9.0){
+                _lM.allowsBackgroundLocationUpdates = YES;
+            }
 //             [_lM requestAlwaysAuthorization];
         }
         
@@ -79,7 +82,7 @@
 {
     NSLog(@"更新位置");
     // 停止更新
-    [manager stopUpdatingLocation];
+//    [manager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
@@ -127,6 +130,11 @@
         default:
             break;
     }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"定位失败");
 }
 
 
