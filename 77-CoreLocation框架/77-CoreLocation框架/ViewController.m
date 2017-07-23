@@ -13,7 +13,8 @@
 
 /** 位置管理者 */
 @property(nonatomic,strong)CLLocationManager* lM;
-
+/** 老位置 */
+@property(nonatomic,strong)CLLocation* oldL;
 @end
 
 @implementation ViewController
@@ -26,7 +27,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     // 使用位置管理者
-    //    [self.lM startUpdatingLocation];
+    [self.lM startUpdatingLocation];
 #if 0
     // 唯独相差一度，相距大概110km
     CLLocation* l1 = [[CLLocation alloc]initWithLatitude:21.123 longitude:123.456];
@@ -36,7 +37,7 @@
     NSLog(@"%lf",distance);
 #endif
     
-    [self.lM requestLocation];
+    // [self.lM requestLocation];
     
 }
 
@@ -97,19 +98,53 @@
      speed：速度
      */
     CLLocation* location = [locations lastObject];
-    NSLog(@"%@",location);
+//    NSLog(@"%@",location);
     
     // 1，获取方向偏向
-    
+    NSString* angleStr = nil;
+    switch ((int)(location.course / 90)) {
+        case 0:
+            angleStr = @"北偏东";
+            break;
+        case 1:
+             angleStr = @"东偏南";
+            break;
+        case 2:
+             angleStr = @"南偏西";
+            break;
+        case 3:
+             angleStr = @"西偏北";
+            break;
+        default:
+             angleStr = @"不知道去哪里啦";
+            break;
+    }
     // 2,偏向角度
+    NSInteger angle = 0;
+    angle = (int)location.course % 90;
+    if (angle == 0) {
+        NSRange range = NSMakeRange(0, 1);
+        angleStr = [NSString stringWithFormat:@"正%@",[angleStr substringWithRange:range]];
+    }
+    
     
     // 3，移动多少米
-    
+    double distance = 0;
+    if (_oldL) {
+        distance = [location distanceFromLocation:_oldL];
+    }
+    _oldL = location;
     // 4,拼串打印
+    NSString* noticStr = nil;
     
+    if (angle) {
+        noticStr = [NSString stringWithFormat:@"%@%zd方向,移动了%lf米",angleStr,angle,distance];
+    }else{
+        noticStr = [NSString stringWithFormat:@"%@方向,移动了%lf米",angleStr,distance];
+    }
+
     
-    
-    
+    NSLog(@"%@",noticStr);
     // 停止更新
     //    [manager stopUpdatingLocation];
 }
