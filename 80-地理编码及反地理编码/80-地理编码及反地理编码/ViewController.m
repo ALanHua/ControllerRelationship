@@ -32,8 +32,12 @@
 }
 - (IBAction)geoCoder {
     
+    NSString* addressName = self.addressTV.text;
+    if ([addressName isEqualToString:@""]) {
+        return;
+    }
     // 地理编码
-    [self.geoC geocodeAddressString:@"江陵地铁站" completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+    [self.geoC geocodeAddressString:addressName completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         /**
          *  CLPlacemark
             location: 位置对象
@@ -44,8 +48,6 @@
         if (error == nil) {
             
             [placemarks enumerateObjectsUsingBlock:^(CLPlacemark * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                NSLog(@"%@",obj.name);
-                self.addressTV.text = obj.name;
                 self.latitudeTF.text = @(obj.location.coordinate.latitude).stringValue;
                 self.longtitudeTF.text = @(obj.location.coordinate.longitude).stringValue;
             }];
@@ -56,6 +58,26 @@
     }];
 }
 - (IBAction)reverseGeoCoder {
+    
+    double ratitude   = self.latitudeTF.text.doubleValue;
+    double longtitude = self.longtitudeTF.text.doubleValue;
+    
+    if (ratitude == 0 || longtitude == 0) {
+        return;
+    }
+    
+    CLLocation* loc = [[CLLocation alloc]initWithLatitude: ratitude   longitude:longtitude];
+    
+    [self.geoC reverseGeocodeLocation:loc completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (error == nil) {
+            
+            [placemarks enumerateObjectsUsingBlock:^(CLPlacemark * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                self.addressTV.text = obj.name;
+            }];
+        }else{
+            NSLog(@"error:%@",error);
+        }
+    }];
 }
 
 - (void)viewDidLoad {
