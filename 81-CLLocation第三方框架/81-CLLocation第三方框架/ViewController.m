@@ -31,7 +31,7 @@
                  NSLog(@"%ld",achievedAccuracy);
              }
              else if (status == INTULocationStatusTimedOut) {
-
+                 
              }
              else {
                  
