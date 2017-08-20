@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B80FD2921F49C41D00A3A3B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FD2911F49C41D00A3A3B0 /* main.m */; };
+		B80FD2951F49C41D00A3A3B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FD2941F49C41D00A3A3B0 /* AppDelegate.m */; };
+		B80FD2981F49C41D00A3A3B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FD2971F49C41D00A3A3B0 /* ViewController.m */; };
+		B80FD29B1F49C41D00A3A3B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80FD2991F49C41D00A3A3B0 /* Main.storyboard */; };
+		B80FD29D1F49C41D00A3A3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80FD29C1F49C41D00A3A3B0 /* Assets.xcassets */; };
+		B80FD2A01F49C41D00A3A3B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80FD29E1F49C41D00A3A3B0 /* LaunchScreen.storyboard */; };
+		B80FD2AB1F49C41D00A3A3B0 /* _3_mapkit________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FD2AA1F49C41D00A3A3B0 /* _3_mapkit________Tests.m */; };
+		B80FD2B61F49C41D00A3A3B0 /* _3_mapkit________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FD2B51F49C41D00A3A3B0 /* _3_mapkit________UITests.m */; };
+		B80FD2C51F49C64800A3A3B0 /* YHPAnno.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FD2C41F49C64800A3A3B0 /* YHPAnno.m */; };
+		B80FD2C81F49C94900A3A3B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80FD2C71F49C94900A3A3B0 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B80FD2A71F49C41D00A3A3B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B80FD2851F49C41D00A3A3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B80FD28C1F49C41D00A3A3B0;
+			remoteInfo = "83-mapkit框架自定义大头针";
+		};
+		B80FD2B21F49C41D00A3A3B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B80FD2851F49C41D00A3A3B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B80FD28C1F49C41D00A3A3B0;
+			remoteInfo = "83-mapkit框架自定义大头针";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B80FD28D1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "83-mapkit框架自定义大头针.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80FD2911F49C41D00A3A3B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B80FD2931F49C41D00A3A3B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B80FD2941F49C41D00A3A3B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B80FD2961F49C41D00A3A3B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B80FD2971F49C41D00A3A3B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B80FD29A1F49C41D00A3A3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B80FD29C1F49C41D00A3A3B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B80FD29F1F49C41D00A3A3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B80FD2A11F49C41D00A3A3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B80FD2A61F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "83-mapkit框架自定义大头针Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80FD2AA1F49C41D00A3A3B0 /* _3_mapkit________Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_3_mapkit________Tests.m"; sourceTree = "<group>"; };
+		B80FD2AC1F49C41D00A3A3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B80FD2B11F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "83-mapkit框架自定义大头针UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80FD2B51F49C41D00A3A3B0 /* _3_mapkit________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_3_mapkit________UITests.m"; sourceTree = "<group>"; };
+		B80FD2B71F49C41D00A3A3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B80FD2C31F49C64800A3A3B0 /* YHPAnno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHPAnno.h; sourceTree = "<group>"; };
+		B80FD2C41F49C64800A3A3B0 /* YHPAnno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHPAnno.m; sourceTree = "<group>"; };
+		B80FD2C71F49C94900A3A3B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B80FD28A1F49C41D00A3A3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80FD2C81F49C94900A3A3B0 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80FD2A31F49C41D00A3A3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80FD2AE1F49C41D00A3A3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B80FD2841F49C41D00A3A3B0 = {
+			isa = PBXGroup;
+			children = (
+				B80FD28F1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针 */,
+				B80FD2A91F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针Tests */,
+				B80FD2B41F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针UITests */,
+				B80FD28E1F49C41D00A3A3B0 /* Products */,
+				B80FD2C61F49C94900A3A3B0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B80FD28E1F49C41D00A3A3B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B80FD28D1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针.app */,
+				B80FD2A61F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针Tests.xctest */,
+				B80FD2B11F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B80FD28F1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针 */ = {
+			isa = PBXGroup;
+			children = (
+				B80FD2931F49C41D00A3A3B0 /* AppDelegate.h */,
+				B80FD2941F49C41D00A3A3B0 /* AppDelegate.m */,
+				B80FD2961F49C41D00A3A3B0 /* ViewController.h */,
+				B80FD2971F49C41D00A3A3B0 /* ViewController.m */,
+				B80FD2C31F49C64800A3A3B0 /* YHPAnno.h */,
+				B80FD2C41F49C64800A3A3B0 /* YHPAnno.m */,
+				B80FD2991F49C41D00A3A3B0 /* Main.storyboard */,
+				B80FD29C1F49C41D00A3A3B0 /* Assets.xcassets */,
+				B80FD29E1F49C41D00A3A3B0 /* LaunchScreen.storyboard */,
+				B80FD2A11F49C41D00A3A3B0 /* Info.plist */,
+				B80FD2901F49C41D00A3A3B0 /* Supporting Files */,
+			);
+			path = "83-mapkit框架自定义大头针";
+			sourceTree = "<group>";
+		};
+		B80FD2901F49C41D00A3A3B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B80FD2911F49C41D00A3A3B0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B80FD2A91F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B80FD2AA1F49C41D00A3A3B0 /* _3_mapkit________Tests.m */,
+				B80FD2AC1F49C41D00A3A3B0 /* Info.plist */,
+			);
+			path = "83-mapkit框架自定义大头针Tests";
+			sourceTree = "<group>";
+		};
+		B80FD2B41F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B80FD2B51F49C41D00A3A3B0 /* _3_mapkit________UITests.m */,
+				B80FD2B71F49C41D00A3A3B0 /* Info.plist */,
+			);
+			path = "83-mapkit框架自定义大头针UITests";
+			sourceTree = "<group>";
+		};
+		B80FD2C61F49C94900A3A3B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B80FD2C71F49C94900A3A3B0 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B80FD28C1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80FD2BA1F49C41D00A3A3B0 /* Build configuration list for PBXNativeTarget "83-mapkit框架自定义大头针" */;
+			buildPhases = (
+				B80FD2891F49C41D00A3A3B0 /* Sources */,
+				B80FD28A1F49C41D00A3A3B0 /* Frameworks */,
+				B80FD28B1F49C41D00A3A3B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "83-mapkit框架自定义大头针";
+			productName = "83-mapkit框架自定义大头针";
+			productReference = B80FD28D1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B80FD2A51F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80FD2BD1F49C41D00A3A3B0 /* Build configuration list for PBXNativeTarget "83-mapkit框架自定义大头针Tests" */;
+			buildPhases = (
+				B80FD2A21F49C41D00A3A3B0 /* Sources */,
+				B80FD2A31F49C41D00A3A3B0 /* Frameworks */,
+				B80FD2A41F49C41D00A3A3B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B80FD2A81F49C41D00A3A3B0 /* PBXTargetDependency */,
+			);
+			name = "83-mapkit框架自定义大头针Tests";
+			productName = "83-mapkit框架自定义大头针Tests";
+			productReference = B80FD2A61F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B80FD2B01F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80FD2C01F49C41D00A3A3B0 /* Build configuration list for PBXNativeTarget "83-mapkit框架自定义大头针UITests" */;
+			buildPhases = (
+				B80FD2AD1F49C41D00A3A3B0 /* Sources */,
+				B80FD2AE1F49C41D00A3A3B0 /* Frameworks */,
+				B80FD2AF1F49C41D00A3A3B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B80FD2B31F49C41D00A3A3B0 /* PBXTargetDependency */,
+			);
+			name = "83-mapkit框架自定义大头针UITests";
+			productName = "83-mapkit框架自定义大头针UITests";
+			productReference = B80FD2B11F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B80FD2851F49C41D00A3A3B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YHP;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = YouHuaPei;
+				TargetAttributes = {
+					B80FD28C1F49C41D00A3A3B0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					B80FD2A51F49C41D00A3A3B0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B80FD28C1F49C41D00A3A3B0;
+					};
+					B80FD2B01F49C41D00A3A3B0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B80FD28C1F49C41D00A3A3B0;
+					};
+				};
+			};
+			buildConfigurationList = B80FD2881F49C41D00A3A3B0 /* Build configuration list for PBXProject "83-mapkit框架自定义大头针" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B80FD2841F49C41D00A3A3B0;
+			productRefGroup = B80FD28E1F49C41D00A3A3B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B80FD28C1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针 */,
+				B80FD2A51F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针Tests */,
+				B80FD2B01F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B80FD28B1F49C41D00A3A3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80FD2A01F49C41D00A3A3B0 /* LaunchScreen.storyboard in Resources */,
+				B80FD29D1F49C41D00A3A3B0 /* Assets.xcassets in Resources */,
+				B80FD29B1F49C41D00A3A3B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80FD2A41F49C41D00A3A3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80FD2AF1F49C41D00A3A3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B80FD2891F49C41D00A3A3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80FD2981F49C41D00A3A3B0 /* ViewController.m in Sources */,
+				B80FD2C51F49C64800A3A3B0 /* YHPAnno.m in Sources */,
+				B80FD2951F49C41D00A3A3B0 /* AppDelegate.m in Sources */,
+				B80FD2921F49C41D00A3A3B0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80FD2A21F49C41D00A3A3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80FD2AB1F49C41D00A3A3B0 /* _3_mapkit________Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80FD2AD1F49C41D00A3A3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80FD2B61F49C41D00A3A3B0 /* _3_mapkit________UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B80FD2A81F49C41D00A3A3B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B80FD28C1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针 */;
+			targetProxy = B80FD2A71F49C41D00A3A3B0 /* PBXContainerItemProxy */;
+		};
+		B80FD2B31F49C41D00A3A3B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B80FD28C1F49C41D00A3A3B0 /* 83-mapkit框架自定义大头针 */;
+			targetProxy = B80FD2B21F49C41D00A3A3B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B80FD2991F49C41D00A3A3B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B80FD29A1F49C41D00A3A3B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B80FD29E1F49C41D00A3A3B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B80FD29F1F49C41D00A3A3B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B80FD2B81F49C41D00A3A3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B80FD2B91F49C41D00A3A3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B80FD2BB1F49C41D00A3A3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "83-mapkit框架自定义大头针/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3-mapkit--------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B80FD2BC1F49C41D00A3A3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "83-mapkit框架自定义大头针/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3-mapkit--------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B80FD2BE1F49C41D00A3A3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "83-mapkit框架自定义大头针Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3-mapkit--------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/83-mapkit框架自定义大头针.app/83-mapkit框架自定义大头针";
+			};
+			name = Debug;
+		};
+		B80FD2BF1F49C41D00A3A3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "83-mapkit框架自定义大头针Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3-mapkit--------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/83-mapkit框架自定义大头针.app/83-mapkit框架自定义大头针";
+			};
+			name = Release;
+		};
+		B80FD2C11F49C41D00A3A3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "83-mapkit框架自定义大头针UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3-mapkit--------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "83-mapkit框架自定义大头针";
+			};
+			name = Debug;
+		};
+		B80FD2C21F49C41D00A3A3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "83-mapkit框架自定义大头针UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-3-mapkit--------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "83-mapkit框架自定义大头针";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B80FD2881F49C41D00A3A3B0 /* Build configuration list for PBXProject "83-mapkit框架自定义大头针" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80FD2B81F49C41D00A3A3B0 /* Debug */,
+				B80FD2B91F49C41D00A3A3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B80FD2BA1F49C41D00A3A3B0 /* Build configuration list for PBXNativeTarget "83-mapkit框架自定义大头针" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80FD2BB1F49C41D00A3A3B0 /* Debug */,
+				B80FD2BC1F49C41D00A3A3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B80FD2BD1F49C41D00A3A3B0 /* Build configuration list for PBXNativeTarget "83-mapkit框架自定义大头针Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80FD2BE1F49C41D00A3A3B0 /* Debug */,
+				B80FD2BF1F49C41D00A3A3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B80FD2C01F49C41D00A3A3B0 /* Build configuration list for PBXNativeTarget "83-mapkit框架自定义大头针UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80FD2C11F49C41D00A3A3B0 /* Debug */,
+				B80FD2C21F49C41D00A3A3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B80FD2851F49C41D00A3A3B0 /* Project object */;
+}
