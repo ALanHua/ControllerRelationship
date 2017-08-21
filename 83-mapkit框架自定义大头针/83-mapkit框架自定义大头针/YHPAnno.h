@@ -15,5 +15,6 @@
 @property (nonatomic, copy, nullable) NSString *title;
 @property (nonatomic, copy, nullable) NSString *subtitle;
 
-
+/** 类型 */
+@property(nonatomic,assign)NSInteger type;
 @end
