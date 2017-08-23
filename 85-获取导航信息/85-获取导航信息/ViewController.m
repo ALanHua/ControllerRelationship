@@ -10,8 +10,9 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController ()
+@interface ViewController ()<MKMapViewDelegate>
 
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 /** CLGeocoder */
 @property(nonatomic,strong)CLGeocoder* geoC;
@@ -52,6 +53,12 @@
 
 -(void)getRouteWithBeginPL:(CLPlacemark*)beginP andEndPL:(CLPlacemark*)endP
 {
+    MKCircle* circle = [MKCircle circleWithCenterCoordinate: beginP.location.coordinate radius:100000];
+    [self.mapView addOverlay:circle];
+    MKCircle* circle2 = [MKCircle circleWithCenterCoordinate: endP.location.coordinate radius:100000];
+    [self.mapView addOverlay:circle2];
+    
+    
     MKDirectionsRequest* request = [[MKDirectionsRequest alloc]init];
     //    起点
     CLPlacemark* clP = beginP;
@@ -78,13 +85,51 @@
         */
         [response.routes enumerateObjectsUsingBlock:^(MKRoute * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSLog(@"%@",obj.name);
+            
+            MKPolyline *polyline = obj.polyline;
+            
+            // 添加一个覆盖层会调用mapView的代理方法rendererForOverlay
+            [self.mapView addOverlay:polyline];
+            /*
             [obj.steps enumerateObjectsUsingBlock:^(MKRouteStep * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 NSLog(@"%@",obj.instructions);
-            }];
+            }];*/
         }];
         
     }];
 }
+
+#pragma mark -<MKMapViewDelegate>
+
+/**
+ 获取对应的图层渲染
+
+ @param mapView 地图
+ @param overlay 覆盖层
+ @return 渲染图层
+ */
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    
+    if ([overlay isKindOfClass:[MKCircle class]]) {
+        MKCircleRenderer* cricleR =  [[MKCircleRenderer alloc]initWithOverlay:overlay];
+        cricleR.fillColor = [UIColor cyanColor];
+        cricleR.alpha = 0.5;
+        return cricleR;
+    }
+    
+    if ([overlay isKindOfClass:[MKPolyline class]])
+    {
+        MKPolylineRenderer* renderer = [[MKPolylineRenderer alloc]initWithOverlay:overlay];
+        //    设置线宽
+        renderer.lineWidth = 5;
+        renderer.strokeColor = [UIColor greenColor];
+        return renderer;
+    }
+    
+    return nil;
+}
+
 
 
 @end
