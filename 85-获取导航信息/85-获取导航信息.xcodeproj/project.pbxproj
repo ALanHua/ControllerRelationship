@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B858BA6B1F4DB4CC00EEBF0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B858BA6A1F4DB4CC00EEBF0E /* main.m */; };
+		B858BA6E1F4DB4CC00EEBF0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B858BA6D1F4DB4CC00EEBF0E /* AppDelegate.m */; };
+		B858BA711F4DB4CC00EEBF0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B858BA701F4DB4CC00EEBF0E /* ViewController.m */; };
+		B858BA741F4DB4CC00EEBF0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B858BA721F4DB4CC00EEBF0E /* Main.storyboard */; };
+		B858BA761F4DB4CC00EEBF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B858BA751F4DB4CC00EEBF0E /* Assets.xcassets */; };
+		B858BA791F4DB4CC00EEBF0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B858BA771F4DB4CC00EEBF0E /* LaunchScreen.storyboard */; };
+		B858BA841F4DB4CD00EEBF0E /* _5_______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B858BA831F4DB4CD00EEBF0E /* _5_______Tests.m */; };
+		B858BA8F1F4DB4CD00EEBF0E /* _5_______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B858BA8E1F4DB4CD00EEBF0E /* _5_______UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B858BA801F4DB4CD00EEBF0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B858BA5E1F4DB4CC00EEBF0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B858BA651F4DB4CC00EEBF0E;
+			remoteInfo = "85-获取导航信息";
+		};
+		B858BA8B1F4DB4CD00EEBF0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B858BA5E1F4DB4CC00EEBF0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B858BA651F4DB4CC00EEBF0E;
+			remoteInfo = "85-获取导航信息";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B858BA661F4DB4CC00EEBF0E /* 85-获取导航信息.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "85-获取导航信息.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B858BA6A1F4DB4CC00EEBF0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B858BA6C1F4DB4CC00EEBF0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B858BA6D1F4DB4CC00EEBF0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B858BA6F1F4DB4CC00EEBF0E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B858BA701F4DB4CC00EEBF0E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B858BA731F4DB4CC00EEBF0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B858BA751F4DB4CC00EEBF0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B858BA781F4DB4CC00EEBF0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B858BA7A1F4DB4CC00EEBF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B858BA7F1F4DB4CD00EEBF0E /* 85-获取导航信息Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "85-获取导航信息Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B858BA831F4DB4CD00EEBF0E /* _5_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_5_______Tests.m"; sourceTree = "<group>"; };
+		B858BA851F4DB4CD00EEBF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B858BA8A1F4DB4CD00EEBF0E /* 85-获取导航信息UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "85-获取导航信息UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B858BA8E1F4DB4CD00EEBF0E /* _5_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_5_______UITests.m"; sourceTree = "<group>"; };
+		B858BA901F4DB4CD00EEBF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B858BA631F4DB4CC00EEBF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B858BA7C1F4DB4CD00EEBF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B858BA871F4DB4CD00EEBF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B858BA5D1F4DB4CC00EEBF0E = {
+			isa = PBXGroup;
+			children = (
+				B858BA681F4DB4CC00EEBF0E /* 85-获取导航信息 */,
+				B858BA821F4DB4CD00EEBF0E /* 85-获取导航信息Tests */,
+				B858BA8D1F4DB4CD00EEBF0E /* 85-获取导航信息UITests */,
+				B858BA671F4DB4CC00EEBF0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B858BA671F4DB4CC00EEBF0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B858BA661F4DB4CC00EEBF0E /* 85-获取导航信息.app */,
+				B858BA7F1F4DB4CD00EEBF0E /* 85-获取导航信息Tests.xctest */,
+				B858BA8A1F4DB4CD00EEBF0E /* 85-获取导航信息UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B858BA681F4DB4CC00EEBF0E /* 85-获取导航信息 */ = {
+			isa = PBXGroup;
+			children = (
+				B858BA6C1F4DB4CC00EEBF0E /* AppDelegate.h */,
+				B858BA6D1F4DB4CC00EEBF0E /* AppDelegate.m */,
+				B858BA6F1F4DB4CC00EEBF0E /* ViewController.h */,
+				B858BA701F4DB4CC00EEBF0E /* ViewController.m */,
+				B858BA721F4DB4CC00EEBF0E /* Main.storyboard */,
+				B858BA751F4DB4CC00EEBF0E /* Assets.xcassets */,
+				B858BA771F4DB4CC00EEBF0E /* LaunchScreen.storyboard */,
+				B858BA7A1F4DB4CC00EEBF0E /* Info.plist */,
+				B858BA691F4DB4CC00EEBF0E /* Supporting Files */,
+			);
+			path = "85-获取导航信息";
+			sourceTree = "<group>";
+		};
+		B858BA691F4DB4CC00EEBF0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B858BA6A1F4DB4CC00EEBF0E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B858BA821F4DB4CD00EEBF0E /* 85-获取导航信息Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B858BA831F4DB4CD00EEBF0E /* _5_______Tests.m */,
+				B858BA851F4DB4CD00EEBF0E /* Info.plist */,
+			);
+			path = "85-获取导航信息Tests";
+			sourceTree = "<group>";
+		};
+		B858BA8D1F4DB4CD00EEBF0E /* 85-获取导航信息UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B858BA8E1F4DB4CD00EEBF0E /* _5_______UITests.m */,
+				B858BA901F4DB4CD00EEBF0E /* Info.plist */,
+			);
+			path = "85-获取导航信息UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B858BA651F4DB4CC00EEBF0E /* 85-获取导航信息 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B858BA931F4DB4CD00EEBF0E /* Build configuration list for PBXNativeTarget "85-获取导航信息" */;
+			buildPhases = (
+				B858BA621F4DB4CC00EEBF0E /* Sources */,
+				B858BA631F4DB4CC00EEBF0E /* Frameworks */,
+				B858BA641F4DB4CC00EEBF0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "85-获取导航信息";
+			productName = "85-获取导航信息";
+			productReference = B858BA661F4DB4CC00EEBF0E /* 85-获取导航信息.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B858BA7E1F4DB4CD00EEBF0E /* 85-获取导航信息Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B858BA961F4DB4CD00EEBF0E /* Build configuration list for PBXNativeTarget "85-获取导航信息Tests" */;
+			buildPhases = (
+				B858BA7B1F4DB4CD00EEBF0E /* Sources */,
+				B858BA7C1F4DB4CD00EEBF0E /* Frameworks */,
+				B858BA7D1F4DB4CD00EEBF0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B858BA811F4DB4CD00EEBF0E /* PBXTargetDependency */,
+			);
+			name = "85-获取导航信息Tests";
+			productName = "85-获取导航信息Tests";
+			productReference = B858BA7F1F4DB4CD00EEBF0E /* 85-获取导航信息Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B858BA891F4DB4CD00EEBF0E /* 85-获取导航信息UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B858BA991F4DB4CD00EEBF0E /* Build configuration list for PBXNativeTarget "85-获取导航信息UITests" */;
+			buildPhases = (
+				B858BA861F4DB4CD00EEBF0E /* Sources */,
+				B858BA871F4DB4CD00EEBF0E /* Frameworks */,
+				B858BA881F4DB4CD00EEBF0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B858BA8C1F4DB4CD00EEBF0E /* PBXTargetDependency */,
+			);
+			name = "85-获取导航信息UITests";
+			productName = "85-获取导航信息UITests";
+			productReference = B858BA8A1F4DB4CD00EEBF0E /* 85-获取导航信息UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B858BA5E1F4DB4CC00EEBF0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = YouHuaPei;
+				TargetAttributes = {
+					B858BA651F4DB4CC00EEBF0E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					B858BA7E1F4DB4CD00EEBF0E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B858BA651F4DB4CC00EEBF0E;
+					};
+					B858BA891F4DB4CD00EEBF0E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B858BA651F4DB4CC00EEBF0E;
+					};
+				};
+			};
+			buildConfigurationList = B858BA611F4DB4CC00EEBF0E /* Build configuration list for PBXProject "85-获取导航信息" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B858BA5D1F4DB4CC00EEBF0E;
+			productRefGroup = B858BA671F4DB4CC00EEBF0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B858BA651F4DB4CC00EEBF0E /* 85-获取导航信息 */,
+				B858BA7E1F4DB4CD00EEBF0E /* 85-获取导航信息Tests */,
+				B858BA891F4DB4CD00EEBF0E /* 85-获取导航信息UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B858BA641F4DB4CC00EEBF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B858BA791F4DB4CC00EEBF0E /* LaunchScreen.storyboard in Resources */,
+				B858BA761F4DB4CC00EEBF0E /* Assets.xcassets in Resources */,
+				B858BA741F4DB4CC00EEBF0E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B858BA7D1F4DB4CD00EEBF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B858BA881F4DB4CD00EEBF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B858BA621F4DB4CC00EEBF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B858BA711F4DB4CC00EEBF0E /* ViewController.m in Sources */,
+				B858BA6E1F4DB4CC00EEBF0E /* AppDelegate.m in Sources */,
+				B858BA6B1F4DB4CC00EEBF0E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B858BA7B1F4DB4CD00EEBF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B858BA841F4DB4CD00EEBF0E /* _5_______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B858BA861F4DB4CD00EEBF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B858BA8F1F4DB4CD00EEBF0E /* _5_______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B858BA811F4DB4CD00EEBF0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B858BA651F4DB4CC00EEBF0E /* 85-获取导航信息 */;
+			targetProxy = B858BA801F4DB4CD00EEBF0E /* PBXContainerItemProxy */;
+		};
+		B858BA8C1F4DB4CD00EEBF0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B858BA651F4DB4CC00EEBF0E /* 85-获取导航信息 */;
+			targetProxy = B858BA8B1F4DB4CD00EEBF0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B858BA721F4DB4CC00EEBF0E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B858BA731F4DB4CC00EEBF0E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B858BA771F4DB4CC00EEBF0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B858BA781F4DB4CC00EEBF0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B858BA911F4DB4CD00EEBF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B858BA921F4DB4CD00EEBF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B858BA941F4DB4CD00EEBF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "85-获取导航信息/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-5-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B858BA951F4DB4CD00EEBF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "85-获取导航信息/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-5-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B858BA971F4DB4CD00EEBF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "85-获取导航信息Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-5-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/85-获取导航信息.app/85-获取导航信息";
+			};
+			name = Debug;
+		};
+		B858BA981F4DB4CD00EEBF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "85-获取导航信息Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-5-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/85-获取导航信息.app/85-获取导航信息";
+			};
+			name = Release;
+		};
+		B858BA9A1F4DB4CD00EEBF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "85-获取导航信息UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-5-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "85-获取导航信息";
+			};
+			name = Debug;
+		};
+		B858BA9B1F4DB4CD00EEBF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "85-获取导航信息UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mark.-5-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "85-获取导航信息";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B858BA611F4DB4CC00EEBF0E /* Build configuration list for PBXProject "85-获取导航信息" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B858BA911F4DB4CD00EEBF0E /* Debug */,
+				B858BA921F4DB4CD00EEBF0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B858BA931F4DB4CD00EEBF0E /* Build configuration list for PBXNativeTarget "85-获取导航信息" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B858BA941F4DB4CD00EEBF0E /* Debug */,
+				B858BA951F4DB4CD00EEBF0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B858BA961F4DB4CD00EEBF0E /* Build configuration list for PBXNativeTarget "85-获取导航信息Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B858BA971F4DB4CD00EEBF0E /* Debug */,
+				B858BA981F4DB4CD00EEBF0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B858BA991F4DB4CD00EEBF0E /* Build configuration list for PBXNativeTarget "85-获取导航信息UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B858BA9A1F4DB4CD00EEBF0E /* Debug */,
+				B858BA9B1F4DB4CD00EEBF0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B858BA5E1F4DB4CC00EEBF0E /* Project object */;
+}
