@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Sprites.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Default-568h@2x.png",
+      "filename" : "Sprites@2x.png",
       "scale" : "2x"
     },
     {
