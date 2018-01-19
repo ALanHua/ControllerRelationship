@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClockFace" translatesAutoresizingMaskIntoConstraints="NO" id="W6M-J4-0Bo">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="SgA-8F-2xT"/>
+                                    <constraint firstAttribute="height" constant="300" id="TRs-kN-Aan"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HourHand" translatesAutoresizingMaskIntoConstraints="NO" id="tYs-0B-aVM">
+                                <rect key="frame" x="177" y="278" width="30" height="111"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MinuteHand" translatesAutoresizingMaskIntoConstraints="NO" id="2cG-Ir-VzB">
+                                <rect key="frame" x="182" y="283" width="20" height="106"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SecondHand" translatesAutoresizingMaskIntoConstraints="NO" id="7Lo-y0-w8G">
+                                <rect key="frame" x="188" y="289" width="8" height="102"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W6M-J4-0Bo" firstAttribute="leading" secondItem="tYs-0B-aVM" secondAttribute="trailing" constant="-169.5" id="282-R3-gLK"/>
+                            <constraint firstItem="7Lo-y0-w8G" firstAttribute="top" secondItem="tYs-0B-aVM" secondAttribute="bottom" constant="-100" id="5ny-Db-C3f"/>
+                            <constraint firstItem="tYs-0B-aVM" firstAttribute="centerY" secondItem="W6M-J4-0Bo" secondAttribute="centerY" id="9ON-th-0Yk"/>
+                            <constraint firstItem="2cG-Ir-VzB" firstAttribute="top" secondItem="tYs-0B-aVM" secondAttribute="bottom" constant="-106" id="ZtK-yC-8g2"/>
+                            <constraint firstItem="W6M-J4-0Bo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bUe-8j-ZtH"/>
+                            <constraint firstItem="7Lo-y0-w8G" firstAttribute="leading" secondItem="tYs-0B-aVM" secondAttribute="trailing" constant="-19" id="hkY-xs-1iT"/>
+                            <constraint firstItem="W6M-J4-0Bo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s2O-dU-341"/>
+                            <constraint firstItem="W6M-J4-0Bo" firstAttribute="top" secondItem="tYs-0B-aVM" secondAttribute="bottom" constant="-205.5" id="sVn-Zv-RQ0"/>
+                            <constraint firstItem="2cG-Ir-VzB" firstAttribute="leading" secondItem="tYs-0B-aVM" secondAttribute="trailing" constant="-25" id="yOx-VK-ziq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="hourHand" destination="tYs-0B-aVM" id="dBy-sc-J5t"/>
+                        <outlet property="minuteHand" destination="2cG-Ir-VzB" id="d0z-m8-STJ"/>
+                        <outlet property="secondHand" destination="7Lo-y0-w8G" id="jl4-yI-HMZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="29.23538230884558"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ClockFace" width="256" height="256"/>
+        <image name="HourHand" width="30" height="94"/>
+        <image name="MinuteHand" width="20" height="106"/>
+        <image name="SecondHand" width="8" height="102"/>
+    </resources>
+</document>
