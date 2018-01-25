@@ -17,7 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_4);
+//    CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_4);
+    CGAffineTransform transform = CGAffineTransformIdentity;
+//    缩小50%
+    transform = CGAffineTransformScale(transform, 0.5, 0.5);
+//   旋转 30 degrees
+    transform = CGAffineTransformRotate(transform, M_PI_2);
+//   平移200 point
+    transform = CGAffineTransformTranslate(transform, 200, 0);
     
     self.layerView.layer.affineTransform = transform;
     
