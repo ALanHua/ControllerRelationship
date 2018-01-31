@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import <GLKit/GLKit.h>
+
+#define LIGHT_DIRECTION   0, 1, -0.5
+#define AMBIENT_LIGHT     0.5
 
 @interface ViewController ()
 
@@ -25,7 +29,7 @@
     CATransform3D perspective = CATransform3DIdentity;
     perspective.m34 = -1.0 / 500.0;
     perspective = CATransform3DRotate(perspective, -M_PI_4, 1, 0, 0);
-//    perspective = CATransform3DRotate(perspective, -M_PI_4, 0, 1, 0);
+    perspective = CATransform3DRotate(perspective, -M_PI_4, 0, 1, 0);
     self.view.layer.sublayerTransform = perspective;
 //  添加cube face 1
     CATransform3D transform = CATransform3DMakeTranslation(0,0,100);
@@ -70,6 +74,40 @@
     [self.view addSubview:face];
     [self.faces addObject:face];
     face.layer.transform = transform;
+    [self applyLightingToFace:face.layer];
+}
+
+/**
+ 这个函数里面的看不懂
+ @param face 图层
+ */
+-(void)applyLightingToFace:(CALayer*)face{
+    CALayer* layer = [CALayer layer];
+    layer.frame = face.bounds;
+    [face addSublayer:layer];
+//    转换transform到矩阵
+    CATransform3D transform = face.transform;
+    GLKMatrix4 matrix4 = [self matrixFrom3DTransformation:transform];
+    GLKMatrix3 matrix3 = GLKMatrix4GetMatrix3(matrix4);
+//    获取正常人脸
+    GLKVector3 normal = GLKVector3Make(0, 0, 1);
+    normal = GLKMatrix3MultiplyVector3(matrix3, normal);
+    normal = GLKVector3Normalize(normal);
+//    get dot product with light direction
+    GLKVector3 light = GLKVector3Normalize(GLKVector3Make(LIGHT_DIRECTION));
+    float dotProduct = GLKVector3DotProduct(light,normal);
+    CGFloat shadow = 1 + dotProduct - AMBIENT_LIGHT;
+    UIColor* color = [UIColor colorWithWhite:0 alpha:shadow];
+    layer.backgroundColor = color.CGColor;
+}
+
+-(GLKMatrix4)matrixFrom3DTransformation:(CATransform3D)transform{
+    
+    GLKMatrix4 matrix = GLKMatrix4Make(transform.m11, transform.m12, transform.m13, transform.m14,transform.m21, transform.m22, transform.m23, transform.m24,
+        transform.m31, transform.m32, transform.m33, transform.m34,
+        transform.m41,transform.m42, transform.m43, transform.m44);
+    
+    return matrix;
 }
 
 - (void)didReceiveMemoryWarning {
