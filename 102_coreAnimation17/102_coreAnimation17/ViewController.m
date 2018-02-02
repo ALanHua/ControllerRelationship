@@ -38,6 +38,8 @@
     lobortis";
     
     textLayer.string = text;
+    textLayer.contentsScale = [UIScreen mainScreen].scale;
+    
     
     [self.view.layer addSublayer:textLayer];
 }
